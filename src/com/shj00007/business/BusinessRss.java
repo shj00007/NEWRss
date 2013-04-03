@@ -116,13 +116,13 @@ public class BusinessRss {
 		FileInputStream _InputStream = null;
 		try {
 			_InputStream = new FileInputStream(DBHelper.TEXTFILE_PAT + "/"
-					+ _DescriptionMD5 );
+					+ _DescriptionMD5);
 			byte[] bytes = new byte[1024];
 			int hasRead = 0;
 			while ((hasRead = _InputStream.read(bytes)) > 0) {
-				description += new String(bytes, 0, hasRead,"UTF-8");
+				description += new String(bytes, 0, hasRead, "UTF-8");
 			}
-			
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -138,6 +138,10 @@ public class BusinessRss {
 
 		}
 		return description;
+	}
+
+	public boolean isRead(String pRssName, String pItemName) {
+		return mSQLiteRssItem.getIsRead(pRssName, pItemName);
 	}
 
 	public void setHasRead(String pRssName, String pItemName) {

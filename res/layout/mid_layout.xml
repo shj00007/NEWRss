@@ -11,12 +11,7 @@
         android:layout_weight="400"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/mid_title_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ListView
+        <com.shj00007.utility.listviewfromnet.StickyListHeadersListView
             android:id="@+id/mid_listview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -5,6 +5,9 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.text.Html;
 import android.util.DisplayMetrics;
 import android.view.GestureDetector;
@@ -102,7 +105,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 
 				final EditText et = new EditText(MainActivity.this);
 				et.setText("http://cn.engadget.com/rss.xml");
-				ShowProgressDialog("!!!", "loading");
+
 				new AlertDialog.Builder(MainActivity.this)
 						.setTitle("请输入")
 						.setView(et)
@@ -113,17 +116,36 @@ public class MainActivity extends Activity implements OnGestureListener,
 									public void onClick(DialogInterface dialog,
 											int which) {
 										// TODO Auto-generated method stub
+										ShowProgressDialog("!!!", "loading");
 
-										mBusinessRss.downloadRSS(et.getText()
-												.toString());
-										mBusinessRss.addRssFeed("新闻");
-										mBusinessRss.updateRss();
-										bindData();
+										new Thread(new Runnable() {
+
+											@Override
+											public void run() {
+												// TODO Auto-generated method
+												// stub
+												mBusinessRss.downloadRSS(et
+														.getText().toString());
+												mBusinessRss.addRssFeed("新闻");
+												mBusinessRss.updateRss();
+												Handler myhandler = new Handler(
+														Looper.getMainLooper()) {
+													@Override
+													public void handleMessage(
+															Message msg) {
+														// TODO Auto-generated
+														// method stub
+														bindData();
+														DismissProgressDialog();
+													}
+												};
+												myhandler.removeMessages(123);
+												myhandler.sendEmptyMessage(123);
+											}
+										}).start();
 
 									}
 								}).setNegativeButton("取消", null).show();
-
-				DismissProgressDialog();
 
 			}
 		});
@@ -142,13 +164,17 @@ public class MainActivity extends Activity implements OnGestureListener,
 						.getDescription(_RssName, _ItemTitle);
 				tvrighttext.setText(Html.fromHtml(_Description, new DownFile(
 						tvrighttext, _Description), null));
-				mBusinessRss.setHasRead(_RssName, _ItemTitle);
 				// ((TextView) arg1.findViewById(R.id.midtitle))
 				// .setTextAppearance(MainActivity.this,
 				// R.style.styleHasRead);
-				mExpandableAdapter.notifyDataSetChanged();
+				if (!mBusinessRss.isRead(_RssName, _ItemTitle)) {
 
-				((MidListViewAdapter) arg0.getAdapter()).notifyDataSetChanged();
+					mBusinessRss.setHasRead(_RssName, _ItemTitle);
+					mExpandableAdapter.notifyDataSetChanged();
+
+					((MidListViewAdapter) arg0.getAdapter())
+							.notifyDataSetChanged();
+				}
 			}
 		});
 	}

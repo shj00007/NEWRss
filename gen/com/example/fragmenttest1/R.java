@@ -15,56 +15,104 @@ public final class R {
         public static final int open_layout=0x7f040003;
     }
     public static final class attr {
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int childSize=0x7f010002;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fromDegrees=0x7f010000;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int leftHolderWidth=0x7f010003;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int toDegrees=0x7f010001;
     }
     public static final class drawable {
         public static final int addrss=0x7f020000;
-        public static final int count=0x7f020001;
-        public static final int expanddown_png=0x7f020002;
-        public static final int expandright_png=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int left_divider=0x7f020005;
-        public static final int left_divider_png=0x7f020006;
-        public static final int leftbackground_open=0x7f020007;
-        public static final int leftbackgroundopen_png=0x7f020008;
-        public static final int midbackground=0x7f020009;
-        public static final int midbackground_png=0x7f02000a;
-        public static final int rightbackground=0x7f02000b;
-        public static final int rightbackground_png=0x7f02000c;
-        public static final int rssicon_png=0x7f02000d;
-        public static final int unfind=0x7f02000e;
+        public static final int composer_button=0x7f020001;
+        public static final int composer_button_normal=0x7f020002;
+        public static final int composer_button_pressed=0x7f020003;
+        public static final int composer_icn_plus=0x7f020004;
+        public static final int composer_icn_plus_normal=0x7f020005;
+        public static final int composer_icn_plus_pressed=0x7f020006;
+        public static final int count=0x7f020007;
+        public static final int expanddown_png=0x7f020008;
+        public static final int expandright_png=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int left_divider=0x7f02000b;
+        public static final int left_divider_png=0x7f02000c;
+        public static final int leftbackground_open=0x7f02000d;
+        public static final int leftbackgroundopen_png=0x7f02000e;
+        public static final int midbackground=0x7f02000f;
+        public static final int midbackground_png=0x7f020010;
+        public static final int rightbackground=0x7f020011;
+        public static final int rightbackground_png=0x7f020012;
+        public static final int rssicon_png=0x7f020013;
+        public static final int unfind=0x7f020014;
     }
     public static final class id {
-        public static final int arrow=0x7f090006;
-        public static final int expandableListleft=0x7f09000a;
-        public static final int groupright=0x7f090008;
+        public static final int arrow=0x7f09000a;
+        public static final int control_hint=0x7f090006;
+        public static final int control_layout=0x7f090005;
+        public static final int expandableListleft=0x7f09000e;
+        public static final int groupright=0x7f09000c;
         public static final int homelayout=0x7f090000;
-        public static final int ivAddRss=0x7f09000b;
+        public static final int item_layout=0x7f090004;
+        public static final int ivAddRss=0x7f09000f;
         public static final int left_view=0x7f090001;
-        public static final int lefttitle_count=0x7f090009;
-        public static final int menu_settings=0x7f090015;
-        public static final int mid_listview=0x7f09000d;
-        public static final int mid_title_date=0x7f09000c;
+        public static final int lefttitle_count=0x7f09000d;
+        public static final int menu_settings=0x7f090018;
+        public static final int mid_listview=0x7f090010;
         public static final int mid_view=0x7f090002;
-        public static final int middate=0x7f090010;
-        public static final int midname=0x7f09000f;
-        public static final int midtext=0x7f090012;
-        public static final int midtitle=0x7f090011;
-        public static final int midtitleimage=0x7f09000e;
+        public static final int middate=0x7f090013;
+        public static final int midname=0x7f090012;
+        public static final int midtext=0x7f090015;
+        public static final int midtitle=0x7f090014;
+        public static final int midtitleimage=0x7f090011;
         public static final int right_view=0x7f090003;
-        public static final int svrightscrool=0x7f090013;
-        public static final int tvleftchildcount=0x7f090005;
-        public static final int tvleftchildtitle=0x7f090004;
-        public static final int tvright_text_up=0x7f090014;
-        public static final int tvrss_category=0x7f090007;
+        public static final int svrightscrool=0x7f090016;
+        public static final int text=0x7f090007;
+        public static final int tvleftchildcount=0x7f090009;
+        public static final int tvleftchildtitle=0x7f090008;
+        public static final int tvright_text_up=0x7f090017;
+        public static final int tvrss_category=0x7f09000b;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int left_child_layout=0x7f030001;
-        public static final int left_group_layout=0x7f030002;
-        public static final int left_layout=0x7f030003;
-        public static final int mid_layout=0x7f030004;
-        public static final int mid_listview=0x7f030005;
-        public static final int right_layout=0x7f030006;
+        public static final int arc_menu=0x7f030001;
+        public static final int header=0x7f030002;
+        public static final int left_child_layout=0x7f030003;
+        public static final int left_group_layout=0x7f030004;
+        public static final int left_layout=0x7f030005;
+        public static final int mid_layout=0x7f030006;
+        public static final int mid_listview=0x7f030007;
+        public static final int ray_menu=0x7f030008;
+        public static final int right_layout=0x7f030009;
     }
     public static final class menu {
         public static final int activity_main=0x7f080000;
@@ -127,4 +175,96 @@ public final class R {
         public static final int customstyle=0x7f070003;
         public static final int styleHasRead=0x7f070004;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a ArcLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ArcLayout_childSize com.example.fragmenttest1:childSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #ArcLayout_fromDegrees com.example.fragmenttest1:fromDegrees}</code></td><td></td></tr>
+           <tr><td><code>{@link #ArcLayout_toDegrees com.example.fragmenttest1:toDegrees}</code></td><td></td></tr>
+           </table>
+           @see #ArcLayout_childSize
+           @see #ArcLayout_fromDegrees
+           @see #ArcLayout_toDegrees
+         */
+        public static final int[] ArcLayout = {
+            0x7f010000, 0x7f010001, 0x7f010002
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.fragmenttest1.R.attr#childSize}
+          attribute's value can be found in the {@link #ArcLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:childSize
+        */
+        public static final int ArcLayout_childSize = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.example.fragmenttest1.R.attr#fromDegrees}
+          attribute's value can be found in the {@link #ArcLayout} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:fromDegrees
+        */
+        public static final int ArcLayout_fromDegrees = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.fragmenttest1.R.attr#toDegrees}
+          attribute's value can be found in the {@link #ArcLayout} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:toDegrees
+        */
+        public static final int ArcLayout_toDegrees = 1;
+        /** Attributes that can be used with a RayLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #RayLayout_leftHolderWidth com.example.fragmenttest1:leftHolderWidth}</code></td><td></td></tr>
+           </table>
+           @see #RayLayout_leftHolderWidth
+         */
+        public static final int[] RayLayout = {
+            0x7f010003
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.fragmenttest1.R.attr#leftHolderWidth}
+          attribute's value can be found in the {@link #RayLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:leftHolderWidth
+        */
+        public static final int RayLayout_leftHolderWidth = 0;
+    };
 }

@@ -129,4 +129,18 @@ public class SQLiteRssItem extends SQLiteBase {
 				new String[] { pRssName });
 		_Cursor.close();
 	}
+
+	public boolean getIsRead(String pRssName, String pItemName) {
+		String _tablename = getTableName(pRssName);
+		Cursor _Cursor = mDatabase.rawQuery("Select isread from " + _tablename
+				+ " where title='" + pItemName + "';", null);
+		_Cursor.moveToNext();
+		int isread = getCursorInt(_Cursor, "isread");
+		_Cursor.close();
+		if (isread == 1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
