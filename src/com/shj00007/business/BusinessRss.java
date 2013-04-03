@@ -1,14 +1,11 @@
 package com.shj00007.business;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.shj00007.bean.ModelRssItem;
 import com.shj00007.bean.ModelRssfeed;
@@ -37,17 +34,17 @@ public class BusinessRss {
 	public void updateRss() {
 
 		String _LocalLastNews = "";
-		String _DownloadLatNews = "";
+		String _DownloadLastNews = "";
 		int index = 0;
 
-		_DownloadLatNews = mParser.getFeed().getItem().get(index).getTitle();
+		_DownloadLastNews = mParser.getFeed().getItem().get(index).getTitle();
 		_LocalLastNews = mSQLiteRssItem.getLastNews(mParser.getFeed()
 				.getTitle());
 
-		while (!_DownloadLatNews.equals(_LocalLastNews)
+		while (!_DownloadLastNews.equals(_LocalLastNews)
 				&& index < mParser.getFeed().getItem().size() - 1) {
 			index++;
-			_DownloadLatNews = mParser.getFeed().getItem().get(index)
+			_DownloadLastNews = mParser.getFeed().getItem().get(index)
 					.getTitle();
 		}
 
@@ -119,12 +116,13 @@ public class BusinessRss {
 		FileInputStream _InputStream = null;
 		try {
 			_InputStream = new FileInputStream(DBHelper.TEXTFILE_PAT + "/"
-					+ _DescriptionMD5);
+					+ _DescriptionMD5 );
 			byte[] bytes = new byte[1024];
 			int hasRead = 0;
 			while ((hasRead = _InputStream.read(bytes)) > 0) {
-				description += new String(bytes, 0, hasRead);
+				description += new String(bytes, 0, hasRead,"UTF-8");
 			}
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

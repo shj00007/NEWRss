@@ -16,6 +16,8 @@ import java.util.regex.Pattern;
 
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.text.Html;
 import android.text.Html.ImageGetter;
 import android.util.Log;
@@ -26,7 +28,6 @@ import com.shj00007.database.DBHelper;
 public class DownFile implements ImageGetter {
 
 	public final String IAMGE_FLODER_PATH = "/data/data/com.example.fragmenttest1/pic";
-	private Handler handler = new Handler();
 	TextView rightText = null;
 	String str = null;
 
@@ -168,7 +169,13 @@ public class DownFile implements ImageGetter {
 		}
 		imageFolder = new File(IAMGE_FLODER_PATH + "/" + iamgeMD5);
 		if (!imageFolder.exists()) {
-			         new Thread(new Runnable() {
+			try {
+				imageFolder.createNewFile();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			new Thread(new Runnable() {
 
 				@Override
 				public void run() {
@@ -186,8 +193,27 @@ public class DownFile implements ImageGetter {
 							_FileOutputStream.write(buffer, 0, hasread);
 						}
 						_FileOutputStream.flush();
-						rightText.setText(Html.fromHtml(str, new DownFile(
-								rightText, str), null));
+						Handler handler = new Handler(Looper.getMainLooper()) {
+							public void handleMessage(Message msg) {
+
+								rightText.setText(Html.fromHtml(str,
+										new DownFile(rightText, str), null));
+
+							};
+						};
+						handler.removeMessages(123);
+						handler.sendEmptyMessage(123);
+						// Handler handler;
+						// Looper.prepare();
+						// handler = new Handler() {
+						// public void handleMessage(Message msg) {
+						// rightText.setText(Html.fromHtml(str,
+						// new DownFile(rightText, str), null));
+						//
+						// };
+						// };
+						// handler.sendEmptyMessage(123);
+						// Looper.loop();
 					} catch (Exception e) {
 						// d = getDefaultImageIcon();
 						// d.setBounds(0, 0, d.getIntrinsicWidth(),
@@ -215,9 +241,13 @@ public class DownFile implements ImageGetter {
 
 			return null;
 		} else {
+
 			try {
 				is = new FileInputStream(imageFolder);
 				d = Drawable.createFromStream(is, "src");
+				if (d == null) {
+					return null;
+				}
 				d.setBounds(0, 0, d.getIntrinsicWidth(), d.getIntrinsicHeight());
 				return d;
 			} catch (FileNotFoundException e) {

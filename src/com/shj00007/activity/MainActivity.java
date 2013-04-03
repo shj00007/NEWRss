@@ -216,9 +216,11 @@ public class MainActivity extends Activity implements OnGestureListener,
 		if (e1.getX() - e2.getX() > 120 && ishomeopen) {
 			layout.startAnimation(open_layout_anim);
 			ishomeopen = false;
+			return true;
 		} else if (e1.getX() - e2.getX() < -80 && e1.getX() < 50 && !ishomeopen) {
 			layout.startAnimation(close_layout_anim);
 			ishomeopen = true;
+			return true;
 		}
 		return false;
 	}
