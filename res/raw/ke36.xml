@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>36氪 | 关注互联网创业</title>
+    <link>http://www.36kr.com/</link>
+    <atom:link href="http://www.36kr.com/feed" rel="self" type="application/rss+xml"/>
+    <description>36氪 | 关注互联网创业最新发表新文章.</description>
+    <language>en-us</language>
+    <item>
+      <title>Schmidt发话:Android和Chrome仍将“保持分开和独立”</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/2cf3f3c4869ea01e61c6cda8dea97d6e.png" alt=""/&gt;&lt;br/&gt;
+Google 执行董事长 Eric Schmidt 在最近于印度举办的Google Big Tent 大会上，澄清了公司会将Android 与 Chrome OS合并的传言，他表示这两者还是会：“在很长的一段时间内保持分开和独立”。&lt;/p&gt;
+
+&lt;p&gt;而就在不久前，有传言称，Android之父 &lt;a href="http://www.36kr.com/p/202062.html"&gt;Andy Rubin&lt;/a&gt;卸任，由Chrome主管Sundar Pichai&lt;a href="http://www.36kr.com/p/201885.html"&gt;接手&lt;/a&gt;的举动，似乎预示着Google或会整合Chrome OS和Android，推统一的&lt;a href="http://www.36kr.com/p/201938.html"&gt;Google OS&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;根据&lt;a href="http://in.reuters.com/article/2013/03/21/india-google-chrome-android-os-idINDEE92K08220130321"&gt;路透社&lt;/a&gt;的报道，Schmidt表示：Android 和 Chrome并非合并，而是在将来会有更多的“通用性(commonality)”，这并不就意味着Chrome OS未来有运行Android 应用的可能。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>guolee89@gmail.com (guolee89)</author>
+      <pubDate>Thu, 21 Mar 2013 20:18:54 +0800</pubDate>
+      <link>http://www.36kr.com/p/202068.html</link>
+      <guid>http://www.36kr.com/p/202068.html</guid>
+    </item>
+    <item>
+      <title>在封闭系统内组成新联盟：可连接各乐器app的Audiobus有了新支持者—苹果自家的GarageBand</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/97fb08c40ba1b6caa3ab3821a01cd6f3.jpg" alt=""/&gt;&lt;br/&gt;
+之前&lt;a href="http://www.36kr.com/p/200099.html"&gt;Audiobus&lt;/a&gt;发布时我介绍过它，文章末尾还提到“不知今后苹果自家的GarageBand 会不会也入盟 Audiobus”。而今天&lt;a href="https://itunes.apple.com/cn/app/id408709785?mt=8"&gt;GarageBand&lt;/a&gt;更新，开始支持Audiobus。苹果在自家应用里植入第三方框架，这还挺少见的。现在&lt;a href="http://audiob.us/apps/"&gt;支持Audiobus的乐器编曲类app&lt;/a&gt;达到九十多款了，我还看到一个用户评价说“以后不买不支持Audiobus的应用”。&lt;/p&gt;
+
+&lt;p&gt;Audiobus这款应用改变了iOS设备上的音乐创作。举个例子，你用A应用编了段曲子，但还想加上B应用里才能弄出的那种鼓点。如果没有Audiobus，你得先把那段编曲音频导入B应用再处理，甚至还得借用别的音频文件工具来实现拷贝和导入。这样创作过程会中断。&lt;/p&gt;
+
+&lt;p&gt;但Audiobus就为 iOS 里的音乐应用搭建一个统一的音频通道。可把它理解成一根虚拟连接线，将一个个原本独立的音乐应用连接起来，当然那些app先得使用Audiobus的SDK。这样你在创作音乐时就能在不同的 App 里切换和跳转，实时处理同段音频。它的演示视频可以&lt;a href="http://v.youku.com/v_show/id_XNDgzMDQxMDk2.html"&gt;看这里&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;这背后是&lt;a href="http://atastypixel.com/"&gt;A Tasty Pixel&lt;/a&gt;公司，它只有一个人Michael Tyson。Michael还开源了一套iOS平台的音频处理框架&lt;a href="http://theamazingaudioengine.com/"&gt;The Amazing Audio Engine&lt;/a&gt;，为的是让其他开发者“不用重新发明轮子”。&lt;/p&gt;
+
+&lt;p&gt;沙盒机制带来安全也带来app孤岛，但Audiobus正在封闭系统内形成新的联盟。如果后续iOS建立规则，&lt;a href="http://www.36kr.com/p/200594.html"&gt;让各App可依规范通上话&lt;/a&gt;，又会发生什么？&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>ly@36kr.com (chenlinyuan)</author>
+      <pubDate>Thu, 21 Mar 2013 18:05:40 +0800</pubDate>
+      <link>http://www.36kr.com/p/202067.html</link>
+      <guid>http://www.36kr.com/p/202067.html</guid>
+    </item>
+    <item>
+      <title>Andy Rubin的黯然离场：他为何非走不可？</title>
+      <description>&lt;p&gt;&lt;em&gt;导语：他一手打造Android系统，助力Google直追苹果，与iOS二分移动市场的天下。却在Android扶摇直上之时，不得不黯然离场，忍痛割爱，放手让Android前行。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/8bb05f674c05f84064f5bb5bc64bcd38.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;一周前，Google宣布Andy Rubin将调离Android，加入一项保密项目。决定一出，业界哗然，Google内部员工亦震惊不已。然而，Andy Rubin的离去并非突然，他的秉性、才能，他对Android的帮助与局限，都成为他离去的伏笔。&lt;/p&gt;
+
+&lt;p&gt;很多人猜测Android之所以叫Android，是因为它听起来和Andy谐音。这个猜测只对了一半——并非发音相近，Android正是Andy Rubin的绰号。早在1989年，Andy还为苹果工作时，他的同事就给他起了这么个俏皮的绰号，因为Andy对机器人（robot）有着狂热。直到2008年，Android.com仍做为Rubin的个人主页而存在。&lt;/p&gt;
+
+&lt;p&gt;Rubin对Android的意义不言而喻。去年六月，流言纷传他会离开Google，转投创业公司CloudCar。鉴于他对Google的功绩，以及在CEO Larry Page核心集团内的特殊地位，谣言扩散极快，惊慌四起。人们纷纷议论他走后的Google该走向何方。Robert Scoble甚至写道：“Andy这些年为Google做了多少事啊！”&lt;/p&gt;
+
+&lt;p&gt;Rubin很快现身灭火——宣称CloudCar只是自己洛杉矶孵化器孵化的一间创业公司，其创始人是自己的好友。“我从未想过离开Google”，Rubin在自己的Google+上写道，末尾附上“27号的I/O大会见！”。去年I/O大会，Rubin仍是舞台之主，他的名字和Android同列，毫不违和。&lt;/p&gt;
+
+&lt;p&gt;然而周四，Page就宣布Rubin“决定移交Android，开启在Google内的新篇章”。Rubin给开发者寄去邮件，表达了相同的意愿：“在我内心深处，更想做一个企业家。”&lt;/p&gt;
+
+&lt;p&gt;Rubin没有离开Google，但他将不再和Android有任何关联——Android的庞大超乎Rubin的可控范围，Rubin对Android亦深感疲惫。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;天才之能，天才之累&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;十年间，Rubin一手将Android从白纸上天马行空的想法发展为世界上最受欢迎的智能手机操作系统。超过7.5亿终端置入Android，超过250亿的app被下载，绿色的小机器人标识和被咬了一口的苹果辨识度相当。&lt;/p&gt;
+
+&lt;p&gt;然而，盛名之下，Android却前路难明，荆棘遍布。平板电脑市场上，Android份额跟iPad相去尚远。而Android@Home 计划（致力于让开发者为家用电器开发app），又似乎操之过急。尽管Google坚持开放系统理念，却无法从中获得实际利益，甚至让自己的竞争对手Samsung抢占移动设备市场，赚得盆满钵满，赶超自身。&lt;/p&gt;
+
+&lt;p&gt;“就连微软都比Google更懂得如何在Android基础上借助专利挣钱。”分析师Michael不无嘲讽地说道。在其它领域内，Google也几乎失去对Android的控制。Amazon的Kindle Fire搭建在Android基础之上，他们的Amazon app store却在和Google Play竞争。&lt;/p&gt;
+
+&lt;p&gt;没有人会否认Rubin天赋异禀。他既有建筑师之才，又有尝试不倦、勇于突破的黑客精神。进入Google之前，他做过苹果的工程师、微软的经理，又独立创业，带领两支创业团队走向成功：一是Danger，一是后来的Android。&lt;/p&gt;
+
+&lt;p&gt;“我乐于和Andy共事，因为他有惊人的才能。他极擅长于设定宏大的目标，哪怕早期看似痴人说梦，最终他总有能力调动小团队，把不可能变成可能。”Google公用建设部高级副主席 Urs Hölzle说，“他是天才型人物，没有他，我不认为还有谁能造就今天的Android。”&lt;/p&gt;
+
+&lt;p&gt;但Rubin一直不愿，或者说不能，让Android成为Google的印钞机。Samsung制造出远销海外的Android智能机，Google却无法从中获得一分利润。“Andy是个天生的独舞者。他不断奔向心中所想，无谓的人事皆不入眼。”曾与Rubin共事的一位业界人士说道，“但是Android必定会成长到某种的规模，那时它离不开团队内部的互动、合作、协调，甚或需要强力的外部资源支撑。事实证明，Android成长到这个阶段时，Rubin发现自己失去了掌控力。他开始举棋不定，看不清航向。”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Danger往事&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Rubin和他创立的Danger被看做首台智能机之父。在互联网泡沫泛滥的年代，他的产品一鸣惊人——网络支持的智能手机，拥有自己的app生态系统。他本人则更加特立独行。工作室附近停放着他的麻雀电动车、Segway（无污染的电动两轮代步车），以及 Pole Position式的电子游戏机，还总时不时地捡回屏幕颜色不同的手机。诸如Rich Miner、Steve Perlman甚至是Steve Wozniak（苹果联合创始人）都会忍不住驻足观看。&lt;/p&gt;
+
+&lt;p&gt;在Danger的四年中，Rubin从未间断过战斗，从不喊累。“他极力掩藏自己的疲态，”Danger时期和Rubin亲近的一位同事说，“我曾见过他工作至深夜，几近虚脱，第二天却依旧换上干净的衬衫去上班，仍能在采访和商业会议中应对自如。”&lt;/p&gt;
+
+&lt;p&gt;Danger的科技实力，远远超出它所属时代的想象力，却在实现商业价值方面步履维艰。“他们勉强维系着公司的生存，”Runbin的前同事说道。直到2003年，Rubin被投资人剔除出局，通信业老手、精明的生意人Hank Nothhaft接过权杖。&lt;/p&gt;
+
+&lt;p&gt;“当时我们有一个超棒的产品，即将推出市场，因此我们找来Hank。只有他知道如何处理这么大的生意，和合伙人打好交道。”Danger的前投资人Rees说，Hank才是能带领这间企业上一个台阶的CEO。&lt;/p&gt;
+
+&lt;p&gt;离开Danger不久，Rubin就着手Android的研发。就像那句话所说，“他不会逗留太久”，Rees回忆道。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Google岁月&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;2005年，Larry Page买下仍属雏形的Android，Rubin就此加盟Google。但Sergey Brin和Eric Schmidt一直同Android保持距离，他们不懂移动领域。Page却对Rubin开放移动操作系统的远见赞赏不已。他甚至觉得Google可以推动全球范围的手机革新浪潮，哪怕困难重重。&lt;/p&gt;
+
+&lt;p&gt;Page坚信Android对Google意义非凡，Rubin却半信半疑。他感受到Google内部结构的松散，企业文化的疯狂，以及最初的不适。就连他把限量版德国汽车送进修理厂，于崇尚平民主义的Google人而言都像炫耀之举。&lt;/p&gt;
+
+&lt;p&gt;在外界看来，Google快速收购Android的举动似乎预示着他们进军无线领域的决心，但Google自身不愿坦露过多细节。Rubin进入Google的领导层，担任移动数字部门高级副总裁。他带领产品研发，寻找合作伙伴，和乔布斯成为盟友。&lt;/p&gt;
+
+&lt;p&gt;但Android的诸多努力最终都不甚了了。彼时风风火火说要组建引领行业标准的Open Handset联盟，最终却被OEM巨头瓜分平台。Android Update联盟也曾尝试协调系统更新时间，却以失败告吹。Rubin赞成的Motorola收购，至今无法为Google实现盈利。&lt;/p&gt;
+
+&lt;p&gt;CFO Pichette说，Motorola怎么看都不符合Google一贯崇尚的新奇标准。而这起收购案带来的大肆报道，又令Google陷入沸沸扬扬的专利诉讼中。&lt;/p&gt;
+
+&lt;p&gt;Google不愿透露现在有多少员工为Android工作，可以肯定的是，它的规模已是最初Rubin带来的8人团队的几十倍。超过200人的Google+资料填写的是Android或Google Play员工，但真实数据可能还要更多，2010年时就有200到250人的规模。相比之下，Rubin离开Danger前管理的只是刚过100人的团队，他还没当过这支团队的CEO。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;交出权杖&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Google对Rubin的去处缄默不言，但外界的揣测纷纷指向Google X研发实验室。这位乐于发明东西的Android之父，已拥有11项专利权，以及一沓专利申请书。他对硬件有天生的热爱，尤其是可以拍照的硬件。在微软的时候，他总是偷偷走开，回到自己位于洛杉矶的实验室，在氖灯管的照耀下敲敲打打。实验室窗户上的标语忽隐忽现：Robots that kill.&lt;/p&gt;
+
+&lt;p&gt;苹果时期，他黑进公司系统，告知同事股票报价。在Danger时，他从网上收集各式各样的图片。“他的车上布满了插件。他的家里也是。”Rees回忆道，“他喜欢可以触摸的酷玩意儿。”&lt;/p&gt;
+
+&lt;p&gt;脱离Rubin后，Android将被交到高级副总裁Sundar Pichai手中，他同时还负责Chrome和Apps两个项目。融合Chrome OS和Android的猜想由来已久，如果真能如此，Google就能将PC端和移动端的软件统一起来，创造出类似Pixel这种可以触摸的笔记本。Google也表示这两个操作系统未来可能融合，但目前一定不是最佳时机。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/4828c312b0f01d4fd8183ca2fe8b9748.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;Page希望Google产品线能连贯统一，如此不仅有利研发，也有利市场。但对Chrome OS和Android这支团队而言，融合之路困难重重。它们的风格不一，目标不同——Android团队习惯飞快的工作节奏，他们必须不间断地工作才能升级软件、修复bug、赶上移动互联网迅猛的发展步调。&lt;/p&gt;
+
+&lt;p&gt;而Pichai则兼具冷静和战斗力。作为产品经理，他把Chrome浏览器一路做到行业顶尖，同时还能兼顾Google的专业产品Apps。若Android和Chrome OS团队合并，必得经历阵痛，才能达到稳定之态。对此时此刻的Google而言，融合绝非明智之选。Android换将之后，Pichai令Android走向盈利的任务呼之欲出。他得完成Rubin未竟的任务。&lt;/p&gt;
+
+&lt;p&gt;距离今年的Google I/O大会只剩两个月，门票一如既往地被一抢而空。现在，人们都翘首以盼地期待Google宣布点什么，但猜测已经太多。分析师Gartenberg说道：“其实Google也未必清楚自己想做的是什么。尝试是肯定的，这需要一个过程。有一天我们会和Google一起恍然大悟‘噢，原来这就是我们想要的’。”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tips：&lt;/strong&gt;在微信搜索wow36kr添加36氪微信公众账号&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>liao717921@gmail.com (yuanlingliao)</author>
+      <pubDate>Thu, 21 Mar 2013 17:45:46 +0800</pubDate>
+      <link>http://www.36kr.com/p/202062.html</link>
+      <guid>http://www.36kr.com/p/202062.html</guid>
+    </item>
+    <item>
+      <title>如何设计出更好的产品</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/f3de3713082774b7ce1543171cdd8eb2.jpeg" alt=""/&gt;&lt;br/&gt;
+乔布斯2005年在斯坦福的演讲，闻名于世，被推为世界上最经典的演讲之一。而事实上，在乔布斯演讲之前，曾经向一个人请教过关于演讲稿方面的问题。这个人便是好莱坞金牌编剧，《社交网络》、《新闻编辑室》的幕后写手Aaron Sorkin。&lt;/p&gt;
+
+&lt;p&gt;巧的是，这位资深编剧在乔布斯生前拒绝了他，而在乔布斯去世之后，编起了电影《乔布斯》。他曾在一段访谈中说，我用电脑还没有我女儿精通。我听说有些孩子拿到iPad的第一刻，便知道如何操作它。如果我可以同乔布斯对话的话，我很想问一问，他是如何做到的。&lt;/p&gt;
+
+&lt;p&gt;James Buckhouse 最近发布在Medium上的《&lt;a href="https://medium.com/design-story/dc17e3416cce"&gt;People，not users&lt;/a&gt;》，或许会是一个不错的答案：&lt;/p&gt;
+
+&lt;p&gt;你的用户都是人。他们真正需求是什么？他们喜欢做些什么？他们住在何处？以怎样的方式使用你的产品？他们过着怎样的生活？你的产品又在其中扮演着什么样的角色？&lt;/p&gt;
+
+&lt;p&gt;你的用户不是你的市场份额，他们是真真切切的人。他们在某处长大，有自己喜欢的乐队、初吻、雀斑、成功以及失败。你的产品只是他们生活的附属品，并非必需品。&lt;/p&gt;
+
+&lt;p&gt;了解这个以后，你该怎么做呢？&lt;/p&gt;
+
+&lt;p&gt;将你的产品展示给5个人看。不要去解释它的功能，只是看。间或问问他们的想法和感受。观察他们想要去了解一个产品的方式。看着他们浏览、点击、和遗漏。他们或许会找不到你的保存按钮，或许完全没有发现你的新功能。在尝试一通后，他们终于因为你的产品并未提供他们所期望的功能，失去了继续用下去的耐心。&lt;/p&gt;
+
+&lt;p&gt;用户在你没有给他一个确切的产品时，他们很难解释清楚他们要的究竟是什么。基于以上的观察，你可以改进你的产品，同时也能领悟出他们心里真正想要寻找的功能。&lt;/p&gt;
+
+&lt;p&gt;最后你要做的，就是将它做出来，就好像iPad一样。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>guolee89@gmail.com (guolee89)</author>
+      <pubDate>Thu, 21 Mar 2013 17:35:53 +0800</pubDate>
+      <link>http://www.36kr.com/p/202065.html</link>
+      <guid>http://www.36kr.com/p/202065.html</guid>
+    </item>
+    <item>
+      <title>Quora终于推出了全文搜索</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/311314f41acbd91ddf57fb0dcffe635d.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;社交问答网站 &lt;a href="http://quora.com/"&gt;Quora&lt;/a&gt; 终于推出了全文搜索，此举将改善其内容搜索体验，目测很受用户欢迎。&lt;/p&gt;
+
+&lt;p&gt;该公司官方博客称，改进版的Quora搜索引擎将不再需要用户像过去那样，转到一个个的独立页面去查看搜索结果，新的类似 Google 的关键字搜索将会返回一系列的结果。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;搜索任何关键字，结果中问题、答案、帖子和评论的预览都会显示在搜索结果中，这样就可以更容易地找到需要的内容。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/dac25abc5669e87a1716a07104b7fe43.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;通过搜索还可以直接访问 Quora 的用户、主题和您关注的博客。新设计的理念是：更好的发现和分享社区里的内容。&lt;/p&gt;
+
+&lt;p&gt;就在不久前，Quora还尝试用媒体助推问答，推出了全新&lt;a href="http://www.36kr.com/p/201870.html"&gt;官方博客Spotlight&lt;/a&gt;，聚焦当下热门话题。此外，它还&lt;a href="http://www.36kr.com/p/200777.html"&gt;将最优秀的100个回答加以汇总&lt;/a&gt;，做成 PDF 供所有人下载。再加上他们这次优化搜索体验的举措，都是在努力把内容提供给更多的用户。&lt;/p&gt;
+
+&lt;p&gt;虽然 Quora 不收取用户费用，但却也因为强迫用户注册，未注册无法获得完全的访问权限，而承受了一定的压力。今年早些时候，Quora 的立场有所放松，引入了新的不注册而查看内容的方法。不过，Quora 强调权限限制只是为了促进注册，而不是为了赚钱。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>whitedog356@gmail.com (sh356)</author>
+      <pubDate>Thu, 21 Mar 2013 17:20:29 +0800</pubDate>
+      <link>http://www.36kr.com/p/202064.html</link>
+      <guid>http://www.36kr.com/p/202064.html</guid>
+    </item>
+    <item>
+      <title>Google 应用商店 Android 应用改版</title>
+      <description>&lt;p&gt;据 &lt;a href="http://techcrunch.com/2013/03/20/googles-play-store-android-app-may-soon-get-another-facelift/"&gt;TC&lt;/a&gt; 报道，Google 正准备对 Android 平台上的移动版 Google 应用商店进行改版。新版应用版本号为 4.0，很可能会在今年的 Google I/O 大会上发布，而来自 Droid-Life 网站的知情人士称，自己已经先人一步获得并安装了这款应用。&lt;/p&gt;
+
+&lt;p&gt;从 Droid-Life 方面透露出的谍照上看，新版应用较当前版本有很大的不同，风格向着明亮清新的方向转变，一改之前黑灰的色彩搭配，而应用之间的布局也显得更加宽敞。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/4a8c55b2587d0d865e6b56497586fd09.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/33dab5fbf6ac81a30f96b5a2cbf5b09d.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;从图片比对中可以很明显地感受到两者风格的不同。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;TC 指出，更新后的应用商店在设计上和 Google Now 有一些类似之处。它们都偏好于更大的图像和斜体字文本，个人应用列表的展示方式也有异曲同工之妙。以下是新版应用商店的上手视频&lt;/p&gt;
+
+&lt;iframe height=498 width=510 src="http://player.youku.com/embed/XNTMwMDM4MjY4" frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;移动设备点击&lt;a href="http://v.youku.com/v_show/id_XNTMwMDM4MjY4.html"&gt;这里&lt;/a&gt;观看&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>304760767@qq.com (demetrius)</author>
+      <pubDate>Thu, 21 Mar 2013 16:44:49 +0800</pubDate>
+      <link>http://www.36kr.com/p/202063.html</link>
+      <guid>http://www.36kr.com/p/202063.html</guid>
+    </item>
+    <item>
+      <title>悉尼创业公司Canva融资300万美元，想让每个人都能成为设计师</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/0322008c01cbc597d449708c9366e1a7.jpg" alt=""/&gt;&lt;br/&gt;
+悉尼的一家叫做&lt;a href="https://canva.com/"&gt;Canva&lt;/a&gt;的创业公司最近在悄悄地做一个在线设计平台。产品还没做出来，融资就已经拿到了。近日，Canva宣布公司已经完成了一轮300万美元的种子轮投资。投资机构包括Matrix Partners、InterWest Partners、 500 Startups。另外还包括一些天使投资人，分别是Google Maps创始人Lars Rassmusen, Charles River Ventures合伙人Bill Tai 和雅虎CFO Ken Goldman。 据Canva CEO Melanie Perkins透露，公司将为在线合作设计提供一种难以想象的全新解决方案。但具体细节，Perkins没有透露。&lt;/p&gt;
+
+&lt;p&gt;事实上，Perkins表示，Canva的创意来自她之前做的一家叫Fusion Books的创业公司。Fusion Books创立于2007年，专为学校提供一个在线年鉴制作平台。目前Fusion Books已经覆盖了澳大利亚10%的学校，且近日还开始了对新西兰和法国等市场的开拓。&lt;/p&gt;
+
+&lt;p&gt;“我们知道我们研发出的技术不只能够用于制作年鉴。”Perkins表示，“所以，在去年夏天我们开始了Canva的尝试，希望它能把我们的技术带向更大的市场。”另外，Perkins还表示，“通过在Fusion Books的经历，我们逐渐摸清了一般人在把想法变成具体设计过程中都有哪些特点和习惯。根据这些特点和习惯，我们想为他们研发相应的设计工具，希望每个人都能轻松参与设计工作。”&lt;/p&gt;
+
+&lt;p&gt;到底Canva具体要做什么？我们从它的&lt;a href="http://www.linkedin.com/company/canva"&gt;LinkedIn主页&lt;/a&gt;或许能窥见一斑。上面的描述称Canva能够让你设计Facebook头像、名片、幻灯片、咖啡馆菜单、公司业务手册等等。当然，除了为普罗大众提供设计工具，Perkins也表示Canva同时也会推出专业版。&lt;/p&gt;
+
+&lt;p&gt;目前，Canva团队正在加紧其基于HTML5的Web版和iPad版的开发，预计会在今年5月正式推出。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>dwf@36kr.com (kimi447123410)</author>
+      <pubDate>Thu, 21 Mar 2013 16:09:31 +0800</pubDate>
+      <link>http://www.36kr.com/p/202061.html</link>
+      <guid>http://www.36kr.com/p/202061.html</guid>
+    </item>
+    <item>
+      <title>英国航空为百位科技天才开“Ungrouded”之旅，要他们同坐一舱在空中解决问题</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/67025523fe27b2e2e77c03ac541389a6.jpg" alt=""/&gt;&lt;br/&gt;
+今天，英国航空公司宣布了一个惊人的飞行之旅：它将开设一个名为“Ungrounded”的创新实验室飞行之旅。这次旅程将邀请来自Google 、Andreessen Horowitz、RocketSpace等硅谷公司的100为科技创新天才同坐一舱，共同针对同一问题商讨解决方案。英国航空表示，这次旅程是和联合国合作的，旅程目的地是伦敦，起飞日期是7月12日。&lt;/p&gt;
+
+&lt;p&gt;“别让天才们各自为政，只有当他们真正面对面，伟大的创新才会诞生。”这是英国航空副总裁Simon Talling-Smith在关于Ungrounded的记者会上指出的本次旅程的意义所在。&lt;/p&gt;
+
+&lt;p&gt;他表示，此次旅程邀请的100位科技天才将包括创始人、投资人、工程师和学院派，他们将各尽职能，在10小时的旅途中针对一个问题提出解决方案。而目前他们为此次旅程定的问题是：技术创新者所钻研的问题中有哪些是和实际问题所在存在不匹配情况。10小时的旅程结束之后，这100位科技天才将向联合国赞助的&lt;a href="http://www.dnasummit.com/"&gt;Decide Now Act&lt;/a&gt; 峰会和联合国国际电信联盟秘书长提交问题解决的进展情况。&lt;/p&gt;
+
+&lt;p&gt;把天才聚集起来解决问题，这个想法我们似乎见过。还记得《&lt;a href="http://www.36kr.com/p/154613.html" title="崩塌的英雄理想国TheGlint"&gt;崩塌的英雄理想国TheGlint&lt;/a&gt;》一文吗？理想国的三名热血青年就想把全世界的天才们都聚集在同一栋大楼，同吃同住，一起商量问题。三个年轻人还真实现了自己的想法，在旧金山的双子峰顶租了一幢四层小楼，取名TheGlint。在最开始的几个月 TheGlint 确实是搞得风风火火，吸引了不少慕名而来的人才，不过正式由于它太红火了，最终导致了它的夭折。三个创始人都表示，他们根本没想到 TheGlint 会发展的这么快，因此对 TheGlint 的很多细节也没有具体规划。而最终的结果是，人多了事也多。很多房客甚至为了房租、打扫、洗衣服这些生活琐事吵起来。8个月之后，TheGlint崩塌了。&lt;/p&gt;
+
+&lt;p&gt;把天才聚集起来是否能达到1+1&amp;gt;2的效果主要还是得看整体的组织。因此，对于Ungrounded这次旅程来说，组织安排非常重要。英国航空表示，整个旅程的组织安排他们将交于艾迪欧公司。此外， Eric Schmidt的投资机构 Innovation Endeavors和RocketSpace加速器也会从旁协助。人选方面，Andreessen Horowitz的Todd Lutwak、Google的Leor Stern、Innovation Endeavors的 Celestine Johnson、RocketSpace的Duncan Logan、硅谷银行的Gerald Brady、Stanford GSB的Marguerite Gong Hancock已确认参加。而其他乘客人选还在商讨之中。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>dwf@36kr.com (kimi447123410)</author>
+      <pubDate>Thu, 21 Mar 2013 14:46:11 +0800</pubDate>
+      <link>http://www.36kr.com/p/202059.html</link>
+      <guid>http://www.36kr.com/p/202059.html</guid>
+    </item>
+    <item>
+      <title>金钱或者经验，你现在想要的是哪个？</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/5ac369d580de77693f99fbbfc253d95b.jpg" alt=""/&gt;&lt;br/&gt;
+我经常会跟各种创业者交流，商量他们是否给加入某家创业公司。我通常会使出老招式，用问题回答问题：“金钱或者经验，你现在想要哪个？”&lt;/p&gt;
+
+&lt;p&gt;你瞧，如果你打算加入一家已经拿到500万美元的创业公司，在里面做一个市场总监、产品经理、资深构架师或者国际事业部老大，想挣够退休金的希望是非常渺茫的。但是没关系，并不是每份工作都需要成为你的重大突破，就算这份工作只是提供一个学习机会也不错嘛。&lt;/p&gt;
+
+&lt;p&gt;但是我还是经常碰到各种人问我这家公司会不会撞大运。在我看来，这些人是把钱和经验弄混了。简单的算一下就明白了，比如你有0.25%的股份，这家公司B轮拿到了500万美元，假设VC对它的估值正常，就是说这轮拿到了1/3的股份，500万除以1/3就是1500万美元的估值。如果这家公司以后再也融不到下一轮了（很有可能哟），最后VC正常退出（平均是5000万美元），那么你的股份值多少呢？12.5万美元。就这么多。简单的算术就能解决问题，但是人们就是很少去做。&lt;/p&gt;
+
+&lt;p&gt;我们假设花了4年时间来退出，那就是每年31250美元。这些是优先认股权，不是受限制股票，所以你得交一笔短期资本利得税，在加州大概是42.5%，最后也就是每年18000美元，这还是乐观的！对了，这儿还没考虑优先清算权，也就是说你拿的会更少。&lt;/p&gt;
+
+&lt;p&gt;别误会我，不是说钱不重要，只是在Palt Alto或者Santa Monica买套房得200万，这点钱真没啥用。&lt;/p&gt;
+
+&lt;p&gt;我不想打击你，只是想让你看清现实。如果你想挣钱（我是指起码能买套房），你就得自己去开公司或者做高管，或者天上掉馅饼你能成为类似Google、Facebook、MySpace或者Twitter的早期雇员。现实一点好么，这种公司一年全国能有几家？1家？顶多两家？有个投资人最近跟我说，每年有1500家公司拿到投资，只有80家最终是卖了5000万的，能卖到1.5亿的只有8家!&lt;/p&gt;
+
+&lt;p&gt;所以你现在明白为何当那些斯坦福的MBA、资深技术人打电话问我下一步该去哪时，我总是会问“金钱或者经验，你现在想要的是哪个？”&lt;/p&gt;
+
+&lt;p&gt;对大多数人来说，是经验。我的建议通常是：“保证你在这家公司工作能获得以下几项中的一样：同厉害的高官和VC结成良好的人脉，比上份工作更多的责任，能帮助你继续走下去的专业技能，同能够增加你行业阅历的公司合作的机会。”现在的经验是为了以后的金钱。&lt;/p&gt;
+
+&lt;p&gt;我第一次做BuildOnline的CEO时，还是1999年，那时候每招一个进来都会给他算给他的股份值多少钱，正逢科技股大涨，大家都愿意来。后来我就发现这样不好，开始给后面的人这么说：“加入BuildOnline，是因为你相信在这儿有独特的经历，因为你喜欢我们在做的事情，因为在这儿你可以做一份更好的工作，因为在这儿的几年里你可以给自己的简历加分，因为虽然我们给的工资不错但不会特别高。股权不会让你暴富，所以不要因为股份而加入我们。”&lt;/p&gt;
+
+&lt;p&gt;显然的，你应该去做那些你喜欢的工作，只有这样你才会每早来上班时都激情满满。不要还没弄清自己为啥要加入就去一家公司。&lt;/p&gt;
+
+&lt;p&gt;最近有个朋友问我该不该去一家创业公司去做CTO，去了就是3号员工。我问他母公司有多少股份，管理层又能拿到多少。他说还没问。后来我们聊起来，他说CEO只有5%的福分，而且没有为管理层预留期权池。我的建议是，闪啊！既然这家公司构架都有问题，死就只是时间问题了。&lt;/p&gt;
+
+&lt;p&gt;还有个聪明的小伙最近跟我聊了下，他在NY有个offer，湾区也有，还有一家LA的也要他，他自己做的公司也开张六个月了，这还是个不到21岁的孩子。他想知道该怎么办，我就告诉他得自己想好现在想挣钱还是学东西。以他现在的条件两件事都能做，但是得明白为什么要选其中之一去做。我建议他别去湾区那家，因为那是家稍大的公司，去那儿只能做些文书工作。如果你想学东西，起码得去一些能做点让人兴奋的事的公司。如果在那做的顺，你可以在那儿好好学习成长五年，如果不行，自己去创业，到26岁就能做3家公司了。那时候就是挣钱的时候了。&lt;/p&gt;
+
+&lt;p&gt;至于赚钱这件事，我有个朋友是个很有才的高管，上过哈佛商学院，呆过3家不错的创业公司和两家大公司，在美国和海外都工作过，现在刚过40岁。每次他给我打电话估计都会觉得我疯了，因为我总是冲他嚷嚷：“老兄，该挣钱了。别到处瞎晃做二把手，你得去掌舵，要么自己去开家公司或者去需要CEO的地方。&lt;/p&gt;
+
+&lt;p&gt;如果你真想挣大钱，就得冲到这家公司的前三四位，最好是老大。没几个人有这个本事，所以要弄清自己到底有什么样的技能、背景和脑子。&lt;/p&gt;
+
+&lt;p&gt;说了这么多，我希望这篇文章不会太尖酷，我不是那种只为了钱的人。在一家创业公司工作时非常有回报感的事情，再怎么推荐都不为过。但是你得将自己的才能、年纪、技能、抱负和经济基础同自己现有的处境匹配好。最起码，你得明白到底有多少回报，并且一定要问对自己正确的问题：“我到这来，是为了金钱，还是为了经验？”&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>leon@36kr.com (leon)</author>
+      <pubDate>Thu, 21 Mar 2013 14:33:45 +0800</pubDate>
+      <link>http://www.36kr.com/p/202058.html</link>
+      <guid>http://www.36kr.com/p/202058.html</guid>
+    </item>
+    <item>
+      <title>待遇有所谓：为什么我不会在Y Combinator孵化的公司工作</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/f89d466d81ace251b30498a2375da943.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;编者注：在创业的圈子里，我们常常会听到创始人和投资人的看法和观点，但是我们很少听到创业公司员工的声音。Michael Halligan是一位从1995年就开始在互联网领域工作的硅谷老手，虽然默默无闻，文字也算不上华丽，但是我们是否能从中透视到摘掉光环后，硅谷和普通硅谷人一些最真实的现状？&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;在过去的6年中，我和6家Y Combinator孵化的公司打过交道，我在他们公司里工作过或者我和他们合作过。我也在大概十几家YC孵化的公司面试过，但是我都没有接受他们的offer。我不去的原因是因为他们给的工资低于市场平均水平，可怜的福利待遇，而且他们期望你像奴隶一样给他们工作。我对那些创始人没有意见，他们都很优秀，但是我对YC有意见。YC越来越像一个想把刚毕业的大学生变成百万富翁，而把风投变成亿万富翁的邪教。&lt;/p&gt;
+
+&lt;p&gt;昨天，我刚刚和一家成熟的YC公司结束了我们的谈判。从评判创业公司的角度来讲，他们的条件非常理想：16个人、已经盈利、估值是4000万美元。他们告诉我他们拿了大约1200万美元的种子、天使和风险投资，现在银行里还有1000万美元储蓄。挺好的，但是我没有接受他们的offer，因为他们还是给我低于市场平均水平的工资和少得可怜的股份。当我问到他们关于福利的问题的时候，他们花了4天时间做一个 PDF 文档，但是内容就是最基本的医疗保险。他们吹捧他们的“无限制假期”制度，但是他们每年只给15天的带薪假日，和美国任何其它白领工作没有区别。&lt;/p&gt;
+
+&lt;p&gt;我把他们拒绝了之后， 和我另外一个offer对比了一下。我不想提具体工资，我是一位有20多年经验的架构师，我的工资水平还可以，但是我也生活在美国房价最贵的地区（指硅谷）。我希望可以在未来的两年内买房子，也就是说我需要一个好的工资，而且我还要每周做15-20小时的外包来攒够最低12万美元的首付。我在旧金山市内是买不起房子的，最多在市区外的East Bay买一套三居室。&lt;/p&gt;
+
+&lt;p&gt;YC孵化的公司给的福利待遇是这样的：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;本人的医疗保险，$0自付保险费&lt;/li&gt;
+&lt;li&gt;女儿的医疗保险，每月自付$100保险费&lt;/li&gt;
+&lt;li&gt;每年15天带薪休假&lt;/li&gt;
+&lt;li&gt;或许一台足球桌 （讽刺一些公司把办公室里的玩具也算成福利）&lt;/li&gt;
+&lt;li&gt;不好吃的午饭&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这是一家想招聘资深员工，而不光是应届毕业生公司的福利待遇：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;每年付3次行业会展的费用, 折合每年$18000 &lt;/li&gt;
+&lt;li&gt;每年$2500的灵活支出账户（一般是用来付医疗费用） &lt;/li&gt;
+&lt;li&gt;5%基本工资放入401k（&lt;a href="http://baike.baidu.com/view/1812071.htm?fromId=1245439"&gt;退休金&lt;/a&gt;） &lt;/li&gt;
+&lt;li&gt;我和女儿的医疗保险, $0自付保险费 &lt;/li&gt;
+&lt;li&gt;健身中心会员卡 &lt;/li&gt;
+&lt;li&gt;每月$150公交卡 &lt;/li&gt;
+&lt;li&gt;每年30天带薪休假&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;第二家公司是一家更传统一点的公司，现在正在做C轮融资，但是创建也只有4年。两家公司都给了我0.50%的股份。假设这两家公司都会以7500万美元的价格被收购，创始人会得到大约2000-3000万美元，我的0.50%股份会给我37.5万美元。这37.5万块钱要纳63%的税务（短期资本利益税），也就是说我能拿到手13.9万美元。这也就是一套房子的首付。第二家公司知道他们的股份是多么没有价值，所以每年会比那家YC孵化的公司多给我4.5万美元的工资。&lt;/p&gt;
+
+&lt;p&gt;YC旗下公司的创始人们有可能赚一笔大钱，所以我不责怪他们的观点。但是成功的诱惑已经遮住了他们的眼睛，他们不能够理解为什么有人会不想在他们的公司工作。他们大多数也是刚从大学出来，不能理解为什么有人会在乎待遇和工作与生活的平衡。他们每周工作100个小时，所以也想让你每周工作100个小时。&lt;/p&gt;
+
+&lt;p&gt;那家YC旗下公司的团队很棒，我很高兴认识他们，而且我也很尊重他们。他们真的很聪明，但是他们的产品对我来说毫无意义。这个产品不会改变世界，但这不是问题，第二家公司的产品也不会改变世界。基本上所有今天的创业公司都是在搞广告。如果我真的认同一家公司的使命，我可以每年拿10万美元的工资（对于他来说，是比较低的工资），没有福利待遇，股份越多越好。但是，除了我很多年前加入过的Napster（最早的一款P2P文件分享工具，改变了美国音乐业）之外，我没有真正认同过哪一家公司。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>hyd628@gmail.com (hyd628)</author>
+      <pubDate>Thu, 21 Mar 2013 12:37:55 +0800</pubDate>
+      <link>http://www.36kr.com/p/202045.html</link>
+      <guid>http://www.36kr.com/p/202045.html</guid>
+    </item>
+    <item>
+      <title>不想在Pinterest一颗树上吊死，社交营销平台Pinfluencer更名Piqora，瞄准Tumblr、Twitter</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/20c667a973f1bf9bf8990f0d2f18c43e.jpg" alt=""/&gt;&lt;br/&gt;
+围绕Pinterest做社交营销的公司有一大堆，&lt;a href="http://www.piqora.com/products/promotions"&gt;Pinfuencer&lt;/a&gt;就是其中一家。不过它可不想在Pinterest一棵树上吊死。这不，最近它就打算将业务拓展到Tumblr、Polyvore、Twitter等其它社交网络，并为此把名字都改成了Piqora。&lt;/p&gt;
+
+&lt;p&gt;更名和拓展业务有何关系？CEO Sharad Verma表示，“Pin”打头的公司名很容易让人联想到Pinterest，但要知道我们的业务可不仅是在Pinterest上，我们也会帮客户在Facebook做社交营销。另外，我们目前还正打算把Tumblr、Polyvore、Twitter等社交网络添进来呢!总之Piqora是想做一家跨平台的社交营销与分析公司。&lt;/p&gt;
+
+&lt;p&gt;另外，Verma还表示，Piqora做跨平台社交营销整合的另一原因是要拓展公司业务。伴随此次更名，Piqora还将上线一个叫做Gallery的功能。通过这个功能，在Piqora上做社交营销的商家能够获得自家产品在Pinterest上被Pin的情况，并把这些情况收集起来显示在自家网站上，以给消费者提供更丰富的商品信息。&lt;/p&gt;
+
+&lt;p&gt;Piqora认为这个功能对于商家非常重要，因为这能帮助商家形成一个“购买闭环”。在Pinterest分享商品的用户不一定会到源网站去购买商品，而把商品在Pinterest上的分享情况导到源网站则会帮助消费者真正做出购买决定。另一方面来说，现在很多电商网站虽然很重视在社交网络上的营销，但其对于自家网站的市场推广费用还是要高于社交营销费用（源于&lt;a href="http://techcrunch.com/2013/03/13/gartner-digital-marketing-survey-2012/"&gt;Gartner最近的一项统计&lt;/a&gt;）。因此，Gallery这种在商家自家网站上做营销优化的方式就显得格外有意义。&lt;/p&gt;
+
+&lt;p&gt;对于Gallery的具体功能，Piqora还表示，除了商品被分享情况，它还会为商品的热卖程度进行排序，还需为商品添加更多具体的零售商信息（比如库存量、购买链接等）。&lt;/p&gt;
+
+&lt;p&gt;虽然目光不只停留在Pinterest上了，不过Pinterest还是为其带来了一则好消息。我们知道，Pinterest一直没能利用自己的数据帮助商家做社交营销和分析，这也导致一大堆企业来“帮助”Pinterest填补这一空白。在此之前，Pinterest一直默不作声，因此这些企业也一直战战兢兢，深怕Pinterest有一天收回权利。而近日Pinterest产品经理 Cat Lee就向TechCrunch表示，类似Pinfuencer这样的企业完全不用担心。事实上，Pinterest对此表示非常欢迎，因为正是这些企业帮助Pinterest填补了空白，也帮Pinterest增加了用户黏性。总之，放心吧！&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>dwf@36kr.com (kimi447123410)</author>
+      <pubDate>Thu, 21 Mar 2013 12:32:54 +0800</pubDate>
+      <link>http://www.36kr.com/p/202056.html</link>
+      <guid>http://www.36kr.com/p/202056.html</guid>
+    </item>
+    <item>
+      <title>手机应用Throwback要“偷走”你心爱的照片，将来再用邮件发回给你</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/9ea745bfd3ce2e81948b9cc0890cabb1.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;小时候的我，总爱依偎在母亲身边，看她从书柜中取出一本厚厚的影集，指尖于照片间轻轻滑过，开启时间的枷锁，唤醒尘封的记忆，母亲的眼睛像被思念注满的清泉，澄澈而温暖。&lt;/p&gt;
+
+&lt;p&gt;于是爱上收藏照片。从胶卷，到数码，再到手机，设备不停的更换，拍照也越来越方便。我们能记录下的瞬间越来越多，但回忆的分量似乎也在逐渐消解。&lt;/p&gt;
+
+&lt;p&gt;当即时通讯越来越发达，我们忘却了一纸书信所能承载的情感分量；当人人微信上被图片浪潮淹没，我们是否还记得如何将回忆品尝？&lt;/p&gt;
+
+&lt;p&gt;或许正如Calli Higgins所言，“怀旧，是因为许久不见。”&lt;/p&gt;
+
+&lt;p&gt;有没有一种方式，让我们将照片里的故事沉淀，然后于某个洒满落日余晖的午后送还我们一份思念？Calli Higgins用&lt;a href="https://itunes.apple.com/us/app/throwback/id551185859?mt=8"&gt;Throwback&lt;/a&gt;给出了我们答案。&lt;/p&gt;
+
+&lt;p&gt;这款iOS应用的逻辑十分简单——挑选你相册里的照片，或是现在拍一张，然后设定一个时间（可以在未来1个月到5年的时间段内选择特定的一天或是一个时间段，也可以是未来随机的某一天），确定对象（自己，或者你和你的朋友），然后确认——Throwback就会“偷走”这张照片，在你设定好的时间里，以邮件的方式把照片寄还给你希望看到它的人。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/55744ac51b6d755435cafa157a1b262f.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;那么，你会怎样使用Throwback呢？&lt;/p&gt;
+
+&lt;p&gt;拍下毕业旅行时的合影，在5年之后寄回给同学，以此为契机发起一场同学聚会？&lt;br/&gt;
+拍下和恋人相处的甜蜜时光，在你们的纪念日给他/她送上一份惊喜？&lt;br/&gt;
+或者，像Raina所言：“假如我得了癌症，我要拍下我活着时候的照片，等我死后，每年的生日寄给我男朋友……吓死他……”&lt;br/&gt;
+这时Leon发话了：“我比较关心的是，如果几年之后Throwback不在了……”&lt;/p&gt;
+
+&lt;p&gt;旁白响起：隔一程山水，你是我不能回去的原乡，与我坐望于光阴的两岸。彼处桃花盛开，绚烂满天凄艳的红霞，你笑得清浅从容，而我却仍在这里守望，落英如雨，印证我佛拈花一笑的了然。爱，如此繁华，如此寂寥……&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>www.ljp@qq.com (JasonLee)</author>
+      <pubDate>Thu, 21 Mar 2013 12:14:20 +0800</pubDate>
+      <link>http://www.36kr.com/p/202055.html</link>
+      <guid>http://www.36kr.com/p/202055.html</guid>
+    </item>
+    <item>
+      <title>英国手机经销商Carphone Warehouse：三星 Galaxy S4预订量是S3的4倍</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/2866175b0bb88fd3118a8b0d22424e40.jpg" alt=""/&gt;&lt;br/&gt;
+三星&lt;a href="http://www.36kr.com/p/201906.html" title="Samsung Galaxy S4发布会实录：野心勃勃想做“生活伴侣”的S4，推出双镜头拍摄、Air View悬浮预览、眼动跟踪等功能"&gt;Galaxy S4&lt;/a&gt;能够延续S3的成功吗？相信很多人都有这个问号。而近日英国手机经销商Carphone Warehouse就为S4释放了一个积极信号：S4预订量是其前辈S3的4倍，这也让S4成了其网站历史上最畅销的手机之一。&lt;/p&gt;
+
+&lt;p&gt;值得一提的是，Carphone Warehouse称，S4完成这个4倍的成绩是在3天之内，而S3当时花的时间可是5天。很难相信当大家连S4的价格都不知道的情况下就如此积极（三星还未公布）。据悉三星将于4月26日正式发售S4，而如果你想在Carphone Warehouse网站上第一时间拿到S4，你还需要29欧元插队。有点夸张！&lt;/p&gt;
+
+&lt;p&gt;如此强劲的预售势头能够让S4超越前辈S3吗？我们先把S3的销售数字摆上，等待S4的挑战吧。S3发售后的前两个月就卖了1000万部，前5个月是达到3000万部，而到今年3月，S3的全球销量已经超过5000万部。加油吧，S4！&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>dwf@36kr.com (kimi447123410)</author>
+      <pubDate>Thu, 21 Mar 2013 11:04:22 +0800</pubDate>
+      <link>http://www.36kr.com/p/202054.html</link>
+      <guid>http://www.36kr.com/p/202054.html</guid>
+    </item>
+    <item>
+      <title>完爆旧式游戏体验，Stinky Footboard助你用脚操控游戏人物</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/0f0a0d24ba410b4564f22cdd9f4b2166.png" alt=""/&gt;&lt;br/&gt;
+还在右手方向键左手出大招的玩游戏？是时候的换一种方式了。&lt;/p&gt;
+
+&lt;p&gt;近日，位于加拿大的Stelulu公司，推出了一款名为&lt;a href="http://www.stinkyboard.com/"&gt;Stinky Footboard&lt;/a&gt;的硬件设备。顾名思义，这是一款服务于脚的设备，通过触发Stinky Footboard分布在脚趾、脚跟以及面板两侧的四个Cherry MX感应器，来完成游戏人物的移动操作。是不是很帅？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/124a7d545b017b9be29a0f52bc35d8da.jpeg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;像魔兽世界、任何一款射击游戏以及类似英雄联盟这样的战略游戏，在玩家上手之前，都需要熟悉大量的组合键操作，而Stinky Footboard不仅能降低这种学习成本，还能让你有种身临其境的感觉。熟练之后，势必完爆过去的游戏体验。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/3fc81ab21e4dd4263af0e2474269a021.jpeg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;Stinky Footboard目前兼容Windows 7/Windows 8，通过USB口连接，售价119美刀，预计今年6月将正式发布。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/ba4456dfbcf6ddabd099d31f47411ec1.jpeg" alt=""/&gt;&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>guolee89@gmail.com (guolee89)</author>
+      <pubDate>Thu, 21 Mar 2013 10:40:50 +0800</pubDate>
+      <link>http://www.36kr.com/p/202053.html</link>
+      <guid>http://www.36kr.com/p/202053.html</guid>
+    </item>
+    <item>
+      <title>Youtube宣布月活跃用户突破10亿</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/af9a5597a7f75d9848e80e18558cfb05.jpg" alt=""/&gt;&lt;br/&gt;
+今天，Youtube官方博客&lt;a href="http://youtube-global.blogspot.com/2013/03/onebillionstrong.html"&gt;宣布&lt;/a&gt;其月活跃用户已经突破十亿。对此，国外科技博客&lt;a href="http://techcrunch.com/2013/03/20/youtube-announces-that-it-has-hit-one-billion-monthly-users-which-is-roughly-ten-super-bowl-audiences/"&gt;TechCrunch称&lt;/a&gt;这一数字近乎疯狂，因为它是连传统电视网络都无法企及的。这意味着全球每两个互联网用户中就有一个在访问Youtube。&lt;/p&gt;
+
+&lt;p&gt;TechCrunch认为Youtube活跃用户的飞速增长除了归功于它跨越了所有设备，还因为它有了“&lt;a href="http://www.indianweekender.co.nz/Pages/ArticleDetails/10/3600/India/70-per-cent-Youtube-viewers-under-35-Google"&gt;Generation C&lt;/a&gt;（源自Google的定义，指的是Youtube上那群年轻人，他们对流行趋势敏感，帮助Youtube做内容归纳整理）”这样一群人。正式这群人创造的一个个视频表单让Youtube用户能够获得更优质的内容服务。&lt;/p&gt;
+
+&lt;p&gt;除此之外，Youtube的成长还有个重要原因——用户创造内容的过程越来越简单。现在，在我们的移动设备上，我们仅需要几分钟就能上传一段视频到Youtube。而且，为了提高用户上传视频的便捷性和速度，Google之前还专门推出了&lt;a href="http://www.36kr.com/p/200235.html" title="攻势继续，Google在iOS上推出视频录制/增强/上传应用Youtube Capture"&gt;Youtube Capture&lt;/a&gt;应用。通过它，用户仅需3次点击就能完成拍摄和上传的动作。&lt;/p&gt;
+
+&lt;p&gt;10亿用户数的宣布对于Youtube而言最大的好处是它又得多准备点钱袋子来装广告费了。而对Google来说，16.5亿美元的收购价确实也没白花。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>dwf@36kr.com (kimi447123410)</author>
+      <pubDate>Thu, 21 Mar 2013 10:28:57 +0800</pubDate>
+      <link>http://www.36kr.com/p/202052.html</link>
+      <guid>http://www.36kr.com/p/202052.html</guid>
+    </item>
+    <item>
+      <title>海外自助游app“爱出国”为你奉上当地导游私藏干货，打通旅行中的内容、工具服务</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/ae4cf8b13c09530bdf74f5af21ae4126.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;还在各大论坛泡数个月收集素材？还在抱个砖头大的LP走南闯北？移动app出来后，我们有了藏在手机里的旅行攻略，按说方便了许多。不过，现在的大部分旅行攻略都是瞄准用户出行前的需求，写得连篇累牍，很多也都是聚合驴友的经验之谈。&lt;/p&gt;
+
+&lt;p&gt;跟上面的这些app相比，“&lt;a href="http://www.iichuguo.com/"&gt;爱出国&lt;/a&gt;”的定位有些不同。它瞄准的是自助出境游用户在旅行中的需求，所有攻略都写成了精短的短攻略，另外还拉上当地导游奉上私藏干货——毕竟，驴友去一个地方一趟两趟，比不上导游天天在当地混迹折返。&lt;/p&gt;
+
+&lt;p&gt;爱出国的目标是将内容和工具服务与用户在旅行中的体验、需求和实际场景做深度结合，所以它的功能就围绕这个目标包括了这么几块：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;奉上当地导游私藏干货、并尝试将信息高度整合：只将每个地方最具特色的内容做模块化呈现；&lt;/li&gt;
+&lt;li&gt;个性化的内容推荐：1.根据不同用户群体特性，告诉你白领爱去哪、局长爱去哪、屌丝爱去哪；2.基于LBS位置信息的内容推荐；&lt;/li&gt;
+&lt;li&gt;聚合当地商家的优惠信息：满足出国游用户普遍的购物扫货需求；&lt;/li&gt;
+&lt;li&gt; 各类工具服务：包括离线地图、导航、查找周边美食、景点和商场等，以及含汇率换算、货币介绍等的主题内容包；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/3e8bcf5566f2f98a025b97b3fd268c5e.jpg" alt=""/&gt;&lt;br/&gt;
+当然，像这样瞄准海外游市场的app还不止爱出国，比如国内穷游团队的“穷游锦囊”，其优势是穷游在海外中国驴友中的多年口碑和内容积累，以及全球最大旅游社区tripadvisor推出的同名app，不过前者只有大段攻略、体验有待体验，后者的本地化做得不好。另外还有一家途客圈，听说已经转型围绕多个城市分别推独立app。&lt;/p&gt;
+
+&lt;p&gt;爱出国的创始人涂晋曾在腾讯任职多年，主攻产品研发。顺着这个思路他告诉我，目前市面上的很多攻略产品都做得很PC化、常是装了一大堆内容。相比之下，他们希望爱出国可以为游客提供“顾问式的工具服务”，通过碎片化的内容呈现，满足用户在出行中的各类及时的需求，如随时查攻略、随时可定位等，让用户只需在app上花上几分钟、专注沿途风景。&lt;/p&gt;
+
+&lt;p&gt;而之所以瞄准出境游，涂晋解释说，用户出境游人生地不熟、痛点多，现在又没有很好的团队能够解决这些痛点；另外，近年来国内用户出境游的增速迅猛，这些都意味着机会——所以初期爱出国的几款攻略就主打美国市场，包括拉斯维加斯、旧金山、纽约、夏威夷等数个热门城市，单个城市聚合了一千到两千家的商家信息。在涂晋眼里，这些城市是所有扫盲团都会去的地方，下一步则会进一步覆盖美国的其他一线和二线城市， 并逐渐辐射到欧洲、澳洲、加拿大和日韩等地。&lt;/p&gt;
+
+&lt;p&gt;他们下一步的目标则是深入旅游行业，做透做深线下信息的整合——除了间接的商家信息聚合以外，已经有跟地面商家的直接合作。但他们最终的定位则是要做“出国旅行版的大众点评”。在涂晋看来，地面商家他们能谈，但别的竞争对手也能谈。反观大众点评，他们的真正优势实际是用户信息的积累。这是他们希望向大众点评看齐的，并希望日后能基于用户数据做精准营销。&lt;/p&gt;
+
+&lt;p&gt;当然，理想面前困难同在。做了爱出国之后涂晋也有这样的体会，即便在美国这样的国家，商家的信息化程度也没有他们想象的高。目前这些商家只承认纸质的优惠券、优惠券信息也主要是团队自己去商家主页上去扒。他们现阶段的一个任务正是尝试与商家合作，承认他们的电子优惠券。另外，他们也在寻找融资。&lt;/p&gt;
+
+&lt;p&gt;最后再分享一个爱出国团队的策略。跟一般的攻略app不同，爱出国的定位是付费软件，初始下载免费，但用户在10次免费体验之后就需付费。涂晋解释说，因为这类app用户量在短期内不会快速增长，所以设置成付费更合理。另外一个更重要的原因是，出境游用户属于定位非常精准的人群，他们愿意为有价值的信息和服务付费。你怎么看呢？&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://itunes.apple.com/cn/app/ai-chu-guo-la-si-wei-jia-si./id578553766?mt=8"&gt;iOS下载地址&lt;/a&gt;&lt;br/&gt;
+&lt;a href="http://t.dotel.cc/d/LY1.5(Android)_Build0100_Web.apk"&gt;Android下载地址&lt;/a&gt;&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>joycechen@36kr.com (joyce62270252)</author>
+      <pubDate>Thu, 21 Mar 2013 10:26:36 +0800</pubDate>
+      <link>http://www.36kr.com/p/202050.html</link>
+      <guid>http://www.36kr.com/p/202050.html</guid>
+    </item>
+    <item>
+      <title>最新消息称苹果将在6月29日iPhone发布6周年时发布iPhone 5S和iPad 5 </title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/a5687cfec77745680e6c99b3a87f8475.jpg" alt=""/&gt;&lt;br/&gt;
+对于苹果下一代iPhone和iPad的发布时间，一直有各种传闻。不过&lt;a href="http://gizmorati.com/2013/03/iphone-5s-ipad-5-special-releasing-event-original-passion-new-ideas/"&gt;gizmorati&lt;/a&gt;最新消息称，苹果将在6月29日，也就是苹果iPhone发布6周年时发布传闻中的iPhone 5S和iPad 5。&lt;/p&gt;
+
+&lt;p&gt;据悉，苹果将举办一场名为“Original Passion, New Ideas”的特殊活动来庆祝iPhone 发布6周年，并在这次活动上发布下一代iPhone和iPad。&lt;/p&gt;
+
+&lt;p&gt;gizmorati声称自己的消息来自苹果内部，并且得到了第三方的证实，而发布地点可能在苹果的总部举行。&lt;/p&gt;
+
+&lt;p&gt;根据&lt;a href="http://www.36kr.com/p/200813.html"&gt;之前消息&lt;/a&gt;，iPhone 5S可能会配备更高规格的处理器、更高像素的摄像头、更加耐磨的屏幕、全新的外观设计以及配备指纹识别功能。&lt;/p&gt;
+
+&lt;p&gt;而对于下一代iPad，&lt;a href="http://www.36kr.com/p/200700.html"&gt;之前有传&lt;/a&gt;iPad 5 会比 iPad 4 更轻更薄，并采用全新的 A6X 处理器，接口规格沿用 Lightning，整体设计样式上保留三代时的外观。目前还不知道此次发布会是否会包括iPad Mini 2，之前有消息称iPad Mini 2最快会在今年4月发布。&lt;/p&gt;
+
+&lt;p&gt;由于恰逢苹果iPhone发布6周年，我觉得这个发布时间的可信度比较高。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>johntian@36kr.com (JohnTian)</author>
+      <pubDate>Thu, 21 Mar 2013 09:43:36 +0800</pubDate>
+      <link>http://www.36kr.com/p/202048.html</link>
+      <guid>http://www.36kr.com/p/202048.html</guid>
+    </item>
+    <item>
+      <title>在线教育怎能缺少在线考试，Terascore正式上线</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/f1da9d1596e7788c536c005ddeeb6eab.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;传统考卷的答题卡太费时间，尤其在选择题过多的时候，如果你不幸填挪一个，答得再好，分数也一定很低。而对于老师来讲，批改学生答卷，就算已经有各种工具来提高效率，但至今也未能有一个非常好的解决方案。&lt;/p&gt;
+
+&lt;p&gt;问题并非出在工具上，而是过去这种纸质考试形式上。今天，出自Y Combinator孵化器的公司&lt;a href="https://www.terascore.com/"&gt;Terascore&lt;/a&gt;正式上线，他们要做的，就是将传统的课堂测验搬到网上。&lt;/p&gt;
+
+&lt;p&gt;Terascore会给老师提供一系列工具，帮助他们出题和管理在线测试等。而测试结果，在测试结束之后便会出来，又快又准。平台还提供即时的分析工具，帮助老师深入了解问题的质量和难度，如果觉得某一问题好，老师可以将它存储起来，下次测试再用。总的来说，这是一项方便老师更好了解和评估学生表现的服务。&lt;/p&gt;
+
+&lt;p&gt;Terascore推出的时机非常好。随着在线教育的关注度水涨船高，以及社交网络和智能手机在老师和学生之间的普及，学校也开始连接到各种网络。而线下测试的方式，时间周期太长，老师不能快速跟进学生的进度。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/71ab5162445478ae5efdfd872f343bab.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;其他服务于在线教育领域的网站，比如像TeachersPayTeachers和BetterLesson等帮助老师和教育工作者节省时间、共享更好的课堂计划以及教案的网站，已经使得一些老师只通过买课程教案盈利超过100万美元。而Terascore认为这样的机会，同样在在线测试中存在。&lt;/p&gt;
+
+&lt;p&gt;Terascore给老师提供的是一个基于浏览器，“所见即所得”式的工作界面(如下图)。老师可以通过工具在试题中插入图片、链接、视频等交互性的内容。同时还支持数学方程。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/1cc48928069efb983387565425bb8d52.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;Terascore的下一步计划是推出iPad版应用，并给其配备高级的防作弊措施，还带有锁定功能，防止学生直接查找答案。首批beta版将于二月中旬在特定的5家学校测试，目前经由Terascore完成的测试每周约500个。平台暂时免费，在性能和功能逐渐完善之后，会考虑推出高级版本，收费在7-9美元/月。&lt;/p&gt;
+
+&lt;p&gt;公司创始人Balazs Moldovanyi表示，他们目前仍将专注与平台的建设，而不是急着去寻找更多的风投资金。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>guolee89@gmail.com (guolee89)</author>
+      <pubDate>Thu, 21 Mar 2013 09:33:27 +0800</pubDate>
+      <link>http://www.36kr.com/p/202047.html</link>
+      <guid>http://www.36kr.com/p/202047.html</guid>
+    </item>
+    <item>
+      <title>大数据应用框架初创企业Concurrent获400万美元融资</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/04ef4bdf86f24da971f690800b5bf091.png" alt=""/&gt;&lt;br/&gt;
+&lt;a href="http://www.36kr.com/tag/%E5%A4%A7%E6%95%B0%E6%8D%AE"&gt;大数据&lt;/a&gt;初创企业Concurrent在A轮融资中获400万美元。&lt;/p&gt;
+
+&lt;p&gt;成立于2008年的&lt;a href="http://www.concurrentinc.com"&gt;Concurrent&lt;/a&gt;是一家主要面向企业的大数据应用平台开发商。创始人Chris K. Wensel是流行的开源项目Cascading的开发者。Cascading实际上是一个Java应用框架，利用它开发者无需关心底层的MapReduce即可方便地开发企业级的数据分析和数据管理应用，这些应用可以部署在不同的Apache Hadoop计算环境上。&lt;/p&gt;
+
+&lt;p&gt;包括社交网络、零售、金融服务、电信、生物信息以及地理空间等在内的行业均有Cascading的应用案例。其客户包括eBay、Etsy、FlightCaster以及Twitter等，应用领域包括大规模数据的数据处理、数据过滤、工作流优化等。而Airbnb则利用Cascading进行数据的规范化以及对Map Reduce运行实例的控制，实现对点进率、页面统计数据、下降率、预订数等重要数据的分析。分析师可以根据这些数据设定一些重要指标，从而比较不同地域的表现，识别出网站的潜在问题。&lt;/p&gt;
+
+&lt;p&gt;此轮融资由True Ventures和Rembrandt Venture Partners领投，此前Concurrent已获90万美元种子期融资。&lt;/p&gt;
+
+&lt;p&gt;随着大数据时代的来临，数据规模将不断扩充，对Hadoop集群的简化、自动化部署有助于开发者快速扩充应用的处理规模，因此应用框架对开发者的作用将日益凸显。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>boxi.yang@163.com (boxiyang)</author>
+      <pubDate>Thu, 21 Mar 2013 09:02:47 +0800</pubDate>
+      <link>http://www.36kr.com/p/202046.html</link>
+      <guid>http://www.36kr.com/p/202046.html</guid>
+    </item>
+    <item>
+      <title>Google Keep发布，Pinterest，你危险了！</title>
+      <description>&lt;p&gt;3 天前&lt;a href="https://drive.google.com/keep/"&gt;Google Keep&lt;/a&gt;有次&lt;a href="http://www.36kr.com/p/201964.html"&gt;短暂的现身&lt;/a&gt;，今天这款 Google 自己的笔记服务&lt;a href="http://www.36kr.com/p/202042.html"&gt;正式发布&lt;/a&gt;。设计非常简洁，可以记笔记，附图片和建列表，数据存在 Google Drive。web 版用了响应式设计，Android 客户端也已在 Google Play&lt;a href="https://play.google.com/store/apps/details?id=com.google.android.keep"&gt;上架&lt;/a&gt;，支持语音输入。&lt;/p&gt;
+
+&lt;p&gt;在Google Keep上多放几条记录，再把它变成Grid View，然后，有没有发现和Pinterest很像呢？可以这样讲，目前Keep和Pinterest的唯一区别在于，后者是可以进行社会化分享的，而前者还只是纯粹的笔记应用。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/7d632412c1b9665ee45dc0dd6f059ff9.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;社交一直都是Google的野心所在，从他们在Google+上费的心血就能明显感受的到。看到Keep一出来，许多人的第一反应是“Evernote，你危险了！”的确如此，但Pinterest可能也要更加警惕了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/33eb621b336fd5c0f3a273ac96d7417c.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;Google Keep足够简单好用，凭Google的号召力，大家必然蜂拥而至，在里面添加各种内容。保存的东西多了起来，你就会有和别人分享的欲望，接着，Keep加上社会化分享的功能就顺理成章了。再大胆假设，假如Keep再和Google搜索结合一下，你随手就能把喜欢的搜索结果保存到Keep里，这里边又能产生多大的能量呢？&lt;/p&gt;
+
+&lt;p&gt;当然了，Keep才刚刚发布，Google并不急于告诉大家Keep的背后有多大野心。不管怎样，先把Keep用起来，再仔细观察吧。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>jason@36kr.com (JasonZheng)</author>
+      <pubDate>Thu, 21 Mar 2013 08:44:44 +0800</pubDate>
+      <link>http://www.36kr.com/p/202044.html</link>
+      <guid>http://www.36kr.com/p/202044.html</guid>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>36氪 | 关注互联网创业</title>
+    <link>http://www.36kr.com/</link>
+    <atom:link href="http://www.36kr.com/feed" rel="self" type="application/rss+xml"/>
+    <description>36氪 | 关注互联网创业最新发表新文章.</description>
+    <language>en-us</language>
+    <item>
+      <title>揭秘Amazon反应速度超快的下拉菜单</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/c90e4326bff90aeda163dac7b882cf52.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;如果你以前觉得Amazon这家公司不太在用户体验上下功夫，这篇文章可能会改变你的看法。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.amazon.cn/ref=z_cn"&gt;Amazon主页&lt;/a&gt;的左上角有一个商品分类浏览的下拉菜单。当鼠标从菜单中的选项上滑过时，子菜单的显示速度是超快的。我们可以看一下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/2b6361022d75f4edb11cd1b8cd2aa10a.gif" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;这个显示速度基本是与鼠标移动同步的，但是绝大多数网站的下拉菜单在显示子菜单时会有一定的延迟，例如：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/7e137ab02d1e5db40f8414a9514b641b.gif" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;这个延迟反应是必须的，因为如果没有，当你想把鼠标从一个主菜单选项挪到一个子菜单选项时，子菜单会消失。就像这样：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/4c3a30095fa7f08a18ecda813115422f.gif" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;但是Amazon的下拉菜单没有这个延迟，而且子菜单也不会在不应该的时候消失。它是怎样做到这一点的呢？答案是通过探测鼠标移动的方向和轨迹。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/3f716d75a80cdce23c803fc6f088846e.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;想象在鼠标当前的位置和子菜单的左上角和左下角之间画一个三角形。如果鼠标在这个三角形的范围之内移动，那用户很有可能是在把鼠标从主菜单向子菜单里挪，所以不要立刻更新子菜单。但是如果鼠标挪动到这个三角形之外，则可以马上更新子菜单。这就是Amazon主页反应速度超快的下拉菜单背后的算法。&lt;/p&gt;
+
+&lt;p&gt;上帝在细节中（God is in the details）。揭秘一个前端细节，我们看到的不仅是一个精妙的算法，而是一个科技巨头对于产品和用户体验的态度。Amazon的数百亿市值有多少是从这些很小很小，但是明显很用心的产品细节中积累起来的呢？&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;如果想把这个菜单逻辑运用到你的网站上，这是 Khan Academy工程师 Ben Kamens 写的 &lt;a href="https://github.com/kamens/jQuery-menu-aim"&gt;jQuery插件&lt;/a&gt;。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;如果你觉得这个很神奇，很想做这方面的工作，或是觉得这没有什么，你的 UX 设计比这个好，可以考虑给研发出这个细节的 Amazon 团队（chaddes@amazon.com）投一份简历，因为他们正在招聘。&lt;/em&gt;&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>hyd628@gmail.com (hyd628)</author>
+      <pubDate>Thu, 07 Mar 2013 20:50:26 +0800</pubDate>
+      <link>http://www.36kr.com/p/201751.html</link>
+      <guid>http://www.36kr.com/p/201751.html</guid>
+    </item>
+    <item>
+      <title>来自上海的Kickstarter项目SIMPLcase：为国际空中飞人打造的苹果壳</title>
+      <description>&lt;p&gt;如果你经常在世界各地旅行，国际漫游的费用远没有办一张当地的手机卡来的划算。但买了卡后，换卡首先就是个技术活，一个不小心，娇贵的mini SIM卡就有可能就损坏或丢失了。为解决这个不大不小的难题，人在上海的Simon（华人）和Ed（英国人）就一起设计了SIMPLcase苹果壳，并把它发布到了Kickstarter上面。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/577f70ebe0e91343c491ebfd01fe9c9c.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;如图，SIMPLcase可存放3张mini SIM卡和一个换卡工具，方便随时更换和存放mini SIM卡。这款保护壳的工业设计也很出色，边缘增加了1mm，最厚处也只增加了3mm。另外，在SIMPLcase背后插入随便一张卡片，就可以作为iPhone的支架使用，非常方便。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/c08f807e135d8d632170abc9c4dd0c3d.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;SIMPLcase的募资截止到美国东部时间三月29日凌晨4点，目前已经获得了766个支持者，13233美元的资助，还有6767美元就可以达成他们的募资目标，感兴趣的朋友可以去&lt;a href="http://www.kickstarter.com/projects/simonkwan/simplcasetm-minimalist-iphone-case-for-travelers?ref=home_location"&gt;支持一下&lt;/a&gt;。如果一次资助5188美元以上，他们将免费带你游览香港，参观南方的工厂和上海的办公室，并获得专属的SIMPLcase（仅一个名额）。&lt;/p&gt;
+
+&lt;iframe width="640" height="420" src="http://www.kickstarter.com/projects/simonkwan/simplcasetm-minimalist-iphone-case-for-travelers/widget/video.html" frameborder="0"&gt; &lt;/iframe&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>whitedog356@gmail.com (sh356)</author>
+      <pubDate>Thu, 07 Mar 2013 20:43:09 +0800</pubDate>
+      <link>http://www.36kr.com/p/201754.html</link>
+      <guid>http://www.36kr.com/p/201754.html</guid>
+    </item>
+    <item>
+      <title>魔镜啊魔镜，帮我拍下这身新衣，发到网上看看有没有人帮忙付账 </title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/81888a9ca1c6296d2e1933bdd4a7e2ad.png" alt=""/&gt;&lt;br/&gt;
+一个人在商场逛街，换上新衣服后对着镜子左看看右看看，总是拿不定主意，遂掏出手机对着镜子咔嚓一声，照片发给朋友“好看不？在线等~”。女生对这种场景应该不会陌生，微博上这种在试衣间的自拍照多了去了，但是这么拍有一点不爽的是，你没法站的自自然然的拍，得举着手机，于是本来是拍新衣服的，却让正中心的手机抢了风头。&lt;/p&gt;
+
+&lt;p&gt;蚁联团队做的&lt;a href="http://www.iamirror.com/"&gt;嘀嗒自拍镜&lt;/a&gt;也许能让商场自拍变得更有趣方便。在普通的试衣镜上装载一套智能拍摄设备Mirror box，包含摄像头、通讯模块和储存设备，这面镜子就变成了可以帮你自拍的魔镜，控制器就是你的手机。站在镜子前摆好姿势，用手机访问嘀嗒自拍镜的网站，点击准备拍摄，手机会发出一串滴滴哒哒的声音并将自有UDID上传到服务器，Mirror box接收到音频信号后就会进行拍照操作，之后还会对拍摄出的图片进行智能调整以更切合真人图片，完成后将照片和加密编码上传服务器，服务器端揭秘配对，将照片传到你的手机。一张不用举着手机比划的自拍照到手了。&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe height=420 width=640 src="http://player.youku.com/embed/XNTIxNDkyOTQ4" frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;&lt;br/&gt;
+设想很好，但是推广是个问题。这家店得有一面魔镜，消费者进去后还得知道怎么用智能手机和配套应用来完成这略显复杂的操作。创始人杨迪对此是这么打算的，硬件层面的推广打算同中国物联网集团合作，弥补团队自己线下资源的不足。应用推广则会考虑开放API，让大型品牌商将魔镜应用内嵌到自己的App中。&lt;/p&gt;
+
+&lt;p&gt;杨迪称，目前这款产品还只是初级阶段，未来可能会做的有：结合RFID射频码技术，在拍照的同时识别用户穿的衣服的品牌尺码等信息，用户分享照片到社交网络后会带有服装信息购买链接，可以让朋友直接帮你购买，也能帮品牌商做社交营销。对奢侈品和高端品牌，则会考虑用定制LED屏幕+Kinect技术实现虚拟试衣和商品浏览等功能。&lt;/p&gt;
+
+&lt;p&gt;嘀嗒自拍镜利用音频识别来解决自拍的问题，只是一个切入口而已，他们的目标是为线下服装品牌商提供一套推广解决方案。技术上没有问题，但是从现在看来，交互上还是有点不太自然。Chirp可以算是这类音频识别的始祖，当时出来时大家想过很多种可能的使用场景，没想到首先用上的居然是自拍魔镜。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>leon@36kr.com (leon)</author>
+      <pubDate>Thu, 07 Mar 2013 18:44:10 +0800</pubDate>
+      <link>http://www.36kr.com/p/201753.html</link>
+      <guid>http://www.36kr.com/p/201753.html</guid>
+    </item>
+    <item>
+      <title>“半成品搭配+周边超市配送”，订菜网欲打造“小而美”的本地生鲜电商</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/0aa4f32f66be8583845b7aa0dbd29a56.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;在全民皆电商的今天，却少有看到生鲜行业“触电”的成功经验。据此前公开的数据显示，生鲜品类占整个电子商务市场不到3%的份额，仍是一片有待开发的蓝海，不过这是一片冰冻的蓝海。由于生鲜品类的保鲜周期短，库存成本高以及物流要求严格等“硬伤”，少有能够玩转生鲜品类的电商。仅针对江苏地区的生鲜电商品牌“&lt;a href="http://www.dingcai.com/load.do?method=index"&gt;订菜网&lt;/a&gt;”却走出了一条“小而美”的本地电商服务道路。&lt;/p&gt;
+
+&lt;p&gt;生鲜电商虽然鲜有成功“触电”的经验，不过失败的教训却不少，做生鲜电商最大的忌讳在于想要和楼下的菜市场抢生意。生鲜电商本质还是电商，去网上买菜的人和去菜市场买菜的人着实不太相同。因此“订菜网”坚决将目标人群锁定在都市白领阶层，她们出于健康、经济、卫生等方面的考虑，愿意自己买菜做饭，但由于平时工作确实比较忙，因此网上定菜对于她们来说也确实是不错的选择，并且她们对电子商务也不排斥。很难想象平时逛菜市场的大妈会愿意开电脑，打开网页，网上选菜，最后还要在线完成支付，并且这都还是在“看不见菜”的前提下完成。&lt;/p&gt;
+
+&lt;p&gt;除了目标人群，做生鲜最头痛的问题还在于渠道、库存和配送，几乎所有出问题的生鲜电商都死在这几个环节上。不同于衣服和3C产品，生鲜的损耗异常迅速，根本经不起几天的库存周转，再加上物流配送的损耗，大把的银子就这样打水漂了。首先是进货渠道，“订菜网”定位在仅仅针对江苏地区的“本地生鲜电商”，因此进货渠道主要是当地的大型蔬菜批发市场，由于长期订购并且每次量都不小，因此和当地的大型蔬菜批发市场有长期的合作，基本可以保证供应量。&lt;/p&gt;
+
+&lt;p&gt;其次是库存，与生猛海鲜可以进行常年冰冻不同，蔬菜生鲜对库存的要求非常严格，稍有几天库存周转不过来，随时都可能被耗死。而“订菜网”采取的是先下单，后采购，最后再送货的模式，所有的采购完全是基于用户的订单量，因此几乎不存在库存的问题。基本上是早上将生鲜蔬菜采购回来，在晚上之前就可以全部送出去，整个周转期维持在一天。&lt;/p&gt;
+
+&lt;p&gt;接下来要解决的就是配送了，“订菜网”并不提供送菜上门服务，而是根据用户的地址，将蔬菜送到离用户最近的超市内，等到用户下班回家的时候，顺带去超市把菜带回家，这样既解决了配送的问题，又解决了配送过程中损耗的问题。“订菜网”和超市合作，将蔬菜放到超市的冰箱里面，最后再和超市进行结算。为此，“订菜网”还专门开发了一套BMC系统（Business、Market&amp;amp;Machine、Customer），简单的说就是用户在“订菜网”上下订单，通过连锁超市和智能终端管理系统，将商品快速的配送到消费者手中，其实质是构造了一个物联网的基础功能平台，体现出未来强大的竞争优势。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/8cc908aaa99fe00df3843520513ab62d.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;例如小李在订菜网下好单，指定他的菜放到他家小区门口的A超市,＂订菜网＂的客服人员看到下单情况下，配好货后就会把菜送到小李指定的超市，小李下班回家顺路经过超市，去提菜，他到冷藏柜里找到自己的菜（上面有标签，用户名，条码）到收银台扫描一下即可。&lt;/p&gt;
+
+&lt;p&gt;除了通过“&lt;strong&gt;本地超市配送&lt;/strong&gt;”解决物流问题外，“订菜网”的另一大特色服务是“&lt;strong&gt;半成品搭配&lt;/strong&gt;”服务。就像之前说的，生鲜电商不是和家门口的菜市场抢客户，而是面对有做菜需求的都市白领。她们之所以上网定菜，最大的推动力还是“方便”两个字。“订菜网”所有的订单均是采用“半成品搭配”进行销售，&lt;strong&gt;“订菜网”卖的不是青椒和猪肉，而是卖的配好的“回锅肉”&lt;/strong&gt;，将青椒和猪肉洗干净切好，并且还会附上生姜、大葱等佐料。这样即方便配送，又增加了生鲜的附加值。（不然你以为卖菜能赚几个钱！）&lt;/p&gt;
+
+&lt;p&gt;目前“订菜网”整个团队大约有20多个人，包括技术（网站开发）、客服（售后服务或咨询）、采购（食材）、市场（谈合作）、物流配送和网站运营。目前合作的超市也只有21家，已经开始无法能满足订单的需求了，同时也正在积极拓展商家、扩充菜品以及搭建BMC系统。&lt;/p&gt;
+
+&lt;p&gt;“订菜网”创始人对36氪透露，本地生鲜确实是个苦逼的行业，不过采取“&lt;strong&gt;半成品搭配+周边超市配送&lt;/strong&gt;”的确可以将风险降低不少。并且做生鲜电商，基本是以本地服务为主，他们目前定位江苏地区，也正在摸索经验，短期并不考虑将这种模式复制到其他地区。不过“半成品搭配+周边超市配送”对于本地生鲜电商，确实是个不错的尝试。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>wangjingyu@36kr.com (wangjingyu)</author>
+      <pubDate>Thu, 07 Mar 2013 18:43:52 +0800</pubDate>
+      <link>http://www.36kr.com/p/201588.html</link>
+      <guid>http://www.36kr.com/p/201588.html</guid>
+    </item>
+    <item>
+      <title>Uber式的钟点工服务公司Homejoy获Andreessen Horowitz等170万美元种子投资</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/16c5afd85be2555df2eb6bde8d270320.png!heading" alt=""/&gt;&lt;br/&gt;
+想找钟点工，可是不知道打谁的电话？还真有人针对这个问题做互联网创业了。专注钟点工的本地服务公司&lt;a href="https://www.homejoy.com"&gt;Homejoy&lt;/a&gt;就是这么一个项目，在昨天宣布获得了170万美元的种子投资。参与Homejoy这次种子投资的足够亮眼，包括了Andreessen Horowitz，First Round Capital等。CEO兼联合创始人Adora Cheung表示，投资人对这种本地生活服务领域感到特别兴奋，因为它能帮失业者、有些时间赋闲在家的人找到工作。&lt;/p&gt;
+
+&lt;p&gt;这家改名前叫Pathjoy的公司用Uber中心总调度的方式为用户提供钟点工清洁服务。在Homejoy上，你可以根据自己的实际需求对钟点工服务进行预约。只要讲明自己需要打理的地方环境、需要的清洁服务（还包括洗衣、清冰箱、擦玻璃等服务），写下自己的联系方式和地址，Homejoy就会打电话给你做联系确认。而在钟点工下派之前，Homejoy还会将去你家的钟点工资料（包括照片）给你查看。Cheung在之前表示，因为公司已经为这套机制的效率提升花了大量的工作，所以它可以提供更加便宜的服务。目前Homejoy的钟点工服务为20美元每小时。&lt;/p&gt;
+
+&lt;p&gt;我之前介绍专注iPhone维修服务的&lt;a href="http://www.36kr.com/p/201533.html"&gt;iCraked&lt;/a&gt;时曾总结，使用Uber模式的公司所涉及的领域通常因为信息不对称，用户很难得到恰好能满足自己需求的答案，而服务供应商很难物尽其用，两者都需要一个中心去调度。&lt;a href="http://www.36kr.com/tag/Uber"&gt;Uber&lt;/a&gt;、&lt;a href="http://www.36kr.com/p/201154.html"&gt;Takelessons&lt;/a&gt;、iCracked 分属交通、教育、硬件维修三个领域但都是这个模式。Homejoy也是一样的道理。Homejoy号称自己会严格地进行Homejoy钟点工的筛选，不仅会面试还会进行持续、严格的背景调查。而用户在使用服务后对清洁人员的评价也会纳入钟点工的考核。&lt;/p&gt;
+
+&lt;p&gt;而Homejoy还有一个相信广大妇女都会喜欢的礼品卡，可以让收到礼物的人获得相应金额的Homejoy家政服务。这个依托于互联网的家政服务公司和Uber他们很像，服务都很一次性。不过和Uber走高价路线不同，Homejoy比传统家政服务便宜，也是优势之一。&lt;/p&gt;
+
+&lt;p&gt;大概会有人吐槽了，为什么这样的服务也可以拿到Andreessen Horowitz的投资。要知道，本地服务平台可是个不小的市场，提供实时、可信赖外包服务的&lt;a href="http://www.36kr.com/p/87757.html"&gt;Exec&lt;/a&gt;、做综合型本地商家服务的预约平台&lt;a href="http://www.36kr.com/p/201444.html"&gt;mytime&lt;/a&gt;都属于这一领域。在&lt;a href="http://www.36kr.net/yunjiazheng"&gt;36氪＋&lt;/a&gt;上看到国内一家上海的“云家政”似乎也在做和Homejoy类似的事。不过这件事，还真是服务最重要，要做好还是看运营吧。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>raina@36kr.com (raina)</author>
+      <pubDate>Thu, 07 Mar 2013 18:37:32 +0800</pubDate>
+      <link>http://www.36kr.com/p/201752.html</link>
+      <guid>http://www.36kr.com/p/201752.html</guid>
+    </item>
+    <item>
+      <title>从LV到苹果店的距离有多远</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/abeed5e0923aa268e6d8c5efdfccca20.png" alt=""/&gt;&lt;br/&gt;
+&lt;em&gt;编者注：苹果已然成为一门显学，分析它成功的书和博客不计其数。本文作者Francisco Dao从品牌形象的角度将苹果同LV联系起来，不失为一个有趣的视角。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;我依然记得在2009年的SXSW大会上，一位朋友找我借电脑时的情形。当我把手中的Acer笔记本递给他时，他说：“这是个啥？” 我先是愣了一下，才忽然意识到我在他眼里就像个穿着牧马人(Wrangler)的土人，也是那时我才意识到苹果电脑已经成为一种身份的标志。而我没意识到的是，苹果模仿奢侈品牌的做法竟然如此的深入人心。&lt;/p&gt;
+
+&lt;p&gt;1977年，奢侈品行业被欧洲品牌抢尽风头。当时异常流行的皮尔卡丹，无论是香烟还是服装，你都能看到它的身影。Louis Vuitton算是后起之秀，在1854年成立之后的百年间，LV一直由Vuitton家族打理，当时的营业额在1200万美元左右。而随着控制权逐渐转入女婿Henry Racamier手中，其奢侈品标杆的地位才正式确立。&lt;/p&gt;
+
+&lt;p&gt;经过调查，Racamier发现第三方零售商抽走了比Vuitton家族还多的利润。于是他做了一个在当时看来颇为冒险的决定：绕开零售商控制整个销售链，自己开店运营其旗下产品。这一做法很快便获得了巨大的成功，相比其他品牌15%-25%的利润率，Louis Vuitton这一数字高达40%。到了1984年，其销售额已经达到1亿4300万美元，这是之前的12倍；利润则从120万美元暴涨至2200万美元，增长了将近18倍。Vuitton模式是如此的成功以至于后来的高端奢侈品牌争相效仿。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/1225bc61a223a5da6eb19113311b10c3.jpeg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;这是不是听上去有点耳熟？是的，这正是苹果的策略。苹果借由苹果店，其销售和利润增长同Vuitton相比，有过之而无不及。&lt;/p&gt;
+
+&lt;p&gt;值得注意的是，在2001年之前，苹果首次公开他们将开设独立的苹果店时，外界普遍忽视了Louis Vuitton式的成功案例，对苹果一致持唱衰态度。而被权威人士所忽略的一点是，苹果正逐渐弱化其电脑公司的定位，转而开始成为一个奢侈品品牌。&lt;/p&gt;
+
+&lt;p&gt;可能他们从来就没想过苹果会做出这样的调整。通过这样的方式，苹果逐步将自己重新塑造成电脑领域的Louis Vuitton或Prada，而不是一味的限制在同Dell/HP和Wintel王国的竞争之中。&lt;/p&gt;
+
+&lt;p&gt;自然，苹果的成功远不止开几家苹果店那么简单。苹果产品依然会专注于其自身的品牌辨识度，就好像LV会给它的每件产品打上LV的Logo或图案一样。通过建立单独售卖苹果产品的零售店，苹果作为奢侈品的形象逐步确立。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/64f4755d97f3098524143d3c8c194e0f.jpeg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;人们通常会把苹果的复兴归功于超凡的设计，但光凭设计这一点也是远远不够的。在我旅行时，我会用一台售价为250美元的三星Chromebook，它看上去跟Macbook Air几乎一模一样，我想说的是，你可以抄设计，但你抄不了品牌价值。Louis Vuitton每一个季度的新品都会被无数厂商跟风抄袭，但人们显然更乐意为LV买单。&lt;/p&gt;
+
+&lt;p&gt;至于那位嘲笑我用Acer笔电的朋友，显然不是在怀疑它的性能，而是在批评我没有Style。&lt;/p&gt;
+
+&lt;p&gt;尽管同其他品牌产品的质量相差并没我们想象中的悬殊，高端奢侈品的品牌形象使得LV/Prada可以以高出同行数十倍的价格来销售其产品。同样，品牌的魔力也使得苹果粉丝在新品上市之前，甘愿排着长长的队伍，在寒风之中苦苦守候。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>guolee89@gmail.com (guolee89)</author>
+      <pubDate>Thu, 07 Mar 2013 18:11:19 +0800</pubDate>
+      <link>http://www.36kr.com/p/201749.html</link>
+      <guid>http://www.36kr.com/p/201749.html</guid>
+    </item>
+    <item>
+      <title>紧跟图片浪潮，Ourspot打造让用户自由雇佣摄影爱好者为自己拍摄的交易市场</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/09a61e0f6342be3be78b88ec852f33af.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;伴随着数码单反相机的热销和Instagram掀起的图片浪潮，摄影爱好者的队伍也在日益壮大。如今，一家名为&lt;a href="http://www.ourspot.com/"&gt;Ourspot&lt;/a&gt;的创业公司也投身其中，打造出一个线上的摄影师交易市场。&lt;/p&gt;
+
+&lt;p&gt;在Ourspot平台，你可以自由的雇佣摄影爱好者为你拍摄。Ourspot今天刚对旧金山地区的摄影师开放，不久后将对洛杉矶以及纽约地区的用户开放，其网站由三个类目构成：Photos、Photographers以及Photoshoots。&lt;/p&gt;
+
+&lt;p&gt;其中Photos类目下展示的是一些精美的摄影作品，Photographers类目下是摄影师的个人摄影列表，你可以从中找到自己喜欢的风格，而最核心的是Photoshoots类目，用户在这里会发布包含时间和地点等信息在内的摄影任务，可能免费也可能付费，供摄影师挑选。&lt;br/&gt;
+&lt;img src="http://a.36krcnd.com/photo/f659e51c35a37557f2b37a72e05ce3e0.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;Instagram被Facebook收购后公布了新的隐私政策， 从今年1月16日起，Facebook将享有对用户照片的使用权。但Ourspot创始人Yam则表示他们将保留摄影师对其作品的使用权。&lt;/p&gt;
+
+&lt;p&gt;Yam说他不打算覆盖像婚礼摄影这类数千美元价位的高端市场，只想专注于业余市场，因为“业余摄影的市场空间比高端市场更大”。同时，这种定位也能更好的帮助用户找到合适的摄影师，为自己在很随意的场合（比如野餐）拍照。&lt;/p&gt;
+
+&lt;p&gt;为了提升网站的社区性质，Yam还为Ourspot的摄影师提供了免费的商业名片，并在旧金山每月举办一期见面会，邀请专业摄影师对Ourspot的成员进行培训。&lt;br/&gt;
+&lt;img src="http://a.36krcnd.com/photo/807259c7de9a03aa39a091364d54ad0e.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;该公司由Sam Yam一人创立，他之前曾创立过移动广告中介公司AdWhirl以及团购网站ChompOn，AdWhirl在卖给AdMob后被Google以7.5亿收购，而ChompOn则表现平平，于是Yam开始琢磨新的idea。Yam说，“我一直在思考如何将人们的热情延展开来，为那些原本只能作为个人兴趣的东西注入新的元素。”在仔细思考了自己的兴趣爱好后，最终决定从摄影下手。&lt;/p&gt;
+
+&lt;p&gt;Yam认为，有些东西，如果你不全身心投入其中的话，是很难从中获得收益的。但摄影不一样，喜欢摄影的人很多，但真正想成为专业摄影师的人并不多。我就是想为这些业余的摄影爱好者提供一个机会，将他们的作品变现。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>www.ljp@qq.com (JasonLee)</author>
+      <pubDate>Thu, 07 Mar 2013 17:32:43 +0800</pubDate>
+      <link>http://www.36kr.com/p/201746.html</link>
+      <guid>http://www.36kr.com/p/201746.html</guid>
+    </item>
+    <item>
+      <title>上线39天，美图秀秀宣称美颜相机用户突破1000万，将继续深挖女性市场</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/390d5e65c57266aaf74c0634ed20ccba.png" alt=""/&gt;&lt;br/&gt;
+美图秀秀团队今天&lt;a href="http://e.weibo.com/1743374541/zmlnafsDW"&gt;宣称&lt;/a&gt;，旗下新推出的应用“美颜相机”用户数已经突破1000万，目前上线39天。&lt;/p&gt;
+
+&lt;p&gt;美颜相机是一款主打女生自拍市场的App，其特点是自拍后会自动对图片进行美颜，包括自动磨皮、美白、降噪、瘦脸以及美化眼睛等。&lt;/p&gt;
+
+&lt;p&gt;这款应用在&lt;a href="http://www.36kr.com/p/201034.html"&gt;1月27日上线iOS版&lt;/a&gt;，美图秀秀团队说上线3天时其用户达到100万，随后在2月26日推出了Android版。截止今天，两个平台用户总数突破1000万，其中iOS版用户700万，Android版用户300万。&lt;/p&gt;
+
+&lt;p&gt;如果以上数据属实，那么这款应用应该是目前增长非常快速的一款移动端产品。相比下来，美图秀秀达到1000万移动用户花了268天，Instagram用了350天。&lt;/p&gt;
+
+&lt;p&gt;在用户比例上，美图秀秀团队说“美颜相机”女性用户比例占到了80.9%，比“美图秀秀”的69%高出不少。而未来他们将继续深挖女性市场，提升垂直品牌影响力。目前类似的产品还有人人网的&lt;a href="http://www.36kr.com/p/200885"&gt;美美&lt;/a&gt;以及&lt;a href="http://www.36kr.com/p/201031.html"&gt;聿美人&lt;/a&gt;等。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>johntian@36kr.com (JohnTian)</author>
+      <pubDate>Thu, 07 Mar 2013 16:52:19 +0800</pubDate>
+      <link>http://www.36kr.com/p/201738.html</link>
+      <guid>http://www.36kr.com/p/201738.html</guid>
+    </item>
+    <item>
+      <title>看了Manga就手痒，北京创业者夏天想给中国动漫迷打造一个自己的漫画世界</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/c58777241ac3a1abaf54bd7c0f08467e.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;引子：他叫夏天，但第一次见面感觉他像冬天。不是因为他冰冷、不说话。只是卷毛长发、酱红色线帽、一副不怀好意的笑脸、偶尔迸出的日文、对日本动漫的狂热行径，很难不让人联想到日本漫画里那些阴险角色。不过几天接触下来（见面采访+QQ联系）发现这个30岁的男人哪里阴险，那分明是赤裸裸的天真嘛。但正是因为这份天真，他能够在这个浮躁功利的创业圈静下心来，专心将自己对动漫的狂热化成一个漫画世界与大家分享。很纯粹、很专注、很自由。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;夏天做的是一个叫&lt;a href="http://www.xplays.cn/"&gt;漫画家&lt;/a&gt;（&lt;a href="https://itunes.apple.com/us/app/man-hua-jia/id595860495?ls=1&amp;amp;mt=8"&gt;iOS下载&lt;/a&gt;）的拍照应用。不看应用先看人。在我理念里，要想做这样专的应用，创业者本身必须是个狂热分子，这是基本配置。所以我给他的第一个问题是：是动漫迷吗？都有哪些狂热行径啊？遭了！话匣子打开就关不住了。我只能简单总结一下哈：作为一个几十年的日本动漫狂热粉，他早已不满足在家里看字幕、等连番。他为动漫学了日文，去了日本留学，去了日本知名的连锁书店Bookoff扫书，那里有很多失传的剧集、作者手稿。而他也如愿买到了岸本齐史在画火影时的手稿集，里面有很多岸本对人物的设定、想法还有各种法术的创意，和发行本差别很远。这让夏天无比满足。此处省略一千字。&lt;/p&gt;
+
+&lt;p&gt;“日本的漫画相机应用Manga Camera功能跟你的漫画家很像，而且比你们先做，为什么要接着别人的创意另作一个呢？”我强行用问题打断了滔滔不绝的夏天。夏天坦承，他就是看到Manga之后才有做漫画家的想法的。而且和别的创业者一样，当被问到和竞争对手的比较时，他还是被我们这些媒体人逼得硬挤出两个理由：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;1）日本的Manga团队其实心不在此，这从他们半年才更新一次的速度就能知道。事实上，他们只是一个技术公司，Manga只是他们的一个产品演示，告诉客户他们有这种把照片渲染成漫画风格的技术。&lt;/p&gt;
+
+&lt;p&gt;2）Manga产品本身缺乏中国元素，漫画家想把Manga中国化（具体怎么中国化，一会再讨论）。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;两个理由算是成立吧，但我始终觉得夏天做漫画家的源动力就是手痒，出于一个动漫迷的冲动想自己做个Manga试试看。不过，老实说，对比两个应用之后，我确实觉得漫画家比Manga做的用心。&lt;/p&gt;
+
+&lt;p&gt;打开漫画家，镜头里出现的不是你的真身，而是你被漫画手法渲染后的头像。这种实时渲染技术是Manga所没有的。而夏认为他这么做的目的是希望用户一打开漫画家就能逃离现实，进入一个漫画的理想国。而这种避世的心态或许也是很多动漫狂热者沉迷其中的原因之一。&lt;/p&gt;
+
+&lt;p&gt;除此之外，漫画家提供的画风、日语拟声词、中国汉字的添加、四格漫画生成也是Manga没有的（其实Manga也有画风，只是藏的有些深、没有文字注释、而且大部分需要购买）。目前漫画家有提供两套画风，分别是火影和海贼王中的场景，而柯南的画风目前也在策划中。另外，作为一个动漫爱好者，夏表示，允许用户给照片添加日语拟声词的原因是这些词语配合特定场景往往能表现很典型的一些动漫情绪。而中国汉字的添加则是漫画家目前唯一的中国元素。关于漫画家区别于Manga的中国成份一直没提制作几套关于中国动漫的画风（唉！），只是认为汉字很奇妙，尤其是目前的一些网络用语，简单的几个字配上表情就能叫人捧腹。最后，四格漫画则是允许用户从制作好的漫画自拍照中选四张串成小故事，之后再分享到各大社交网络。&lt;br/&gt;
+&lt;img src="http://a.36krcnd.com/photo/c021a10664b7738bc5e52d892a8c340a.jpg" alt=""/&gt;&lt;br/&gt;
+说了这么多功能，夏表示他这么做只有一个目的，就是希望能够调动中国动漫迷的创意。中国的动漫产业虽然远落后于日本，但是中国动漫群体的屌丝可不少（其中一个就是他团队里面的一个奇怪女孩，跟夏一样狂迷动漫，已经有了一份正式工作但还是整天跟夏混一块，给漫画家出鬼主意。），通过提供一些便利的功能把这群动漫屌丝的创意调动起来，漫画家才会真正能成为漫画的世界。&lt;/p&gt;
+
+&lt;p&gt;关于这一点，相信很多用户打开目前的漫画家应用后可能会因目前功能相对简单而失望。我也有此担心。但夏天说，他和那个女孩现在脑子里有很多想法，一下子还无法一块实现，只能排个优先级（排优先级做事是夏之前一直不屑的，但现在形势所迫啊！），一步一步来，之后再做一次较大更新。&lt;/p&gt;
+
+&lt;p&gt;夏表示他最近的这些想法主要是受了一个教授的启发，并且在我的再三追问下跟我说了一些具体内容。听后我也觉得挺有意思，值得期待，只是他不让我写。唉！那么在这里我就说一些我认为可以改进的地方吧。我认为漫画家现在开放给用户的编辑权限远远不够。除了能让用户拍自己的照片、添加画风、加点字之外，最好能让用户真正画起来，这主要是要好好利用漫画家的iPad版。无论是通过模板，还是通过用户手绘，搭上一个复杂一些而且有意思的场景、key上用户自己的脸，配点台词，一幅真正的漫画不就成了吗？&lt;/p&gt;
+
+&lt;p&gt;另一个需要添加的是社区。虽然夏认为他们现在资源不够，现有阶段只能尽量把漫画家做成一个完美的工具。但我始终认为漫画家从工具到社区的转型是必然的。只有社区才能给用户提供一个归宿，沉淀内容，用满足感激励那些有创意的用户继续创作分享。只有这样，一个真正的漫画世界才能构建起来。&lt;/p&gt;
+
+&lt;p&gt;社区对于漫画家尤其重要，为什么夏一直没做呢？因为他目前还不想失去自由。社区、自由，两者有联系吗？有。做社区需要资源、推广，这对于目前的夏天来说是一个严重的负担。夏天和那个女孩目前都有一份不错的工作，属于兼职创业。另外两名负责iOS和Android开发的工程师都是夏的朋友，也有自己的工作。也就是说，夏做漫画家几乎不需要什么成本，可以完全凭兴趣而为。但是如果加上社区这个“重负”，可能漫画家就必须找投资人和专业的运营团队。事实上，当漫画家入驻&lt;a href="http://www.36kr.net/"&gt;36氪+&lt;/a&gt;之后，的确有好几个投资人找过夏天。但夏天认为目前融资还为时尚早。因为团队还没到做社区的时候，还没到用钱的时候。目前他应该做的是好好把漫画家的工具属性做好。当用户感到这个工具越来越好用了，口口相传，用户量自然会积累起来，社区也就水到渠成了。而且过早的融资、过早的束缚可能会让他提早失去当初的那份纯粹和自由。&lt;/p&gt;
+
+&lt;p&gt;从夏天的这个例子实际上还可以讨论辞职创业和兼职创业的问题。我报道的上一个团队“&lt;a href="http://www.36kr.com/p/201567.html" title="广东“阿童”想帮中小企业寻可信任的app开发商，但有点迷惘"&gt;阿童&lt;/a&gt;”就是一有想法马上辞职创业的例子，导致现在压力山大。而我看夏天目前似乎还过得很逍遥嘛。对此，大家是什么看法呢？&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>dwf@36kr.com (kimi447123410)</author>
+      <pubDate>Thu, 07 Mar 2013 15:40:55 +0800</pubDate>
+      <link>http://www.36kr.com/p/201747.html</link>
+      <guid>http://www.36kr.com/p/201747.html</guid>
+    </item>
+    <item>
+      <title>传媒大亨默多克的下一个目标：抢滩K-12电子教育市场，推出教学平板电脑Amplify</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/ed9ccf868c69e65cd0e64003083c63e7.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;纪律、考试、规范……21世纪的K-12教育（特指美国幼儿园至高中毕业教育阶段）依旧墨守成规。默多克领导的新闻集团却决意颠覆陋习：它重塑旗下教育部门Amplify，推出酝酿已久的旗舰产品——集课堂管理、评估、监测功能为一体的教学平板电脑。&lt;/p&gt;
+
+&lt;p&gt;这款10英寸的Android平板电脑预装有基本的学习软件，包括教科书、多媒体课程、《大英百科全书》以及图形计算器，甚至还有当前流行于YouTube的Khan Academy系列课程。不过，它最大的卖点在于课堂管理：老师们可以监控学生的学习状态，当有人分心时，系统会自动发出“注意听课！”警告。同时，老师能用自己的客户端打开或关闭学生终端上的app。当学生完成一个学习阶段，系统就会提供个人测验题，评估学习效果，并为学生定制个性化复习方案。除此之外，教学主任还能为整个年级统一安排学习内容，同地区的学校可以统一考试。&lt;/p&gt;
+
+&lt;iframe height=420 width=640 src="http://player.youku.com/embed/XNTIzMzEyNTk2" frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;不过，这套平板系统并不便宜。学校需为教学软件支付两年的订阅费用（$99/年），以及每台平板电脑$299的购买费用（4G版则是$349美元），而该设备只能在wifi环境下运行。同时，学生和老师必须全都配备Amplify平板，才能用作教学。这意味着学校得大量购入Amplify平板电脑，但即便它能替代教科书和其它IT设备，支出仍显昂贵。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/ede2027567e4d36b19555be95db77410.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;精明如默多克，自然不会做亏本生意。他曾表示美国K-12教育是一个&lt;a href="http://www.newscorp.com/news/news_464.html"&gt;价值5000亿美金&lt;/a&gt;的待挖掘的市场，而有人揣测默多克正是看中这块大蛋糕，才跨界进军EdTech（电子化教学）领域。虽然EdTech领域早已人满为患，得意失意者不乏先例，但默多克在下更大的一盘棋：以三亿六千万美金&lt;a href="http://www.nytimes.com/2010/11/24/nyregion/24newscorp.html"&gt;收购创业公司Wireless Generation&lt;/a&gt;（提供数据和评估服务的软件公司），聘请美国教育界风云人物Joel Klein，和 AT&amp;amp;T（美国电话电报公司）共推平板电脑，打通软、硬件平台。&lt;/p&gt;
+
+&lt;p&gt;Amplify允许企业通过客户端向学校出售课程，学校可以购买教学工具以及存储数据的底层框架。&lt;/p&gt;
+
+&lt;p&gt;EdTech的赢家都明白一条真理：垄断才是王道。学校需要的是整体解决方案，以及强力的技术支持。前有Google凭州级政府&lt;a href="http://mashable.com/2010/04/28/schools-google-apps/"&gt;采购面向教育的Google Apps服务&lt;/a&gt;，而赢得&lt;a href="http://techcrunch.com/2012/10/01/google-says-apps-for-education-now-has-more-than-20-million-users/"&gt;两千多万用户&lt;/a&gt;，现有新闻集团野心勃勃抢占市场，一心在教育界掀起颠覆性改革浪潮。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>liao717921@gmail.com (yuanlingliao)</author>
+      <pubDate>Thu, 07 Mar 2013 15:38:55 +0800</pubDate>
+      <link>http://www.36kr.com/p/201745.html</link>
+      <guid>http://www.36kr.com/p/201745.html</guid>
+    </item>
+    <item>
+      <title>扼杀PC的不是智能手机，而是摩尔定律？</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/45fcb060590a2bb5d23a26c3de3c2b85.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;目前普遍的看法是移动设备的崛起蚕食了PC的市场。但是《PC world》近日发表了一篇&lt;a href="http://www.networkworld.com/news/2013/030513-why-moore39s-law-not-mobility-267394.html?page=2"&gt;文章&lt;/a&gt;，对PC销量放缓提出了新解。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;尽管PC已死的说法明显夸大其词：2012年PC的出货量为3.5亿，远超平板电脑，但是其增长速度放缓却是毋庸置疑的。&lt;/p&gt;
+
+&lt;p&gt;对于PC销量放缓的原因有三种普遍的说法：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;1）  经济萧条 &lt;br/&gt;
+2）  智能手机和平板电脑的崛起&lt;br/&gt;
+3）  发展中国家的销售增长率不高（因为在那里PC是奢侈品，不轻易换）&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;影响PC销售的因素实在是太多了，显然上述说法都各有各的道理。但是在看到自己的丈母娘愉快地摆弄着自己的那台足有10年历史的奔4 PC，上着Facebook，自如地收发邮件时，PC World的Brad Chacos的脑海中浮现出PC停滞的另一种解释。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;日常应用处理老PC足够了？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;文章中说，以前的PC几年就得一换，因为如果你不换机器就跑不了最新的软件。而现在，由于云计算等服务端技术的成熟，以及网络速度的加快，许多应用处理工作都在后端进行了。一部分的日常应用，如在线购物、收发邮件、社交网络聊天、看看一般画质的视频、玩玩纸牌等，用旧PC就可以处理了。对于看看网页、做做表格、写写文字来说，2.5GHz跟3GHz的CPU没多大区别。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;新老PC差距缩小，摩尔定律失效？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;文章提到的第二种原因是新老PC的性能差距变小了。揭示计算机技术发展规律的摩尔定律有两种解释：摩尔本人的说法是晶体管数量每年翻番，后来英特尔的豪斯将其修正为计算能力每18个月翻番。老摩尔定律仍勉强有效，但新摩尔定律显然已经失效了。2009-2012年间PC的计算能力并没有太大的改进，每年计算能力的提升率仅有10-16%。而在过去每次处理器升级至少有60%的性能改善。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CPU性能靠边站&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;考虑到CPU主频的提升已经接近瓶颈，CPU制造商的研发重点已经转移到通过增值附设来提高计算能力了。比方说，最近几年集成显卡技术有了突飞猛进的提高。像AMD的APU，英特尔的Ive Bridge处理器就融入了第三代的核芯显卡HD Graphics 4000。&lt;/p&gt;
+
+&lt;p&gt;异构计算正是芯片制造商提高处理器性能和降低功耗的下一个努力方向。通过将同一系统的不同处理引擎（如CPU、图形处理器）融合到一块芯片上，不仅能令其处理范围大为扩展，且功耗也可显著降低。为了实现这个计算一体化的愿景，AMD、高通、ARM、三星、德仪（不过英特尔和Nvidia）等芯片制造商成立了异构系统架构基金会，以便能通过并行计算等办法突破当前CPU、GPU面临的计算能力瓶颈问题。&lt;/p&gt;
+
+&lt;p&gt;英特尔尽管没有加入异构系统架构基金会，但是也没有停止改进CPU的努力。2013年这家公司计划在研发和收购上的投入高达182亿美元。这笔钱不仅用于制造更大的CPU圆片和改进蚀刻技术，此外还会用于继续推动手势控制、语音识别等需要高度计算能力的普适计算。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;浴火重生&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;这些公司的种种努力，可能会在未来改变我们过去所熟知的PC的概念。将来移动设备、超级本、平板电脑等设备的界限将越来越模糊。虽然现在性能的提升瓶颈令许多人放缓了PC升级的脚步，但是英特尔、AMD等为了未来的计算设备调整路线打开机会之窗，所以说，升级放缓并非敲响PC的丧钟，而浴火重生的信号。&lt;/p&gt;
+
+&lt;p&gt;只要能做一样的事情，谁会在乎设备的形式呢？&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>boxi.yang@163.com (boxiyang)</author>
+      <pubDate>Thu, 07 Mar 2013 14:31:59 +0800</pubDate>
+      <link>http://www.36kr.com/p/201744.html</link>
+      <guid>http://www.36kr.com/p/201744.html</guid>
+    </item>
+    <item>
+      <title>跨平台广告管理工具AdStage想让在线广告更容易上手，已获得140万美元种子投资</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/80d3413319c2efd1a0b25efd6549172a.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.adstage.io/"&gt;AdStage&lt;/a&gt;近期在旧金山的&lt;a href="http://festival.launch.co/"&gt;Launch大会&lt;/a&gt;上正式公布了它的跨平台广告管理工具，并且宣布已经获得140万美元种子投资。&lt;/p&gt;
+
+&lt;p&gt;AdStage想帮助中小型公司更好地在多个在线广告平台上制作、投放和管理广告。通过一个简洁的界面， AdStage 目前支持Google、Bing,、Facebook和LinkedIn四个广告平台。 所有AdStage的功能都是尽量让在线广告的制作和管理更加容易上手。&lt;/p&gt;
+
+&lt;p&gt;在官网上，AdStage称自己不是那种追究时髦的广告公司，而是更基于技术和数据分析。AdStage一个很强大的功能是用户在编写广告时，它会根据从类似公司收集的数据建议用户如何更好地选择关键词，以及如何在不同的广告平台上更好地分布资源。广告发布之后，用户可以通过AdStage查看即时的相关数据，例如点击率等。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/4fb71a1e1401efe6dce8d514399254c5.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;AdStage上星期开始进入测试，商业模式应该就是向使用它服务的公司收费，但是具体收费体系还没有公布。&lt;/p&gt;
+
+&lt;p&gt;参与这轮的投资人包括Dave McClure、500 Startups等。创建AdStage之前, Jain联合创建了移动开发工具Trigger.io。 AdStage计划支持多达50个在线广告平台，也将支持更多的广告模式。&lt;/p&gt;
+
+&lt;p&gt;你可以看一下联合创始人Sahil Jain和Jason Wu在Launch大会上的产品演示和问答。&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt; &lt;iframe height=498 width=510 src="http://player.youku.com/embed/XNTIzMzk5OTAw" frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt; &lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>hyd628@gmail.com (hyd628)</author>
+      <pubDate>Thu, 07 Mar 2013 14:01:00 +0800</pubDate>
+      <link>http://www.36kr.com/p/201721.html</link>
+      <guid>http://www.36kr.com/p/201721.html</guid>
+    </item>
+    <item>
+      <title>用一月看老的方式看Vine有多火？尽管已经打败Viddy、Socialcam，但它依旧非常“小众”</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/5970014b8f83aaae0fb863fc8041441f.png" alt=""/&gt;&lt;br/&gt;
+2013年&lt;a href="http://www.36kr.com/p/200995.html"&gt;1月24号&lt;/a&gt;成为了不少“视频类Instagram”的噩梦，因为Twitter推出了Vine。它很火，但到底有多火？当媒体（包括&lt;a href="http://www.36kr.com/tag/Vine"&gt;我们自己&lt;/a&gt;）都在大谈Vine的时候，它的市场规模其实是不可忽略的。就这个问题，RJMetrics的联合创始人Robert J. Moore写了篇稿子（他们公司通过自己的软件数据帮助线上企业做更好的决策）从Twitter“非常活跃用户”中抽取样本，通过接入RJMetrics的Twitter API，找出Vine第一个月内早期用户的活跃程度（在这里对“非常活跃用户”的定义为在2013年2月24号之前至少已发100次tweet）。&lt;/p&gt;
+
+&lt;p&gt;总体来说，视频创作这一类的应用依旧是极为不发达的市场。在Vine上线的第一个月里，只有4%的非常活跃的用户将Vine或其他�类似应用中的视频分享出去。其中，Vine的市场渗透率稳步上升，占到Twitter非常活跃用户的2.8%，这已经打败了Viddy和Socialcam，要知道，他们分别只占到了0.5%和0.2%。但Robert表示，这并不一定是个决定性的数字，因为头一个月里总会有很多用户想要尝尝鲜。所以他们查看了这个月中用户平均使用应用的次数。结果，Vine的反复使用次数真的要比其他app要高。Vine在第一个月内表现出让人佩服的稳定增长，每日新用户的增长率都保持在一个数值上。这在Robert看来是好事，因为增长率并没有因为时间流失而渐渐回落。&lt;/p&gt;
+
+&lt;p&gt;但相比照片分享应用，无论是Vine、Viddy还是Socialcam，他们的占有率都不如照片分享服务的零头。同样是这个非常活跃用户的样本，有98%的人至少有用照片分享服务分享过一张照片。尽管Vine的表现对于其他视频类应用对手来说是漂亮一击，但它始终还是Twitter上浩瀚媒体中的小玩家而已。实际上，照片依旧是非常活跃用户的最常见选择。目前，Twitter的pic.twitter.com是最大的万家，接着是Instagram（其实在Instagram 解除了Twitter Cards 的整合后，Instagram的照片已经彻底在Twitter上消失了）。&lt;/p&gt;
+
+&lt;p&gt;不过，在这次的调查中可以看到，Twitter为自己的服务加入原生的照片、视频分享已经被证明是富有成效。这些工具很快成为了用户最受欢迎的选择，但这也严重影响了其他第三方app的生意。到目前为止，Twitter有关照片和视频分享的内置工具主宰了这场竞争，Vine.co和pic.twitter.com在视频和照片两个分享类别中都是最受欢迎的工具，而且与其他竞争对手相比遥遥领先。&lt;/p&gt;
+
+&lt;p&gt;虽然用“1月看老”的方式来看Vine还不是太靠谱，但Vine在视频分享应用上的领先已经毋庸置疑。Vine依旧小众,不过我个人挺看好这个服务。就像Twitter、Instagram当年推出后，会出现不少基于他们而衍生出来的产品。而Vine在推出一个月内，至少Vinepeek、&lt;a href="https://vines.s3.amazonaws.com/videos/C067C8BC-633D-4C2E-89B7-BFF6DD8B424F-4705-0000048F7C9125AB_1.0.5.mp4?versionId=zvQMoDyqxehf39TtIEKGFoBlvFx.o2nl"&gt;Vine Flip&lt;/a&gt;什么的都出来了。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>raina@36kr.com (raina)</author>
+      <pubDate>Thu, 07 Mar 2013 12:43:41 +0800</pubDate>
+      <link>http://www.36kr.com/p/201742.html</link>
+      <guid>http://www.36kr.com/p/201742.html</guid>
+    </item>
+    <item>
+      <title>招到牛掰员工后该怎么办</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/5c13e1031041f1d47dbd730d80abb76e.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;创业者 Tom Tancredi 已经带着自己的企业运行了四年。四年的 CEO 经历让他察觉到，身为公司创始人兼负责人，一大压力竟来自于自己的优秀员工。一些优秀的员工完全可以将他取代，并把公司运营得更好。Tancredi 信奉一个道理，CEO 的最大职责不是运营公司，而是让自己的职责不断被他人取代（a CEO’s job is to replace himself, constantly），对于创业企业而言更是如此。&lt;/p&gt;
+
+&lt;p&gt;优秀的员工值得托付，但具体要怎么做呢？以下是 Tancredi 分享的几点“做”与“不做”。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;做&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1、做好准备&lt;/p&gt;
+
+&lt;p&gt;不论多优秀的人才，在加入新团队时都会有一个适应期。CEO 应该确定自己已经为优秀员工的发展道路做好准备，最好提前一周就备好新人适应与发展所需要的资源。&lt;/p&gt;
+
+&lt;p&gt;2、做好通知&lt;/p&gt;
+
+&lt;p&gt;告诉团队的每一员，让大家都知道新来的这一位十分牛掰，以后会为公司做出卓越的贡献。对于创业企业而言，组织架构迭代很快，故而应该尽早给新人“定性”。不要等待大家去发现新来的这个人很牛，模糊的处境会影响新人的发展。&lt;/p&gt;
+
+&lt;p&gt;3、做好庆祝&lt;/p&gt;
+
+&lt;p&gt;庆祝吧，你的企业能够招到牛人已经侧面证明了自己的成功。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;不做&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1、切勿内部斗争&lt;/p&gt;
+
+&lt;p&gt;优秀员工的出现可能会让身为 CEO 的创业者出现危机感，以至于不恰当的行为出现。Tancredi 回忆道，自己就曾和员工作对，因为他感到这个员工抢了他的职责。拉帮结派、釜底抽薪、背后说闲话都是不可出现的行为，这只会给公司的发展带去坏影响。&lt;/p&gt;
+
+&lt;p&gt;2、切勿揽功&lt;/p&gt;
+
+&lt;p&gt;当把原先的权责交付给优秀员工时，员工创造的功劳就应该属于员工，切勿把下属、上级（如果你把员工的职位定得比自己还高）的功劳贴在自己脸上。&lt;/p&gt;
+
+&lt;p&gt;3、切勿退休&lt;/p&gt;
+
+&lt;p&gt;把职责交付他人并不代表着你就能退休了，事实上你应该去开拓更大的市场，背负更长远的任务。有优秀的员工不代表你肩上的担子更轻了，相反它应该变得更沉重。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>304760767@qq.com (demetrius)</author>
+      <pubDate>Thu, 07 Mar 2013 11:55:52 +0800</pubDate>
+      <link>http://www.36kr.com/p/201741.html</link>
+      <guid>http://www.36kr.com/p/201741.html</guid>
+    </item>
+    <item>
+      <title>主打私信功能，私密社交应用Path iOS 3.0发布</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/9f2a29dbc903e56655d58e18a9aa737f.jpeg" alt=""/&gt;&lt;br/&gt;
+主打私密朋友圈的社交应用Path刚刚将其iOS平台的应用更新至&lt;a href="https://itunes.apple.com/ca/app/path/id403639508?mt=8"&gt;3.0版&lt;/a&gt;，此次更新主要包括以下两个主要的功能：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;私信&lt;/strong&gt;。在以前的版本中，你只能在朋友发布的内容下评论，而现在你可以给你的好友发送包括语音、媒体流、地址以及贴纸等信息。而贴纸(Stickers)功能(类似魔法表情，效果如下)将会成为Path的主打功能之一。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/8e73c14b1b00a17b97fc43b70eebc2c0.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;在线商店&lt;/strong&gt;(见下图)。在Path iOS 3.0版本中，你可以在其在线商店中购买“手工制作”的贴纸用于私信中，目前每款贴纸的售价均为1.99美元。应用商店中，还包括售价为0.99美元的照片滤镜。这两种方式，都属目前IM常见的盈利模式。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/bedc4fa0d2bbdc77218273f48566316e.gif" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;据&lt;a href="http://thenextweb.com/insider/2013/03/07/6-million-users-strong-paths-founder-breaks-down-the-product-decisions-made-for-version-3-0/"&gt;TNW报道&lt;/a&gt;，Path创始人Dave Morin曾在同他们采访中表示：Path一直专注于打造一个更加私密的朋友及家人社交圈。而在新版本中加入IM元素，Path仍会继续保持这种私密感。通过新的私信功能，你可以他同你的好友进行一对一的对话，也可以组建最多15人的小组讨论。值得一提的是，你不只可以给你好友列表中的朋友发送私信，也可以给朋友的朋友发。&lt;/p&gt;
+
+&lt;p&gt;同时Morin还表示私信是用户一起热切要求的功能，过去用户只能通过评论的方式同好友互动。&lt;/p&gt;
+
+&lt;p&gt;在私信功能中，还藏有一个非常实用的小功能：&amp;quot;hai(对，你没有看错)&amp;quot;选项。当有人给你发送消息时，通常你会回复“好的，我收到了”或者随便回个什么表示你已经读到了，而在最新版的Path中，你可以开启“hai”功能进行自动回复。&lt;/p&gt;
+
+&lt;p&gt;在谈到新的贴纸功能时，Morin说：贴纸不只是起装饰作用，Path相信有时候贴纸在传情达意方面比文字做的更好。而贴纸也不会取代过去在Path中的表情。&lt;/p&gt;
+
+&lt;p&gt;Path之前一直没有一套明确的商业模式，有人猜测Path此番推出在线商店，是基于盈利方面的考量。购买贴纸和滤镜，也给了那些想要感谢Path团队的一个主要途径。Morin对此的回应是：“贴纸并非我们盈利的主要来源。它会同高级滤镜一样，是盈利方式的一种。我们今天下半年还会推出新的订阅服务。”&lt;/p&gt;
+
+&lt;p&gt;被问到用户情况时，Morin说：“目前的用户数量以及超过600万，用户的平均年龄超过25岁。不管怎样，在美国的年轻用户数正在逐步增长，尤其是高中生和大学生。”&lt;/p&gt;
+
+&lt;p&gt;前不久有媒体爆出Facebook已经逐渐遭到年轻人的抛弃，那么，专注于私密社区加入IM元素的Path会成为美国年轻人下一个追捧的热点吗？&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>guolee89@gmail.com (guolee89)</author>
+      <pubDate>Thu, 07 Mar 2013 11:50:34 +0800</pubDate>
+      <link>http://www.36kr.com/p/201740.html</link>
+      <guid>http://www.36kr.com/p/201740.html</guid>
+    </item>
+    <item>
+      <title>Ev Williams谈网络媒介和Medium</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/c157d3730412e64a51755db1bf76d12c.jpg" alt=""/&gt;&lt;br/&gt;
+Blogger和Twitter的联合创始人Ev Williams现在在做孵化器公司Obvious，目前有Medium，&lt;a href="http://www.36kr.com/p/200775.html"&gt;Branch&lt;/a&gt;和&lt;a href="http://www.36kr.com/p/149168.html"&gt;Lift&lt;/a&gt;三个项目。他最近在&lt;a href="http://festival.launch.co/index.html"&gt;Launch大会&lt;/a&gt;的访谈上分享了他关于网络媒介及&lt;a href="https://medium.com/"&gt;Medium&lt;/a&gt;的看法，完整视频&lt;a href="http://festival.launch.co/live/?s=89326"&gt;在这里&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;关于网络媒介/内容平台&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Williams认为现在网络媒介长期存在的问题就是：网络极大地降低了内容分销的成本，导致信息和内容很泛滥。而内容出版的利益机制仅鼓励速度和数量(又多又快)，而不利于优质内容的创造。我们组织网页内容的方式一直是按时间序列(&amp;quot;put new things on the top&amp;quot;)累加，再加上又追求数量，最终导致上层是低质内容，优质内容被稀释和掩盖。&lt;/p&gt;
+
+&lt;p&gt;互联网的一个妙处就在于能集结大家的力量创造出仅靠个人做不出的东西，维基百科和开源项目都是典例。但是这个特性并没有被很好地利用在类似文章内容/知识分享等方面。如果作者不附属某个媒体机构，那就只会在自己的领地内(比如博客)写作，所有编辑、发布以及后面的内容分销工作都是自己完成的。&lt;/p&gt;
+
+&lt;p&gt;但如果大家可以一起协同创作，会有怎样的效果？这就是Medium要做的了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/fa07524ca5e9717a7309426a97215a12.png" alt=""/&gt;&lt;br/&gt;
+&lt;strong&gt;关于&lt;a href="https://medium.com/"&gt;Medium&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Williams说在2000年做Blogger博客服务时已经有类似Medium的产品想法了。Medium要给人们创造的是内容创作的良好情景(context)，成为一个整体大于局部之和的系统。这其中的要素便是Collection，可看做是开放式半命题创作，同个主题的不同内容可以给人启发。而一篇内容可附属于多个Collection，又可让它在别的领域/主题再次发挥作用。&lt;/p&gt;
+
+&lt;p&gt;Medium并不会把独立访客或是PV数当做关键指标，而关心的是阅读数(read)。人们到底有没有读完这篇内容，有没有从这内容中收获些什么。&lt;/p&gt;
+
+&lt;p&gt;作为内容平台，Medium的创作难度比一条Tweet大得多。Williams说他们并不期望Medium的内容创造者/消费者的比例能像Twitter或Instagram那样。但是，关键点也不是降低内容创造的门槛，Medium想的是怎样让更多的观众读到真正优质的内容。&lt;/p&gt;
+
+&lt;p&gt;主持人和Williams谈到新闻/资讯业的激励机制，受奖励的可能是利于传播的内容而不是强调准确性的内容。他也认为这个激励体制是个问题，创建一个能支持journalism良好运作的机制是个”很值得努力的目标“，而Medium也会在这方面做尝试。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;关于创业&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;被问到对创业者有什么建议，Williams说就应该去做那个你真心希望这世上能有的那个东西，并保持完全专注，好事自会发生。当然，随着年龄增长，注意力和专注越来越难维持，这不仅是个人事务如家庭上的分心，还得面对各种各样的新机会(别人会劝说你做这个新项目)。而Williams的方法就是学会说不，学会拒绝。&lt;/p&gt;
+
+&lt;p&gt;Williams过去创办的Blogger被Google收购后，他本人也进入Google工作，待到2004年离开。他进入Google内部后才意识到为什么总是有新的创业机会，Blogger收进Google后其实运营难度加大很多，他们(Google)的优先级并不在这。其实不用畏惧大公司，他们壮大后行动迟缓，那别的参与者都有机会做新东西。这也正是整个创业生态的魅力。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>ly@36kr.com (chenlinyuan)</author>
+      <pubDate>Thu, 07 Mar 2013 11:49:07 +0800</pubDate>
+      <link>http://www.36kr.com/p/201739.html</link>
+      <guid>http://www.36kr.com/p/201739.html</guid>
+    </item>
+    <item>
+      <title>陶器制作应用Let's Creat! Pottery同Sculpteo合作，3D打印出你在手机上做好的陶器</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/905d302e8a854d393b4770c071c48a01.jpg" alt=""/&gt;&lt;br/&gt;
+&lt;a href="http://www.potterygame.com/"&gt;Let&amp;#39;s Creat! Pottery&lt;/a&gt;是一款移动应用，你可以用它在手机上做出精致的陶器模型，色彩造型都可自己设计。近日它同3D打印服务商&lt;a href="http://www.sculpteo.com/fr/"&gt;Sculpteo&lt;/a&gt;合作，用户在完成自己的模型后，可以将模型提交到网上，然后借助3D Systems公司的SLA 3D打印机把陶器打印出来，然后寄给用户。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/8199df769d93003fff9c99e8af67763c.jpg" alt=""/&gt;&lt;br/&gt;
+Sculpteo是一家法国的3D打印服务商，它可以将普通的图片转换成3D模型，然后借助离客户最近的3D打印机将其打印出来，再邮寄给用户。价格还算可以接受，此次同Let&amp;#39;s Creat! Pottery合作，最小的陶瓷大概是2英尺高，差不多五厘米，价格为14美元，其中包括6美元运费，8美元换一个自己设计并且3D打印出来的陶器还是不错的。稍微大一点的就有点贵了，中等大小（10厘米）的陶器大概有30美元，15厘米的大概要100美元。&lt;/p&gt;
+
+&lt;p&gt;陶器由于其结构的特殊性和趣味性，即使是2D的模型也比较容易被识别，古朴又有趣的造型也很适合3D打印，还有什么手工艺品也适合这么做呢？&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>leon@36kr.com (leon)</author>
+      <pubDate>Thu, 07 Mar 2013 11:22:31 +0800</pubDate>
+      <link>http://www.36kr.com/p/201737.html</link>
+      <guid>http://www.36kr.com/p/201737.html</guid>
+    </item>
+    <item>
+      <title>“无限”云端存储服务商Bitcasa结束公测，存储数据量较公测初期增加13%</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/6da2b6a6193426c1f85988fb2de5d673.png" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;大部分云存储服务都会按容量收费，偏偏反其道而行之的&lt;a href="http://www.36kr.com/p/120247.html"&gt;创业公司Bitcasa&lt;/a&gt;，则向用户提供无限存储服务，每月仅需10 美元。该公司于2011年9月在TechCrunch Disrupt 上线，24小时内用户突破5万。2012年6月拿到700万美元A轮融资。上个月Bitcasa结束了公测，目前已有来自114个国家的用户为该产品付费，用户存储的数据总量达18PB（1PB=1024TB，1TB=1024GB），相较公测之初增加了13%。&lt;/p&gt;
+
+&lt;p&gt;“我们的下一步策略是加强面向未来的存储技术（注：Bitcasa的目标是&lt;a href="http://www.36kr.com/p/201209.html"&gt;用云存储技术取代传统硬盘&lt;/a&gt;），加快商业和团队进程。”Bitcasa的CEO Tony Gauda 称。&lt;/p&gt;
+
+&lt;p&gt;Bitcasa还宣称他们的用户转化率“超过行业平均水平”——用户会在10天内升级成付费服务。除无限空间外，安全性也是Bitcasa的核心竞争力之一，所有上传数据都会经过加密处理，而整套服务仅需每月10美元。&lt;/p&gt;
+
+&lt;p&gt;存储空间优势和价格优势让Bitcasa 无惧同行的竞争，他们唯一需要考虑的就是如何让自己承载起日益增长的用户需求。当然，Bitcasa 有自己擅长的，同时也有自己不擅长的。Dropbox 擅长与人共享文件，Box 在企业市场占据优势，Google Drive 则整合了自己的云端协作办公产品，而这些都是 Bitcasa 不擅长的。对于 Bitcasa 来说，他们擅长的就是“存储”，“无限存储”。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>www.ljp@qq.com (JasonLee)</author>
+      <pubDate>Thu, 07 Mar 2013 11:08:41 +0800</pubDate>
+      <link>http://www.36kr.com/p/201735.html</link>
+      <guid>http://www.36kr.com/p/201735.html</guid>
+    </item>
+    <item>
+      <title>让技术不再成为拦路虎：基于SaaS和云计算的服务提供商“捷库”可助教育机构和企业快速搭建移动学习系统</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/37cb5cd6eca2ed4e2749b202a8387517.jpg" alt=""/&gt;&lt;br/&gt;
+e-learning和在线教育喊了很多年，现在依然问题重重。其中之一是，传统的线下培训机构和学校都是技术盲，憧憬未来两眼放光，谈到技术面如土色，最后还是输在行动力上。&lt;/p&gt;
+
+&lt;p&gt;有没有办法让这两方的资源打通呢？基于SaaS和云计算的服务提供商&lt;a href="http://www.gikoo.cn"&gt;“捷库”&lt;/a&gt;做的便是这样一件事，借助底层数据库，它可以帮助教育机构和企业快速搭建移动学习系统，让技术不再成为拦路虎。&lt;br/&gt;
+&lt;img src="http://a.36krcnd.com/photo/0b6b1c5e58917e5656d1a15b88d78a57.png!w3" alt=""/&gt;&lt;br/&gt;
+捷库的产品同样包括一个面向学员的学习app和面向培训机构的web端管理平台。app端实现的功能就包括：支持图文和视频格式的教程播放和下载、围绕选择题的简单考试系统及问卷调查，查看学习记录和学习计划。web端管理平台则包括四块功能：课件资料的上传、管理和维护；学习任务的推送；学生学习情况的统计和报告；以及组织结构、学员信息的设置和管理。&lt;/p&gt;
+
+&lt;p&gt;目前，捷库将目标客户定在了教育机构和需要内训的企业上面，提供的是基于云计算、SaaS模式的软件订阅服务。对机构来说，他们无需购置相应的硬件或自己开发软件，在购买账号之后即可登录平台管理学习，而学员一端只需下载捷库app即可。另外，考虑到云端的信息安全问题，捷库的账户实行实名管理，并提供3级防护的视频转制保障和播放器加密处理。&lt;br/&gt;
+&lt;img src="http://a.36krcnd.com/photo/8db1d725e7ad0bafc8d9d6feb86a644e.jpg" alt=""/&gt;&lt;/p&gt;
+
+&lt;p&gt;说到这种SaaS服务的市场，团队这样回应，“建立一个E-learning系统，企业需要购买相应的服务器，还需要一定的资金和技术支持，如果再植入视频课件，就会变得更加复杂。”所以，即便像新东方这样的大型培训集团，其内部还有很多部门没有相应的技术团队。但SaaS模式的逐渐盛行则让资源得到了更好利用，他们的客户中就包括新东方和联想。&lt;/p&gt;
+
+&lt;p&gt;不过，像捷库这样做云学习平台的在国内实际还有很多，比如专注于企业培训的时代光华、全景赛斯等等，时代光华就做了好多年。但捷库的优势在移动端，他们是为数不多的开发了移动app（包括iOS和Android版）的团队。第三代平台也在开发中，以尝试满足客户越来越个性化的需求，弥补SaaS服务的短板。&lt;/p&gt;
+
+&lt;p&gt;先不论捷库的产品做得好不好，它确实给我们提供了一个新思路：人都说搞教育（培训）的不懂互联网，搞互联网的不懂教育（培训），有没有其他方法让两方优势得以互用，让那些搞传统教育的可以专注于课程设计和内容优化，搞互联网的又可以专注于提供技术支持，降低前者参与 e-learning 和在线教育的门槛呢？&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>joycechen@36kr.com (joyce62270252)</author>
+      <pubDate>Thu, 07 Mar 2013 10:55:04 +0800</pubDate>
+      <link>http://www.36kr.com/p/201736.html</link>
+      <guid>http://www.36kr.com/p/201736.html</guid>
+    </item>
+    <item>
+      <title>往综合型内容平台迈进，Quora新添结构化点评的内容形式</title>
+      <description>&lt;p&gt;&lt;img src="http://a.36krcnd.com/photo/5875fa772867dab0b2be5c3c7af7049c.png" alt=""/&gt;&lt;br/&gt;
+Quora今天在&lt;a href="http://blog.quora.com/Reviews-on-Quora"&gt;官方博客&lt;/a&gt;里宣布新添点评这种内容形式，并附上1星至5星的评分。本来Quora上就有很多类似“XX怎样，值得推荐吗“的问答，用点评的形式可以把这些数据给结构化起来。&lt;/p&gt;
+
+&lt;p&gt;现在已经可以从主菜单栏里的Write入口里写点评了，直接输入要点评的话题，并标星写评论就能发表。&lt;/p&gt;
+
+&lt;p&gt;今年1月时Quora还&lt;a href="http://www.36kr.com/p/200970.html"&gt;推出博客平台&lt;/a&gt;，作者不用受限于传统问答的形势限制，可以自由的在博客上写文章，但同时又能享受 Quora 独有的内容分发优势。&lt;/p&gt;
+
+&lt;p&gt;Quora已经从最初单一的问答逐渐延伸成一个综合型的内容平台。&lt;/p&gt;除非注明，本站文章均为原创或编译，转载请注明： 文章来自 &lt;a href="http://www.36kr.com/"&gt;36氪&lt;/a&gt;&lt;hr/&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/201073.html?ref=kr_post_feed"&gt;36氪官方iOS应用正式上线，支持『一键下载36氪报道的移动App』和『离线阅读』&lt;/a&gt; &lt;a href="https://itunes.apple.com/cn/app/36ke/id593394038?l=en&amp;mt=8" target="_blank"&gt;立即下载！&lt;/a&gt;&lt;/p&gt;</description>
+      <author>ly@36kr.com (chenlinyuan)</author>
+      <pubDate>Thu, 07 Mar 2013 08:08:18 +0800</pubDate>
+      <link>http://www.36kr.com/p/201734.html</link>
+      <guid>http://www.36kr.com/p/201734.html</guid>
+    </item>
+  </channel>
+</rss>

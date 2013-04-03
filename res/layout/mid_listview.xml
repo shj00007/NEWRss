@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="45dp"
+        android:layout_height="80dp"
+        android:paddingRight="3dp"
+        android:paddingTop="30dp" >
+
+        <ImageView
+            android:id="@+id/midtitleimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/rssicon_png" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/midname"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="title_name" />
+
+        <TextView
+            android:id="@+id/middate"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/midname"
+            android:singleLine="true"
+            android:text="time" />
+
+        <TextView
+            android:id="@+id/midtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/midname"
+            android:singleLine="true"
+            android:text="title"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/midtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/midtitle"
+            android:singleLine="true"
+            android:text="texttext" />
+    </RelativeLayout>
+
+</LinearLayout>
