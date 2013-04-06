@@ -15,15 +15,19 @@ public class SQLiteRssfeed extends SQLiteBase {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void addFeed(String pRssName, String pCategory, int pUnread) {
+	public void addFeed(String pRssName, String pCategory, int pUnread,
+			String pFeedLink) {
 		mDatabase
-				.execSQL("INSERT INTO rssfeed_list(rssname,category,unread) VALUES('"
+				.execSQL("INSERT INTO rssfeed_list(rssname,category,unread,feedlink) VALUES('"
 						+ pRssName
 						+ "','"
 						+ pCategory
 						+ "','"
 						+ pUnread
-						+ "');");
+						+ "','"
+						+pFeedLink
+						+"');");
+						
 
 	}
 
@@ -45,8 +49,8 @@ public class SQLiteRssfeed extends SQLiteBase {
 				.rawQuery("Select * From rssfeed_list;", null);
 		while (_Cursor.moveToNext()) {
 			_ModelRssfeed = new ModelRssfeed();
-			_ModelRssfeed
-					.setTablename("table" + getCursorString(_Cursor, "_id"));
+			_ModelRssfeed.setTablename("table"
+					+ getCursorString(_Cursor, "_id"));
 			_ModelRssfeed.setCategory(getCursorString(_Cursor, "category"));
 			_ModelRssfeed.setRssname(getCursorString(_Cursor, "rssname"));
 			_ModelRssfeed.setUnreadcount(getCursorInt(_Cursor, "unread"));
@@ -61,5 +65,15 @@ public class SQLiteRssfeed extends SQLiteBase {
 		mDatabase.execSQL("delete from rssfeed_list where rssfeed_name='"
 				+ pRssFeedName + "';");
 	}
-	
+
+	public void updateRssFeedCount(String pRssFeedName, int pUnreadCount) {
+		mDatabase.execSQL("update rssfeed_list set unread=" + pUnreadCount
+				+ " where rssname='" + pRssFeedName + "'");
+	}
+
+	public void setRssHasRead(String pRssName) {
+		// TODO Auto-generated method stub
+		mDatabase.execSQL("update rssfeed_list set unread=0 where rssname='"+pRssName+"'");
+	}
+
 }

@@ -27,7 +27,7 @@ import com.shj00007.database.DBHelper;
 
 public class DownFile implements ImageGetter {
 
-	public final String IAMGE_FLODER_PATH = "/data/data/com.example.fragmenttest1/pic";
+	public final String IAMGE_FLODER_PATH = "/data/data/com.shj00007/pic";
 	TextView rightText = null;
 	String str = null;
 
@@ -201,8 +201,8 @@ public class DownFile implements ImageGetter {
 
 							};
 						};
-						handler.removeMessages(123);
-						handler.sendEmptyMessage(123);
+						handler.removeMessages(0);
+						handler.sendEmptyMessageDelayed(0, 500);
 						// Handler handler;
 						// Looper.prepare();
 						// handler = new Handler() {

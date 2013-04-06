@@ -63,6 +63,33 @@ public class SQLiteRssItem extends SQLiteBase {
 
 	}
 
+	public ArrayList<ModelRssItem> getRssfeedList(String pRssFeedName,
+			boolean pOnlyViewUnread) {
+		ArrayList<ModelRssItem> _ModelRssItems = new ArrayList<ModelRssItem>();
+		ModelRssItem _ModelRssItem = null;
+		String _TableName = getTableName(pRssFeedName);
+		String _Sql = "SELECT title,pubdate,category,image,descriptionMD5,isread,starred FROM "
+				+ _TableName + " WHERE ISREAD=0 ORDER BY _id DESC";
+		Cursor _Cursor = mDatabase.rawQuery(_Sql, null);
+		while (_Cursor.moveToNext()) {
+			_ModelRssItem = new ModelRssItem();
+			_ModelRssItem.setNewstitle(getCursorString(_Cursor, "title"));
+			_ModelRssItem.setPubdate(getCursorString(_Cursor, "pubdate"));
+			_ModelRssItem.setCategory(getCursorString(_Cursor, "category"));
+			_ModelRssItem.setImage(getCursorString(_Cursor, "image"));
+			_ModelRssItem.setDescriptionmd5(getCursorString(_Cursor,
+					"descriptionMD5"));
+			_ModelRssItem.setIsread(getBooleanResult(getCursorInt(_Cursor,
+					"isread")));
+			_ModelRssItem.setStarred(getBooleanResult(getCursorInt(_Cursor,
+					"starred")));
+			_ModelRssItems.add(_ModelRssItem);
+		}
+		_Cursor.close();
+		return _ModelRssItems;
+
+	}
+
 	public void deleteRssItemTable(String pRssFeedName) {
 		String _TableName = getTableName(pRssFeedName);
 		mDatabase.execSQL("DROP TABLE '" + _TableName + "';");
@@ -142,5 +169,22 @@ public class SQLiteRssItem extends SQLiteBase {
 		} else {
 			return false;
 		}
+	}
+
+	public int getUnreadCount(String pRssName) {
+		int _UnreadCount = 0;
+		String _tablename = getTableName(pRssName);
+		Cursor _Cursor = mDatabase.rawQuery("select count(*) from "
+				+ _tablename + " where isread=0;", null);
+		_Cursor.moveToNext();
+		_UnreadCount = getCursorInt(_Cursor, "count(*)");
+		return _UnreadCount;
+	}
+
+	public void setAllHasRead(String pRssName) {
+		// TODO Auto-generated method stub
+		String _tablename = getTableName(pRssName);
+		mDatabase.execSQL("update " + _tablename
+				+ " set isread=1 where isread=0;");
 	}
 }

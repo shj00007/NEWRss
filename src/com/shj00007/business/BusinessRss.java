@@ -21,8 +21,6 @@ public class BusinessRss {
 	private RssParser mParser = null;
 	private SQLiteRssfeed mSQLiteRssfeed = null;
 	private SQLiteRssItem mSQLiteRssItem = null;
-	private ModelRssfeed mModelRssfeed = null;
-	private ModelRssItem mModelRssItem = null;
 
 	public BusinessRss(Context pContext) {
 
@@ -47,11 +45,10 @@ public class BusinessRss {
 			_DownloadLastNews = mParser.getFeed().getItem().get(index)
 					.getTitle();
 		}
-
+		String _RssName = mParser.getFeed().getTitle();
 		for (int i = index - 1; i >= 0; i--) {
 
-			String pDescriptionMD5 = MD5Change.getMD5(mParser.getFeed()
-					.getTitle()
+			String pDescriptionMD5 = MD5Change.getMD5(_RssName
 					+ mParser.getFeed().getItem().get(i).getTitle()
 					+ mParser.getFeed().getItem().get(i).getPubDate());
 			DownFile.saveDescription(mParser.getFeed().getItem().get(i)
@@ -59,11 +56,14 @@ public class BusinessRss {
 
 			String _Date = DateTools.getDate(mParser.getFeed().getItem().get(i)
 					.getPubDate());
-			mSQLiteRssItem.addNews(mParser.getFeed().getTitle(), mParser
-					.getFeed().getItem().get(i).getTitle(), _Date, mParser
-					.getFeed().getItem().get(i).getCategory(), mParser
-					.getFeed().getItem().get(i).getLink(), pDescriptionMD5);
+			mSQLiteRssItem.addNews(_RssName, mParser.getFeed().getItem().get(i)
+					.getTitle(), _Date, mParser.getFeed().getItem().get(i)
+					.getCategory(), mParser.getFeed().getItem().get(i)
+					.getLink(), pDescriptionMD5);
 		}
+		mSQLiteRssfeed.updateRssFeedCount(_RssName,
+				mSQLiteRssItem.getUnreadCount(_RssName));
+
 	}
 
 	public void downloadRSS(String pUrl) {
@@ -71,10 +71,10 @@ public class BusinessRss {
 		mParser.parse();
 	}
 
-	public void addRssFeed(String pCategory) {
+	public void addRssFeed(String pCategory, String pFeedLink) {
 
 		mSQLiteRssfeed.addFeed(mParser.getFeed().getTitle(), pCategory, mParser
-				.getFeed().getItem().size() - 1);
+				.getFeed().getItem().size() - 1, pFeedLink);
 		mSQLiteRssItem.createTable(mParser.getFeed().getTitle());
 
 	}
@@ -146,6 +146,11 @@ public class BusinessRss {
 
 	public void setHasRead(String pRssName, String pItemName) {
 		mSQLiteRssItem.setHasRead(pRssName, pItemName);
+	}
+
+	public void setRssIsread(String pRssName) {
+		mSQLiteRssfeed.setRssHasRead(pRssName);
+		mSQLiteRssItem.setAllHasRead(pRssName);
 	}
 
 }

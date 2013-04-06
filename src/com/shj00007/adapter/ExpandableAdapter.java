@@ -5,9 +5,7 @@ import java.util.HashMap;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
@@ -16,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.fragmenttest1.R;
+import com.shj00007.R;
 import com.shj00007.bean.ModelRssfeed;
 import com.shj00007.business.BusinessRss;
 

@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 import android.content.Context;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.fragmenttest1.R;
+import com.shj00007.R;
 import com.shj00007.bean.ModelRssItem;
 import com.shj00007.business.BusinessRss;
 import com.shj00007.utility.listviewfromnet.StickyListHeadersBaseAdapter;
@@ -28,6 +27,10 @@ public class MidListViewAdapter extends StickyListHeadersBaseAdapter {
 		this.mBusinessRss = pBusinessRss;
 		this.mRssName = pRssName;
 		this.mModelRssItems = mBusinessRss.getModelRssItem(pRssName);
+	}
+	
+	public String getRssName(){
+		return mRssName;
 	}
 
 	@Override
@@ -87,12 +90,13 @@ public class MidListViewAdapter extends StickyListHeadersBaseAdapter {
 		return convertView;
 	}*/
 
-	@Override
-	public void notifyDataSetChanged() {
+	public void notifyDataSetChanged(boolean pOnlyViewUnRead) {
 		// TODO Auto-generated method stub
 		this.mModelRssItems = mBusinessRss.getModelRssItem(mRssName);
 		super.notifyDataSetChanged();
 	}
+	
+	
 
 	static class MidViewHolder {
 		TextView midname = null;

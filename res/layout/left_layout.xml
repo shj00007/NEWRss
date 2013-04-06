@@ -13,9 +13,9 @@
 
         <TextView
             android:id="@+id/lefttitle_count"
+            style="@style/customstyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/customstyle"
             android:text="@string/Unread" />
 
         <ExpandableListView
@@ -23,22 +23,21 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:groupIndicator="@null"
             android:childDivider="@android:color/transparent"
             android:divider="#D0D0D0"
-            android:dividerHeight="1.5dp" >
+            android:dividerHeight="1.5dp"
+            android:groupIndicator="@null" >
         </ExpandableListView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="80dp"
             android:orientation="horizontal" >
 
-            <ImageView
+            <com.shj00007.utility.animviewfromnet.RayMenu
                 android:id="@+id/ivAddRss"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/addrss" />
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
 
