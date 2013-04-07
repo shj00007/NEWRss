@@ -25,6 +25,9 @@
             android:layout_weight="1"
             android:childDivider="@android:color/transparent"
             android:divider="#D0D0D0"
+            android:fadingEdge="none"
+            android:cacheColorHint="@android:color/transparent"
+            android:listSelector="@android:color/transparent"
             android:dividerHeight="1.5dp"
             android:groupIndicator="@null" >
         </ExpandableListView>

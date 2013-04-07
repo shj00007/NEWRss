@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.util.Log;
 
 import com.shj00007.bean.ModelRssfeed;
 import com.shj00007.database.base.SQLiteBase;
@@ -24,10 +25,7 @@ public class SQLiteRssfeed extends SQLiteBase {
 						+ pCategory
 						+ "','"
 						+ pUnread
-						+ "','"
-						+pFeedLink
-						+"');");
-						
+						+ "','" + pFeedLink + "');");
 
 	}
 
@@ -46,7 +44,7 @@ public class SQLiteRssfeed extends SQLiteBase {
 		ArrayList<ModelRssfeed> _ModelRssfeedList = new ArrayList<ModelRssfeed>();
 		ModelRssfeed _ModelRssfeed = null;
 		Cursor _Cursor = mDatabase
-				.rawQuery("Select * From rssfeed_list;", null);
+				.rawQuery("SELECT * FROM rssfeed_list;", null);
 		while (_Cursor.moveToNext()) {
 			_ModelRssfeed = new ModelRssfeed();
 			_ModelRssfeed.setTablename("table"
@@ -62,18 +60,33 @@ public class SQLiteRssfeed extends SQLiteBase {
 	}
 
 	public void deleteRssFeed(String pRssFeedName) {
-		mDatabase.execSQL("delete from rssfeed_list where rssfeed_name='"
+		mDatabase.execSQL("DELETE FROM rssfeed_list WHERE rssfeed_name='"
 				+ pRssFeedName + "';");
 	}
 
 	public void updateRssFeedCount(String pRssFeedName, int pUnreadCount) {
-		mDatabase.execSQL("update rssfeed_list set unread=" + pUnreadCount
-				+ " where rssname='" + pRssFeedName + "'");
+		mDatabase.execSQL("UPDATE rssfeed_list SET unread=" + pUnreadCount
+				+ " WHERE rssname='" + pRssFeedName + "'");
 	}
 
 	public void setRssHasRead(String pRssName) {
 		// TODO Auto-generated method stub
-		mDatabase.execSQL("update rssfeed_list set unread=0 where rssname='"+pRssName+"'");
+		mDatabase.execSQL("UPDATE rssfeed_list SET unread=0 WHERE rssname='"
+				+ pRssName + "'");
+	}
+
+	public boolean isRssExist(String pLink) {
+		Cursor _Cursor = mDatabase.rawQuery(
+				"SELECT * FROM rssfeed_list WHERE feedlink='" + pLink + "'",
+				null);
+		boolean _isExist = _Cursor.moveToNext();
+		_Cursor.close();
+		if (_isExist) {
+			Log.i("test", "plink!=null");
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }

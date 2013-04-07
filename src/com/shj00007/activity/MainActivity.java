@@ -10,7 +10,6 @@ import android.os.Looper;
 import android.os.Message;
 import android.text.Html;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
@@ -20,6 +19,7 @@ import android.view.View.OnTouchListener;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
@@ -37,7 +37,6 @@ import com.shj00007.adapter.ExpandableAdapter;
 import com.shj00007.adapter.MidListViewAdapter;
 import com.shj00007.business.BusinessRss;
 import com.shj00007.utility.DownFile;
-import com.shj00007.utility.animviewfromnet.ArcMenu;
 import com.shj00007.utility.animviewfromnet.RayMenu;
 
 public class MainActivity extends Activity implements OnGestureListener,
@@ -68,7 +67,8 @@ public class MainActivity extends Activity implements OnGestureListener,
 			R.drawable.composer_with };
 
 	private ListView mMidListView = null;
-
+	private ImageView mMidUnreadImage = null;
+	private ImageView mRightUnreadImage = null;
 	private TextView tvrighttext = null;
 	private ScrollView svrightscroll = null;
 	private String _Description = null;
@@ -100,11 +100,13 @@ public class MainActivity extends Activity implements OnGestureListener,
 		mMidListView = (ListView) findViewById(R.id.mid_listview);
 		tvrighttext = (TextView) findViewById(R.id.tvright_text_up);
 		svrightscroll = (ScrollView) findViewById(R.id.svrightscrool);
+		mMidUnreadImage = (ImageView) findViewById(R.id.ivmidunreadimage);
+		mRightUnreadImage = (ImageView) findViewById(R.id.ivrightunreadimage);
 	}
 
 	public void setListener() {
 		mExpandableListView.setOnTouchListener(this);
-		mMidListView.setOnTouchListener(this);
+		// mMidListView.setOnTouchListener(this);
 		tvrighttext.setOnTouchListener(this);
 		svrightscroll.setOnTouchListener(this);
 
@@ -114,10 +116,11 @@ public class MainActivity extends Activity implements OnGestureListener,
 			item.setImageResource(ITEM_DRAWABLES[i]);
 			if (i == 0) {
 				ivAddRss.addItem(item, new OnClickListener() {
+					EditText et = null;
 
 					@Override
 					public void onClick(View v) {
-						final EditText et = new EditText(MainActivity.this);
+						et = new EditText(MainActivity.this);
 						et.setText("http://cn.engadget.com/rss.xml");
 
 						new AlertDialog.Builder(MainActivity.this)
@@ -132,6 +135,20 @@ public class MainActivity extends Activity implements OnGestureListener,
 													int which) {
 												// TODO Auto-generated method
 												// stub
+												final String link = et
+														.getText().toString();
+												if (mBusinessRss
+														.isRssFeedExist(link)) {
+													Toast.makeText(
+															MainActivity.this,
+															"rss已存在",
+															Toast.LENGTH_SHORT)
+															.show();
+													return;
+												}
+												InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+												imm.hideSoftInputFromWindow(
+														et.getWindowToken(), 0);
 												ShowProgressDialog("!!!",
 														"loading");
 
@@ -142,14 +159,11 @@ public class MainActivity extends Activity implements OnGestureListener,
 														// TODO Auto-generated
 														// method
 														mBusinessRss
-																.downloadRSS(et
-																		.getText()
-																		.toString());
+																.downloadRSS(link);
 														mBusinessRss
 																.addRssFeed(
 																		"新闻",
-																		et.getText()
-																				.toString());
+																		link);
 														mBusinessRss
 																.updateRss();
 														Handler myhandler = new Handler(
@@ -200,43 +214,25 @@ public class MainActivity extends Activity implements OnGestureListener,
 						}
 					}
 				});
+			} else if (i == 2) {
+				ivAddRss.addItem(item, new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						MidListViewAdapter _Adapter = (MidListViewAdapter) mMidListView
+								.getAdapter();
+						if (_Adapter.getOnlyViewUnRead())
+							_Adapter.setOnlyViewUnRead(false);
+						else
+							_Adapter.setOnlyViewUnRead(true);
+						_Adapter.notifyDataSetChanged();
+					}
+				});
 			} else {
 				ivAddRss.addItem(item, null);
 			}
 		}
-
-		/*
-		 * ivAddRss.setOnClickListener(new OnClickListener() {
-		 * 
-		 * @Override public void onClick(View v) { // TODO Auto-generated method
-		 * stub
-		 * 
-		 * final EditText et = new EditText(MainActivity.this);
-		 * et.setText("http://cn.engadget.com/rss.xml");
-		 * 
-		 * new AlertDialog.Builder(MainActivity.this) .setTitle("请输入")
-		 * .setView(et) .setPositiveButton("确定", new
-		 * DialogInterface.OnClickListener() {
-		 * 
-		 * @Override public void onClick(DialogInterface dialog, int which) { //
-		 * TODO Auto-generated method stub ShowProgressDialog("!!!", "loading");
-		 * 
-		 * new Thread(new Runnable() {
-		 * 
-		 * @Override public void run() { // TODO Auto-generated method // stub
-		 * mBusinessRss.downloadRSS(et .getText().toString());
-		 * mBusinessRss.addRssFeed("新闻"); mBusinessRss.updateRss(); Handler
-		 * myhandler = new Handler( Looper.getMainLooper()) {
-		 * 
-		 * @Override public void handleMessage( Message msg) { // TODO
-		 * Auto-generated // method stub bindData(); DismissProgressDialog(); }
-		 * }; myhandler.removeMessages(123); myhandler.sendEmptyMessage(123); }
-		 * }).start();
-		 * 
-		 * } }).setNegativeButton("取消", null).show();
-		 * 
-		 * } });
-		 */
 
 		mMidListView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -244,6 +240,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 				// TODO Auto-generated method stub
+				mRightUnreadImage.setVisibility(View.GONE);
 				String _RssName = ((TextView) arg1.findViewById(R.id.midname))
 						.getText().toString();
 				String _ItemTitle = ((TextView) arg1
@@ -265,8 +262,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 
 					mBusinessRss.setHasRead(_RssName, _ItemTitle);
 					mExpandableAdapter.notifyDataSetChanged();
-
-					((MidListViewAdapter) arg0.getAdapter())
+					((MidListViewAdapter) mMidListView.getAdapter())
 							.notifyDataSetChanged();
 				}
 			}
@@ -288,7 +284,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 
 	public void bindData() {
 		mExpandableAdapter = new ExpandableAdapter(this, mBusinessRss,
-				mMidListView);
+				mMidListView, mMidUnreadImage);
 		mExpandableListView.setAdapter(mExpandableAdapter);
 	}
 
@@ -333,11 +329,12 @@ public class MainActivity extends Activity implements OnGestureListener,
 			float velocityY) {
 		// TODO Auto-generated method stub
 		setAnimation();
-		if (e1.getX() - e2.getX() > 120 && ishomeopen) {
+		if (e1.getRawX() - e2.getRawX() > 120 && ishomeopen) {
 			layout.startAnimation(open_layout_anim);
 			ishomeopen = false;
 			return true;
-		} else if (e1.getX() - e2.getX() < -80 && e1.getX() < 50 && !ishomeopen) {
+		} else if (e1.getRawX() - e2.getRawX() < -80 && e1.getRawX() < 50
+				&& !ishomeopen) {
 			layout.startAnimation(close_layout_anim);
 			ishomeopen = true;
 			return true;
@@ -355,7 +352,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override

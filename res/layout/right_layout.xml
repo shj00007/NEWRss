@@ -5,6 +5,13 @@
     android:background="@drawable/rightbackground"
     android:orientation="vertical" >
 
+    <ImageView
+        android:id="@+id/ivrightunreadimage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/rightbackground_unread" />
+
     <ScrollView
         android:id="@+id/svrightscrool"
         android:layout_width="match_parent"

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.util.Log;
 
 import com.shj00007.bean.ModelRssItem;
 import com.shj00007.database.base.SQLiteBase;
@@ -37,7 +36,7 @@ public class SQLiteRssItem extends SQLiteBase {
 						+ pLink + "','" + pDescriptionMD5 + "',0,0);");
 	}
 
-	public ArrayList<ModelRssItem> getRssfeedList(String pRssFeedName) {
+	public ArrayList<ModelRssItem> getRssItemList(String pRssFeedName) {
 		ArrayList<ModelRssItem> _ModelRssItems = new ArrayList<ModelRssItem>();
 		ModelRssItem _ModelRssItem = null;
 		String _TableName = getTableName(pRssFeedName);
@@ -60,16 +59,20 @@ public class SQLiteRssItem extends SQLiteBase {
 		}
 		_Cursor.close();
 		return _ModelRssItems;
-
 	}
 
-	public ArrayList<ModelRssItem> getRssfeedList(String pRssFeedName,
+	public ArrayList<ModelRssItem> getRssItemList(String pRssFeedName,
 			boolean pOnlyViewUnread) {
 		ArrayList<ModelRssItem> _ModelRssItems = new ArrayList<ModelRssItem>();
 		ModelRssItem _ModelRssItem = null;
 		String _TableName = getTableName(pRssFeedName);
-		String _Sql = "SELECT title,pubdate,category,image,descriptionMD5,isread,starred FROM "
-				+ _TableName + " WHERE ISREAD=0 ORDER BY _id DESC";
+		String _Sql = null;
+		if (pOnlyViewUnread)
+			_Sql = "SELECT title,pubdate,category,image,descriptionMD5,isread,starred FROM "
+					+ _TableName + " WHERE ISREAD=0 ORDER BY _id DESC";
+		else
+			_Sql = "SELECT title,pubdate,category,image,descriptionMD5,isread,starred FROM "
+					+ _TableName + " ORDER BY _id DESC";
 		Cursor _Cursor = mDatabase.rawQuery(_Sql, null);
 		while (_Cursor.moveToNext()) {
 			_ModelRssItem = new ModelRssItem();

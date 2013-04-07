@@ -32,16 +32,18 @@ public class ExpandableAdapter extends BaseExpandableListAdapter implements
 
 	private ListView mMidListView = null;
 	private MidListViewAdapter mMidListViewAdapter = null;
+	private ImageView mMidUnreadImage = null;
+	
 
 	public ExpandableAdapter(Context pContext, BusinessRss pBusinessRss,
-			ListView pMidListView) {
+			ListView pMidListView, ImageView pUnreadImage) {
 		this.mContext = pContext;
 		this.mBusinessRss = pBusinessRss;
 		this.mRssCategoryList = pBusinessRss.getRssCategoryList();
 		this.mModelRssfeeds = pBusinessRss.getModelRssfeeds();
 		this.mLayoutInflater = LayoutInflater.from(mContext);
-
 		this.mMidListView = pMidListView;
+		this.mMidUnreadImage = pUnreadImage;
 	}
 
 	@Override
@@ -127,8 +129,6 @@ public class ExpandableAdapter extends BaseExpandableListAdapter implements
 
 	static class GroupViewHolder {
 		private TextView tvrss_category = null;
-		private TextView righttext = null;
-		private ImageView arrow = null;
 	}
 
 	@Override
@@ -158,6 +158,7 @@ public class ExpandableAdapter extends BaseExpandableListAdapter implements
 
 		mMidListViewAdapter = new MidListViewAdapter(mContext, mBusinessRss,
 				_RssName);
+		mMidUnreadImage.setVisibility(View.GONE);
 		mMidListView.setAdapter(mMidListViewAdapter);
 
 		return false;

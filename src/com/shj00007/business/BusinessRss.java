@@ -1,6 +1,7 @@
 package com.shj00007.business;
 
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -100,8 +101,9 @@ public class BusinessRss {
 		return list;
 	}
 
-	public ArrayList<ModelRssItem> getModelRssItem(String pRssFeedName) {
-		return mSQLiteRssItem.getRssfeedList(pRssFeedName);
+	public ArrayList<ModelRssItem> getModelRssItem(String pRssFeedName,
+			boolean pOnlyViewUnread) {
+		return mSQLiteRssItem.getRssItemList(pRssFeedName, pOnlyViewUnread);
 	}
 
 	public ArrayList<String> getRssCategoryList() {
@@ -113,23 +115,23 @@ public class BusinessRss {
 		String description = "";
 		String _DescriptionMD5 = mSQLiteRssItem.getDescriptionMD5(pRssName,
 				pItemName);
-		FileInputStream _InputStream = null;
+		FileReader _FileReader = null;
 		try {
-			_InputStream = new FileInputStream(DBHelper.TEXTFILE_PAT + "/"
+			_FileReader = new FileReader(DBHelper.TEXTFILE_PAT + "/"
 					+ _DescriptionMD5);
-			byte[] bytes = new byte[1024];
+			char[] buffer = new char[1024];
 			int hasRead = 0;
-			while ((hasRead = _InputStream.read(bytes)) > 0) {
-				description += new String(bytes, 0, hasRead, "UTF-8");
+			while ((hasRead = _FileReader.read(buffer)) != -1) {
+				description += new String(buffer, 0, hasRead);
 			}
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-			if (_InputStream != null) {
+			if (_FileReader != null) {
 				try {
-					_InputStream.close();
+					_FileReader.close();
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -153,4 +155,7 @@ public class BusinessRss {
 		mSQLiteRssItem.setAllHasRead(pRssName);
 	}
 
+	public boolean isRssFeedExist(String pLink) {
+		return mSQLiteRssfeed.isRssExist(pLink);
+	}
 }
