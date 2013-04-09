@@ -29,7 +29,7 @@ public class RssParser extends DefaultHandler {
 		this.text = new StringBuilder();
 	}
 
-	public void parse() {
+	public boolean parse() {
 		InputStream urlInputStream = null;
 		SAXParserFactory spf = null;
 		SAXParser sp = null;
@@ -43,6 +43,7 @@ public class RssParser extends DefaultHandler {
 				sp = spf.newSAXParser();
 				sp.parse(urlInputStream, this);
 			}
+			return true;
 		}
 		/*
 		 * Exceptions need to be handled MalformedURLException
@@ -52,6 +53,7 @@ public class RssParser extends DefaultHandler {
 		catch (Exception e) {
 			System.out.println("Exception: " + e);
 			e.printStackTrace();
+			return false;
 		} finally {
 			try {
 				if (urlInputStream != null)

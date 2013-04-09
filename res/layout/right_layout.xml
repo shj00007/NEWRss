@@ -8,20 +8,36 @@
     <ImageView
         android:id="@+id/ivrightunreadimage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
         android:scaleType="centerInside"
         android:src="@drawable/rightbackground_unread" />
 
     <ScrollView
         android:id="@+id/svrightscrool"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:visibility="gone" >
 
         <TextView
             android:id="@+id/tvright_text_up"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="good" />
+            android:layout_height="match_parent" />
     </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/mid_bottom_background" >
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/ivsetstarr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/setstarr" />
+    </RelativeLayout>
 
 </LinearLayout>

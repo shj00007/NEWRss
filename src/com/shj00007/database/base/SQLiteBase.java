@@ -1,7 +1,5 @@
 package com.shj00007.database.base;
 
-import java.io.File;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -32,6 +30,18 @@ public class SQLiteBase {
 		} else {
 			return true;
 		}
+	}
+	
+	public String getTableName(String pRssFeedName) {
+		String _TableName = "";
+		String _Sql = "SELECT _id FROM rssfeed_list WHERE rssname='"
+				+ pRssFeedName + "';";
+		Cursor _Cursor = mDatabase.rawQuery(_Sql, null);
+		_Cursor.moveToNext();
+		_TableName = "table" + _Cursor.getInt(_Cursor.getColumnIndex("_id"));
+		_Cursor.close();
+		return _TableName;
+
 	}
 
 }

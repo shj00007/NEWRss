@@ -3,37 +3,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/midbackground"
-    android:orientation="horizontal" >
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="400"
-        android:orientation="vertical" >
-
-        <ImageView
-            android:id="@+id/ivmidunreadimage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/midbackground_unread" />
-
-        <com.shj00007.utility.listviewfromnet.StickyListHeadersListView
-            android:id="@+id/mid_listview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:cacheColorHint="@android:color/transparent"
-            android:divider="#CDD1D0"
-            android:dividerHeight="1dp"
-            android:fadingEdge="none"
-            android:listSelector="@android:color/transparent"
-            android:scrollbars="none" />
-    </LinearLayout>
+    android:orientation="vertical" >
 
     <ImageView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="0.5"
-        android:background="@drawable/left_divider" />
+        android:id="@+id/ivmidunreadimage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:scaleType="fitXY"
+        android:src="@drawable/midbackground_unread" />
+
+    <com.shj00007.utility.listviewfromnet.StickyListHeadersListView
+        android:id="@+id/mid_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#CDD1D0"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:visibility="gone" />
+    <ListView
+        android:id="@+id/mid_starr_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#CDD1D0"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/mid_bottom_background" >
+
+        <ImageView
+            android:id="@+id/ivsetallread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/setallread" />
+
+        <ImageView
+            android:id="@+id/ivviewstarred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/viewstarr" />
+        <ImageView 
+            android:id="@+id/ivonlyunread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/ivviewstarred"
+            android:src="@drawable/onlyunread"
+            />
+    </RelativeLayout>
 
 </LinearLayout>

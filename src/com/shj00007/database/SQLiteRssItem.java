@@ -98,17 +98,7 @@ public class SQLiteRssItem extends SQLiteBase {
 		mDatabase.execSQL("DROP TABLE '" + _TableName + "';");
 	}
 
-	public String getTableName(String pRssFeedName) {
-		String _TableName = "";
-		String _Sql = "SELECT _id FROM rssfeed_list WHERE rssname='"
-				+ pRssFeedName + "';";
-		Cursor _Cursor = mDatabase.rawQuery(_Sql, null);
-		_Cursor.moveToNext();
-		_TableName = "table" + _Cursor.getInt(_Cursor.getColumnIndex("_id"));
-		_Cursor.close();
-		return _TableName;
-
-	}
+	
 
 	public String getLastNews(String pRssFeedName) {
 		String news = "";
@@ -189,5 +179,11 @@ public class SQLiteRssItem extends SQLiteBase {
 		String _tablename = getTableName(pRssName);
 		mDatabase.execSQL("update " + _tablename
 				+ " set isread=1 where isread=0;");
+	}
+
+	public void setStarred(String pRssName, String pItemName) {
+		String _tablename = getTableName(pRssName);
+		mDatabase.execSQL("update " + _tablename
+				+ " set starred=1 where title='" + pItemName + "'");
 	}
 }

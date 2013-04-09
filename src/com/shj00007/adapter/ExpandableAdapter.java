@@ -33,7 +33,6 @@ public class ExpandableAdapter extends BaseExpandableListAdapter implements
 	private ListView mMidListView = null;
 	private MidListViewAdapter mMidListViewAdapter = null;
 	private ImageView mMidUnreadImage = null;
-	
 
 	public ExpandableAdapter(Context pContext, BusinessRss pBusinessRss,
 			ListView pMidListView, ImageView pUnreadImage) {
@@ -159,9 +158,10 @@ public class ExpandableAdapter extends BaseExpandableListAdapter implements
 		mMidListViewAdapter = new MidListViewAdapter(mContext, mBusinessRss,
 				_RssName);
 		mMidUnreadImage.setVisibility(View.GONE);
+		mMidListView.setVisibility(View.VISIBLE);
 		mMidListView.setAdapter(mMidListViewAdapter);
 
-		return false;
+		return true;
 	}
 
 	@Override

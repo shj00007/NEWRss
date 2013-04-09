@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/mid_listview_news_background"
     android:orientation="horizontal" >
 
     <RelativeLayout
@@ -29,7 +30,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginTop="5dp"
             android:singleLine="true"
-            android:text="title_name" />
+             />
 
         <TextView
             android:id="@+id/middate"
@@ -38,7 +39,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignTop="@id/midname"
             android:singleLine="true"
-            android:text="time" />
+             />
 
         <TextView
             android:id="@+id/midtitle"
@@ -47,7 +48,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@id/midname"
             android:singleLine="true"
-            android:text="title"
+            
             android:textSize="16sp" />
 
         <TextView
@@ -57,7 +58,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@id/midtitle"
             android:singleLine="true"
-            android:text="texttext" />
+             />
     </RelativeLayout>
 
 </LinearLayout>

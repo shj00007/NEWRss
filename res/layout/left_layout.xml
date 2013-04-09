@@ -2,52 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/leftbackground_open"
-    android:orientation="horizontal" >
+    android:background="@drawable/left_background_repeat"
+    android:orientation="vertical" >
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="300"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/lefttitle_count"
-            style="@style/customstyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Unread" />
-
-        <ExpandableListView
-            android:id="@+id/expandableListleft"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:childDivider="@android:color/transparent"
-            android:divider="#D0D0D0"
-            android:fadingEdge="none"
-            android:cacheColorHint="@android:color/transparent"
-            android:listSelector="@android:color/transparent"
-            android:dividerHeight="1.5dp"
-            android:groupIndicator="@null" >
-        </ExpandableListView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal" >
-
-            <com.shj00007.utility.animviewfromnet.RayMenu
-                android:id="@+id/ivAddRss"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
+    <TextView
+        android:id="@+id/lefttitle_count"
+        style="@style/customstyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/left_divider" />
+        android:text="@string/Unread" />
+
+    <ExpandableListView
+        android:id="@+id/expandableListleft"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="14"
+        android:cacheColorHint="@android:color/transparent"
+        android:childDivider="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:groupIndicator="@null"
+        android:listSelector="@color/transparent" >
+    </ExpandableListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/left_buttom_background" >
+
+        <ImageView
+            android:id="@+id/ivupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/update" />
+        
+        <ImageView
+            android:id="@+id/ivaddfeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+			android:layout_marginRight="7dp"
+            android:src="@drawable/addfeed" />
+    </RelativeLayout>
 
 </LinearLayout>

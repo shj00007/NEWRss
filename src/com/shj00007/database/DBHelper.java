@@ -23,6 +23,8 @@ public class DBHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
 		db.execSQL("CREATE TABLE IF NOT EXISTS rssfeed_list(_id INTEGER PRIMARY KEY AUTOINCREMENT, rssname VARCHAR, category VARCHAR, unread INTEGER,feedlink INTEGER)");
+		db.execSQL("CREATE TABLE IF NOT EXISTS starred_list(_id INTEGER PRIMARY KEY AUTOINCREMENT, rssname VARCHAR, title VARCHAR,pubdate DATETIME)");
+		
 		mFile = new File(IMAGEFILE_PATH);
 		mFile.mkdirs();
 		mFile = new File(TEXTFILE_PAT);

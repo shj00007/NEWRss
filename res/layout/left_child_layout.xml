@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:minHeight="25dp"
     android:paddingLeft="10dp" >
+
     <TextView
         android:id="@+id/tvleftchildtitle"
         android:layout_width="150dp"
@@ -12,7 +13,8 @@
         android:layout_marginTop="3dp"
         android:gravity="left"
         android:singleLine="true"
-        android:text="childleft" />
+        android:text="childleft"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/tvleftchildcount"

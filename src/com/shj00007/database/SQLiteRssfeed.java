@@ -89,4 +89,14 @@ public class SQLiteRssfeed extends SQLiteBase {
 		}
 	}
 
+	public ArrayList<String> getFeedLinkList() {
+		ArrayList<String> _FeedLinkList=new ArrayList<String>();
+		Cursor _Cursor=mDatabase.rawQuery("select feedlink from rssfeed_list;", null);
+		while(_Cursor.moveToNext()){
+			_FeedLinkList.add(getCursorString(_Cursor, "feedlink"));
+		}
+		_Cursor.close();
+		return _FeedLinkList;
+	}
+
 }

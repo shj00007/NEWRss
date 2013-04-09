@@ -7,4 +7,13 @@
     <string name="Unread">Unread</string>
     <string name="title_activity_test">TestActivity</string>
 
+    <string-array name="category">
+        <item>体育</item>
+        <item>新闻</item>
+        <item>数码</item>
+        <item>资讯</item>
+        <item>时事</item>
+        <item>国际</item>
+    </string-array>
+
 </resources>

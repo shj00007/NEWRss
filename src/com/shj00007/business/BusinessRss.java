@@ -1,17 +1,18 @@
 package com.shj00007.business;
 
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.content.Context;
+import android.database.Cursor;
 
 import com.shj00007.bean.ModelRssItem;
 import com.shj00007.bean.ModelRssfeed;
 import com.shj00007.database.DBHelper;
 import com.shj00007.database.SQLiteRssItem;
+import com.shj00007.database.SQLiteRssStarr;
 import com.shj00007.database.SQLiteRssfeed;
 import com.shj00007.rss.RssParser;
 import com.shj00007.utility.DateTools;
@@ -22,12 +23,14 @@ public class BusinessRss {
 	private RssParser mParser = null;
 	private SQLiteRssfeed mSQLiteRssfeed = null;
 	private SQLiteRssItem mSQLiteRssItem = null;
+	private SQLiteRssStarr mSQLiteRssStarr = null;
+	private Context mContext = null;
 
 	public BusinessRss(Context pContext) {
-
-		mSQLiteRssfeed = new SQLiteRssfeed(pContext);
-		mSQLiteRssItem = new SQLiteRssItem(pContext);
-
+		this.mContext = pContext;
+		mSQLiteRssfeed = new SQLiteRssfeed(mContext);
+		mSQLiteRssItem = new SQLiteRssItem(mContext);
+		mSQLiteRssStarr = new SQLiteRssStarr(mContext);
 	}
 
 	public void updateRss() {
@@ -67,9 +70,12 @@ public class BusinessRss {
 
 	}
 
-	public void downloadRSS(String pUrl) {
+	public boolean downloadRSS(String pUrl) {
 		mParser = new RssParser(pUrl);
-		mParser.parse();
+		if (mParser.parse()) {
+			return true;
+		} else
+			return false;
 	}
 
 	public void addRssFeed(String pCategory, String pFeedLink) {
@@ -158,4 +164,31 @@ public class BusinessRss {
 	public boolean isRssFeedExist(String pLink) {
 		return mSQLiteRssfeed.isRssExist(pLink);
 	}
+
+	public void setItemStarr(String pRssName, String pItemName, String pPubdate) {
+		mSQLiteRssStarr.addStarred(pRssName, pItemName, pPubdate);
+		mSQLiteRssItem.setStarred(pRssName, pItemName);
+	}
+
+	public Cursor getStarredCursor() {
+		return mSQLiteRssStarr.getStarredCursor();
+	}
+
+	public boolean isItemStarred(String pItemName) {
+		return mSQLiteRssStarr.isItemStarred(pItemName);
+	}
+
+	public void setItemUnstarr(String pItemName) {
+		mSQLiteRssStarr.deleteItemStarred(pItemName);
+	}
+
+	public void updateAllRss() {
+		ArrayList<String> _FeedLinkList = mSQLiteRssfeed.getFeedLinkList();
+		for (int i = 0; i < _FeedLinkList.size(); i++) {
+			String link = _FeedLinkList.get(i);
+			this.downloadRSS(link);
+			this.updateRss();
+		}
+	}
+
 }

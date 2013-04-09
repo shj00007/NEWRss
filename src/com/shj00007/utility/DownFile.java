@@ -182,11 +182,12 @@ public class DownFile implements ImageGetter {
 					// TODO Auto-generated method stub
 					InputStream is = null;
 					FileOutputStream _FileOutputStream = null;
+					File _Image = null;
 					try {
 
 						is = (InputStream) new URL(source).getContent();
-						_FileOutputStream = new FileOutputStream(
-								IAMGE_FLODER_PATH + "/" + iamgeMD5);
+						_Image = new File(IAMGE_FLODER_PATH + "/" + iamgeMD5);
+						_FileOutputStream = new FileOutputStream(_Image);
 						byte[] buffer = new byte[1024];
 						int hasread = 0;
 						while ((hasread = is.read(buffer, 0, 1024)) > 0) {
@@ -201,23 +202,10 @@ public class DownFile implements ImageGetter {
 
 							};
 						};
-						handler.removeMessages(0);
 						handler.sendEmptyMessageDelayed(0, 500);
-						// Handler handler;
-						// Looper.prepare();
-						// handler = new Handler() {
-						// public void handleMessage(Message msg) {
-						// rightText.setText(Html.fromHtml(str,
-						// new DownFile(rightText, str), null));
-						//
-						// };
-						// };
-						// handler.sendEmptyMessage(123);
-						// Looper.loop();
+
 					} catch (Exception e) {
-						// d = getDefaultImageIcon();
-						// d.setBounds(0, 0, d.getIntrinsicWidth(),
-						// d.getIntrinsicHeight());
+						_Image.delete();
 						Log.i("test", "d=null");
 						e.printStackTrace();
 					} finally {
