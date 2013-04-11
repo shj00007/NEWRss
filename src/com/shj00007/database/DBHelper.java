@@ -6,6 +6,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.shj00007.utility.DownFile;
+
 public class DBHelper extends SQLiteOpenHelper {
 
 	public static final String DATABASE_NAME = "rssinfo.db";
@@ -28,6 +30,8 @@ public class DBHelper extends SQLiteOpenHelper {
 		mFile = new File(IMAGEFILE_PATH);
 		mFile.mkdirs();
 		mFile = new File(TEXTFILE_PAT);
+		mFile.mkdirs();
+		mFile = new File(DownFile.IMAGE_FLODER_PATH);
 		mFile.mkdirs();
 
 	}

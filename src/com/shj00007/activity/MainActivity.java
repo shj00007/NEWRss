@@ -213,7 +213,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 													.show();
 											return;
 										}
-										final String category = etaddfeedname
+										final String category = etaddcategoryname
 												.getText().toString();
 
 										if (mBusinessRss.isRssFeedExist(link)) {
@@ -399,19 +399,14 @@ public class MainActivity extends Activity implements OnGestureListener,
 					.getText().toString();
 			_Pubdate = ((TextView) arg1.findViewById(R.id.middate)).getText()
 					.toString();
+			
 			_Description = "<h1>" + _ItemTitle + "</h1>\n\n<hr />"
 					+ mBusinessRss.getDescription(_RssName, _ItemTitle);
-			Handler handler = new Handler(Looper.getMainLooper()) {
-				@Override
-				public void handleMessage(Message msg) {
-					// TODO Auto-generated method stub
-					tvrighttext.setText(Html.fromHtml(_Description,
-							new DownFile(tvrighttext, _Description), null));
-				}
-			};
 
-			handler.removeMessages(0);
-			handler.sendEmptyMessage(0);
+			tvrighttext.setText(Html.fromHtml(_Description,
+					new DownFile(tvrighttext), null));
+			mRightUnreadImage.setVisibility(View.GONE);
+			svrightscroll.setVisibility(View.VISIBLE);
 			if (!mBusinessRss.isRead(_RssName, _ItemTitle)) {
 
 				mBusinessRss.setHasRead(_RssName, _ItemTitle);
@@ -419,8 +414,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 				((MidListViewAdapter) mMidListView.getAdapter())
 						.notifyDataSetChanged();
 			}
-			mRightUnreadImage.setVisibility(View.GONE);
-			svrightscroll.setVisibility(View.VISIBLE);
+			
 			mSetStarr.setOnClickListener(new OnClickListener() {
 
 				@Override
