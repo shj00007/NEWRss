@@ -22,4 +22,12 @@ public class ImageModel {
 	public void setImageBitmap(Bitmap imageBitmap) {
 		ImageBitmap = imageBitmap;
 	}
+
+	public String getImageLink() {
+		return ImageLink;
+	}
+
+	public void setImageLink(String imageLink) {
+		ImageLink = imageLink;
+	}
 }

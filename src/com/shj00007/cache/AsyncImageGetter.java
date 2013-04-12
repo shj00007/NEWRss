@@ -70,6 +70,9 @@ public class AsyncImageGetter extends AsyncTask<String, Void, Drawable> {
 
 		String iamgeMD5 = MD5Change.getMD5(source);
 		_ImageFile = new File(DownFile.IMAGE_FLODER_PATH + "/" + iamgeMD5);
+		
+		
+		
 		if (_ImageFile.exists()) {
 			try {
 				Log.i("test", "读取图片+" + DownFile.IMAGE_FLODER_PATH + "/"
