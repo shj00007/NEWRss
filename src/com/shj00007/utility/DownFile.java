@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import android.graphics.drawable.Drawable;
 import android.text.Html.ImageGetter;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -31,19 +32,29 @@ public class DownFile implements ImageGetter {
 	public Drawable getDrawable(String source) {
 		// TODO Auto-generated method stub
 		URLDrawable _URLDrawable = new URLDrawable();
-		AsyncImageGetter _asyncTask = new AsyncImageGetter(_URLDrawable,
-				mRightText);
-		_asyncTask.setOnViewChangeListener(new OnViewChangeListener() {
+		AsyncImageGetter mAsyncTask = new AsyncImageGetter();
+		Log.i("test", source);
+		mAsyncTask.setOnViewChangeListener(_URLDrawable,
+				new OnViewChangeListener() {
 
-			@Override
-			public void onInvalidateView() {
-				// TODO Auto-generated method stub
-				mRightText.invalidate();
-				mRightText.setText(DownFile.this.mRightText.getText());
-				mRightText.setEllipsize(null);
-			}
-		});
-		_asyncTask.execute(source);
+					@Override
+					public void onInvalidateView(Drawable pDrawable) {
+						// TODO Auto-generated method stub
+
+						// mRightText.invalidate();
+						// mRightText.setMinimumHeight((mRightText.getHeight() +
+						// pDrawable
+						// .getIntrinsicHeight()));
+						// mRightText.requestLayout();
+						// mRightText.setHeight((mRightText.getHeight() +
+						// pDrawable
+						// .getIntrinsicHeight()));
+						mRightText.setText(DownFile.this.mRightText.getText());
+						// mRightText.setEllipsize(null);
+						// mRightText.invalidate();
+					}
+				});
+		mAsyncTask.execute(source);
 
 		return _URLDrawable;
 	}

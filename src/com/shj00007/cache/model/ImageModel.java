@@ -7,6 +7,12 @@ public class ImageModel {
 	private String ImageLink;
 	private Bitmap ImageBitmap;
 
+	public ImageModel(String pImageName, String pImageLink, Bitmap pImageBitmap) {
+		setImageName(pImageName);
+		setImageLink(pImageLink);
+		setImageBitmap(pImageBitmap);
+	}
+
 	public String getImageName() {
 		return ImageName;
 	}

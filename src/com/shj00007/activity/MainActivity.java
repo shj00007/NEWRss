@@ -45,11 +45,12 @@ import com.shj00007.R;
 import com.shj00007.adapter.ExpandableAdapter;
 import com.shj00007.adapter.MidListViewAdapter;
 import com.shj00007.business.BusinessRss;
+import com.shj00007.cache.AsyncImageGetter;
 import com.shj00007.utility.DownFile;
 
 public class MainActivity extends Activity implements OnGestureListener,
 		OnTouchListener {
-
+	AsyncImageGetter mAsyncImageGetter = null;
 	private LinearLayout layout = null;
 	private LinearLayout leftView = null;
 	private LinearLayout midView = null;
@@ -110,7 +111,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 	// new
 	public void initTools() {
 		mBusinessRss = new BusinessRss(this);
-
+		mAsyncImageGetter = new AsyncImageGetter();
 	}
 
 	public void initView() {
@@ -190,24 +191,27 @@ public class MainActivity extends Activity implements OnGestureListener,
 										// TODO Auto-generated method
 										// stub
 										InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-										
+
 										final String link = etaddfeedname
 												.getText().toString();
 										if (etaddfeedname.getText().toString()
 												.equals("")) {
-											
+
 											imm.hideSoftInputFromWindow(
 													etaddcategoryname
-															.getWindowToken(), 0);
+															.getWindowToken(),
+													0);
 											Toast.makeText(MainActivity.this,
 													"请输入地址", Toast.LENGTH_SHORT)
 													.show();
 											return;
-										}if (etaddcategoryname.getText().toString()
-												.equals("")) {
+										}
+										if (etaddcategoryname.getText()
+												.toString().equals("")) {
 											imm.hideSoftInputFromWindow(
 													etaddcategoryname
-															.getWindowToken(), 0);
+															.getWindowToken(),
+													0);
 											Toast.makeText(MainActivity.this,
 													"请输入类别", Toast.LENGTH_SHORT)
 													.show();
@@ -222,7 +226,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 													Toast.LENGTH_SHORT).show();
 											return;
 										}
-										
+
 										ShowProgressDialog("正在加载rss", "loading");
 
 										new Thread(new Runnable() {
@@ -360,11 +364,29 @@ public class MainActivity extends Activity implements OnGestureListener,
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				ShowProgressDialog("正在更新rss", "loading");
+				svrightscroll.scrollTo(0, 0);
 				new Thread(new Runnable() {
 
 					@Override
 					public void run() {
-						mBusinessRss.updateAllRss();
+
+						try {
+							mBusinessRss.updateAllRss();
+						} catch (Exception e) {
+							e.printStackTrace();
+
+							Handler myhandler = new Handler(Looper
+									.getMainLooper()) {
+								@Override
+								public void handleMessage(Message msg) {
+									// TODO Auto-generated method stub
+									Toast.makeText(MainActivity.this, "网络异常",
+											Toast.LENGTH_SHORT).show();
+								}
+							};
+							myhandler.removeMessages(0);
+							myhandler.sendEmptyMessage(0);
+						}
 						Handler myhandler = new Handler(Looper.getMainLooper()) {
 							@Override
 							public void handleMessage(Message msg) {
@@ -399,12 +421,12 @@ public class MainActivity extends Activity implements OnGestureListener,
 					.getText().toString();
 			_Pubdate = ((TextView) arg1.findViewById(R.id.middate)).getText()
 					.toString();
-			
+
 			_Description = "<h1>" + _ItemTitle + "</h1>\n\n<hr />"
 					+ mBusinessRss.getDescription(_RssName, _ItemTitle);
 
-			tvrighttext.setText(Html.fromHtml(_Description,
-					new DownFile(tvrighttext), null));
+			tvrighttext.setText(Html.fromHtml(_Description, new DownFile(
+					tvrighttext), null));
 			mRightUnreadImage.setVisibility(View.GONE);
 			svrightscroll.setVisibility(View.VISIBLE);
 			if (!mBusinessRss.isRead(_RssName, _ItemTitle)) {
@@ -414,7 +436,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 				((MidListViewAdapter) mMidListView.getAdapter())
 						.notifyDataSetChanged();
 			}
-			
+
 			mSetStarr.setOnClickListener(new OnClickListener() {
 
 				@Override

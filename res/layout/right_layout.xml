@@ -23,7 +23,9 @@
         <TextView
             android:id="@+id/tvright_text_up"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
     </ScrollView>
 
     <RelativeLayout
@@ -33,10 +35,10 @@
         android:background="@drawable/mid_bottom_background" >
 
         <ImageView
-            android:layout_alignParentRight="true"
             android:id="@+id/ivsetstarr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:src="@drawable/setstarr" />
     </RelativeLayout>
 
