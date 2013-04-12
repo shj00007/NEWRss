@@ -1,4 +1,4 @@
-package com.shj00007.utility;
+package com.shj00007.cache.model;
 
 import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
@@ -6,7 +6,7 @@ import android.graphics.drawable.Drawable;
 
 public class URLDrawable extends BitmapDrawable {
 
-	protected Drawable drawable;
+	public Drawable drawable;
 
 	@Override
 	public void draw(Canvas canvas) {
