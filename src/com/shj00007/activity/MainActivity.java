@@ -137,6 +137,8 @@ public class MainActivity extends Activity implements OnGestureListener,
 	public void setListener() {
 		// mExpandableListView.setOnTouchListener(this);
 		mMidListView.setOnTouchListener(this);
+		mMidListView.setOverscrollHeader(getResources().getDrawable(
+				R.drawable.choose_background));
 		tvrighttext.setOnTouchListener(this);
 		svrightscroll.setOnTouchListener(this);
 		mMid_starr_listview.setOnTouchListener(this);

@@ -39,6 +39,8 @@ public abstract class StickyListHeadersBaseAdapter extends BaseAdapter implement
 	private final Context context;
 	private Drawable divider;
 	private int dividerHeight;
+	
+	
 
 	public StickyListHeadersBaseAdapter(Context context) {
 		this.context = context;

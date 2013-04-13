@@ -12,7 +12,7 @@ import com.shj00007.bean.ModelRssItem;
 import com.shj00007.business.BusinessRss;
 import com.shj00007.utility.listviewfromnet.StickyListHeadersBaseAdapter;
 
-public class MidListViewAdapter extends StickyListHeadersBaseAdapter {
+public class MidListViewAdapter extends StickyListHeadersBaseAdapter  {
 
 	Context context = null;
 	MidViewHolder viewHolder = null;
@@ -20,7 +20,7 @@ public class MidListViewAdapter extends StickyListHeadersBaseAdapter {
 	private ArrayList<ModelRssItem> mModelRssItems = null;
 	private String mRssName = "";
 	private boolean mOnlyViewUnRead = false;
-
+	
 	public MidListViewAdapter(Context context, BusinessRss pBusinessRss,
 			String pRssName) {
 		super(context);
