@@ -77,7 +77,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 	private ImageView mRightUnreadImage = null;
 	private TextView tvrighttext = null;
 	private ScrollView svrightscroll = null;
-	private String _Description = null;
+
 	private ListView mMid_starr_listview = null;
 
 	private ImageView mSetAllRead = null;
@@ -409,6 +409,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 		String _RssName = "";
 		String _ItemTitle = "";
 		String _Pubdate = "";
+		String _Description = null;
 
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
@@ -427,6 +428,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 
 			tvrighttext.setText(Html.fromHtml(_Description, new DownFile(
 					tvrighttext), null));
+			// tvrighttext.setText(_Description);
 			mRightUnreadImage.setVisibility(View.GONE);
 			svrightscroll.setVisibility(View.VISIBLE);
 			if (!mBusinessRss.isRead(_RssName, _ItemTitle)) {

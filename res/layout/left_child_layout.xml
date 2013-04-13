@@ -13,7 +13,6 @@
         android:layout_marginTop="3dp"
         android:gravity="left"
         android:singleLine="true"
-        android:text="childleft"
         android:textColor="@color/black" />
 
     <TextView
@@ -21,10 +20,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+        android:layout_marginRight="6dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/count"
         android:gravity="center"
-        android:text="123"
-        android:textSize="9dp" />
+        android:textSize="9sp" />
 
 </RelativeLayout>

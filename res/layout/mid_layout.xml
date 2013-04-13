@@ -61,6 +61,7 @@
             android:id="@+id/ivonlyunread"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_toLeftOf="@id/ivviewstarred"
             android:src="@drawable/onlyunread"
             />
