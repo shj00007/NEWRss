@@ -5,9 +5,6 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.database.Cursor;
-import android.graphics.BitmapFactory;
-import android.graphics.Shader.TileMode;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -16,6 +13,7 @@ import android.support.v4.widget.CursorAdapter;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.text.Html;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
@@ -46,17 +44,13 @@ import com.shj00007.adapter.ExpandableAdapter;
 import com.shj00007.adapter.MidListViewAdapter;
 import com.shj00007.business.BusinessRss;
 import com.shj00007.cache.AsyncImageGetter;
+import com.shj00007.touch.ctrl.GestureListenerImpl;
 import com.shj00007.utility.DownFile;
 
-public class MainActivity extends Activity implements OnGestureListener,
-		OnTouchListener {
+public class MainActivity extends Activity implements OnTouchListener {
 	AsyncImageGetter mAsyncImageGetter = null;
 	private LinearLayout layout = null;
-	private LinearLayout leftView = null;
-	private LinearLayout midView = null;
-	private LinearLayout rightView = null;
-	private LinearLayout.LayoutParams params = null;
-	private LayoutParams homeparams = null;
+
 	private boolean ishomeopen = true;
 
 	private GestureDetector gestureDetector = null;
@@ -89,7 +83,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 
 	// private EditText etaddfeedname = null;
 	// private AutoCompleteTextView etaddcategoryname = null;
-
+	DisplayMetrics dm = null;
 	private Cursor _Cursor = null;
 
 	@Override
@@ -135,7 +129,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 	}
 
 	public void setListener() {
-		// mExpandableListView.setOnTouchListener(this);
+		mExpandableListView.setOnTouchListener(this);
 		mMidListView.setOnTouchListener(this);
 		mMidListView.setOverscrollHeader(getResources().getDrawable(
 				R.drawable.choose_background));
@@ -193,16 +187,11 @@ public class MainActivity extends Activity implements OnGestureListener,
 										// TODO Auto-generated method
 										// stub
 										InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-
 										final String link = etaddfeedname
 												.getText().toString();
 										if (etaddfeedname.getText().toString()
 												.equals("")) {
 
-											imm.hideSoftInputFromWindow(
-													etaddcategoryname
-															.getWindowToken(),
-													0);
 											Toast.makeText(MainActivity.this,
 													"请输入地址", Toast.LENGTH_SHORT)
 													.show();
@@ -210,10 +199,6 @@ public class MainActivity extends Activity implements OnGestureListener,
 										}
 										if (etaddcategoryname.getText()
 												.toString().equals("")) {
-											imm.hideSoftInputFromWindow(
-													etaddcategoryname
-															.getWindowToken(),
-													0);
 											Toast.makeText(MainActivity.this,
 													"请输入类别", Toast.LENGTH_SHORT)
 													.show();
@@ -229,6 +214,9 @@ public class MainActivity extends Activity implements OnGestureListener,
 											return;
 										}
 
+										imm.hideSoftInputFromWindow(
+												etaddcategoryname
+														.getWindowToken(), 0);
 										ShowProgressDialog("正在加载rss", "loading");
 
 										new Thread(new Runnable() {
@@ -297,6 +285,8 @@ public class MainActivity extends Activity implements OnGestureListener,
 					_RssName = null;
 				}
 				if (_RssName != null) {
+					Toast.makeText(MainActivity.this, "改rss所有条目设置为已阅读",
+							Toast.LENGTH_SHORT).show();
 					mBusinessRss.setRssIsread(_RssName);
 					mExpandableAdapter.notifyDataSetChanged();
 					((MidListViewAdapter) mMidListView.getAdapter())
@@ -313,6 +303,7 @@ public class MainActivity extends Activity implements OnGestureListener,
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+
 				if (mMidListView.getAdapter() == null) {
 					Toast.makeText(MainActivity.this, "请选择rss",
 							Toast.LENGTH_SHORT).show();
@@ -340,6 +331,8 @@ public class MainActivity extends Activity implements OnGestureListener,
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				Toast.makeText(MainActivity.this, "显示所有星标条目",
+						Toast.LENGTH_SHORT).show();
 				_Cursor = mBusinessRss.getStarredCursor();
 
 				mSimpleCursorAdapter = new SimpleCursorAdapter(
@@ -481,86 +474,13 @@ public class MainActivity extends Activity implements OnGestureListener,
 	}
 
 	public void setLayoutSize() {
-		DisplayMetrics dm = getResources().getDisplayMetrics();
+		dm = getResources().getDisplayMetrics();
 
-		leftView = (LinearLayout) findViewById(R.id.left_view);
-		BitmapDrawable TileMe = new BitmapDrawable(getResources(),
-				BitmapFactory.decodeResource(getResources(),
-						R.drawable.left_background_repeat));
-		// TileMe.setTileModeX(TileMode.REPEAT);
-		TileMe.setTileModeY(TileMode.REPEAT);
-		params = (LinearLayout.LayoutParams) leftView.getLayoutParams();
-		params.width = (int) (dm.widthPixels * 0.3);
-		leftView.setLayoutParams(params);
-
-		midView = (LinearLayout) findViewById(R.id.mid_view);
-		params = (LinearLayout.LayoutParams) midView.getLayoutParams();
-		params.width = (int) (dm.widthPixels * 0.4);
-		midView.setLayoutParams(params);
-		midView.setOnTouchListener(this);
-
-		rightView = (LinearLayout) findViewById(R.id.right_view);
-		params = (LinearLayout.LayoutParams) rightView.getLayoutParams();
-		params.width = (int) (dm.widthPixels * 0.6);
-		rightView.setLayoutParams(params);
-		rightView.setOnTouchListener(this);
+		getWindowManager().getDefaultDisplay().getMetrics(dm);
 
 		layout = (LinearLayout) findViewById(R.id.homelayout);
-		gestureDetector = new GestureDetector(this, this);
-		homeparams = (LayoutParams) layout.getLayoutParams();
-	}
-
-	@Override
-	public boolean onDown(MotionEvent e) {
-		// TODO Auto-generated method stub
-		if (e.getRawX() > 900 && ishomeopen) {
-			setAnimation();
-			layout.startAnimation(open_layout_anim);
-			ishomeopen = false;
-		}
-		return false;
-	}
-
-	@Override
-	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
-			float velocityY) {
-		// TODO Auto-generated method stub
-		setAnimation();
-		if (e1.getRawX() - e2.getRawX() > 120 && ishomeopen) {
-			layout.startAnimation(open_layout_anim);
-			ishomeopen = false;
-			return true;
-		} else if (e1.getRawX() - e2.getRawX() < -80 && e1.getRawX() < 50
-				&& !ishomeopen) {
-			layout.startAnimation(close_layout_anim);
-			ishomeopen = true;
-			return true;
-		}
-		return false;
-	}
-
-	@Override
-	public void onLongPress(MotionEvent e) {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
-			float distanceY) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void onShowPress(MotionEvent e) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public boolean onSingleTapUp(MotionEvent e) {
-		// TODO Auto-generated method stub
-		return false;
+		gestureDetector = new GestureDetector(this, new GestureListenerImpl(
+				this, layout, dm));
 	}
 
 	@Override
@@ -572,52 +492,10 @@ public class MainActivity extends Activity implements OnGestureListener,
 	public void setAnimation() {
 		open_layout_anim = AnimationUtils.loadAnimation(this,
 				R.anim.open_layout);
-		open_layout_anim.setAnimationListener(new AnimationListener() {
 
-			@Override
-			public void onAnimationStart(Animation animation) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation animation) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void onAnimationEnd(Animation animation) {
-				// TODO Auto-generated method stub
-				homeparams.leftMargin = -384;
-				layout.setLayoutParams(homeparams);
-				layout.clearAnimation();
-			}
-		});
 		close_layout_anim = AnimationUtils.loadAnimation(this,
 				R.anim.close_layout);
-		close_layout_anim.setAnimationListener(new AnimationListener() {
 
-			@Override
-			public void onAnimationStart(Animation animation) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation animation) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void onAnimationEnd(Animation animation) {
-				// TODO Auto-generated method stub
-				homeparams.leftMargin = 0;
-				layout.setLayoutParams(homeparams);
-				layout.clearAnimation();
-			}
-		});
 	}
 
 	@Override
@@ -630,7 +508,6 @@ public class MainActivity extends Activity implements OnGestureListener,
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
 		if (_Cursor != null) {
-
 			_Cursor.close();
 		}
 		super.onDestroy();
