@@ -27,17 +27,17 @@ public class GestureListenerImpl implements OnGestureListener {
 			DisplayMetrics dm) {
 		this.mMainActivity = pActivity;
 		this.mHomeLayout = pLayout;
-		
 		this.dm = dm;
 		this.mHomeParms = (FrameLayout.LayoutParams) mHomeLayout
 				.getLayoutParams();
+		setAnimation();
 	}
 
 	@Override
 	public boolean onDown(MotionEvent e) {
 		// TODO Auto-generated method stub
 		if (e.getRawX() > dm.widthPixels * 0.7 && ishomeopen) {
-			setAnimation();
+
 			mHomeLayout.startAnimation(open_layout_anim);
 			ishomeopen = false;
 		}
@@ -48,6 +48,16 @@ public class GestureListenerImpl implements OnGestureListener {
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 			float velocityY) {
 		// TODO Auto-generated method stub
+		if (e1.getRawX() - e2.getRawX() > 120 && ishomeopen) {
+			mHomeLayout.startAnimation(open_layout_anim);
+			ishomeopen = false;
+			return true;
+		} else if (e1.getRawX() - e2.getRawX() < -80 && e1.getRawX() < 50
+				&& !ishomeopen) {
+			mHomeLayout.startAnimation(close_layout_anim);
+			ishomeopen = true;
+			return true;
+		}
 		return false;
 	}
 
