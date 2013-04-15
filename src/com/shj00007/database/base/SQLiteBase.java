@@ -7,12 +7,10 @@ import android.database.sqlite.SQLiteDatabase;
 import com.shj00007.database.DBHelper;
 
 public class SQLiteBase {
-	public DBHelper mDbHelper = null;
 	public SQLiteDatabase mDatabase = null;
 	
-	public SQLiteBase(Context pContext) {
-		mDbHelper = new DBHelper(pContext);
-		mDatabase = mDbHelper.getWritableDatabase();
+	public SQLiteBase(Context pContext,SQLiteDatabase pDatabase) {
+		mDatabase = pDatabase;
 		
 	}
 

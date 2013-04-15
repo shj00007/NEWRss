@@ -1,8 +1,6 @@
 package com.shj00007.activity;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -15,14 +13,10 @@ import android.text.Html;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.GestureDetector;
-import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -31,40 +25,33 @@ import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
-import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.shj00007.R;
+import com.shj00007.activity.base.BaseActivity;
 import com.shj00007.adapter.ExpandableAdapter;
 import com.shj00007.adapter.MidListViewAdapter;
 import com.shj00007.business.BusinessRss;
 import com.shj00007.cache.AsyncImageGetter;
+import com.shj00007.cache.ImageCache;
 import com.shj00007.touch.ctrl.GestureListenerImpl;
 import com.shj00007.utility.DownFile;
 
-public class MainActivity extends Activity implements OnTouchListener {
+public class MainActivity extends BaseActivity implements OnTouchListener {
 	AsyncImageGetter mAsyncImageGetter = null;
 	private LinearLayout layout = null;
 
-	private boolean ishomeopen = true;
-
 	private GestureDetector gestureDetector = null;
-	private Animation open_layout_anim = null;
-	private Animation close_layout_anim = null;
 
-	// new
 	private BusinessRss mBusinessRss = null;
 	private ExpandableListView mExpandableListView = null;
 	private ExpandableAdapter mExpandableAdapter = null;
 
 	private SimpleCursorAdapter mSimpleCursorAdapter = null;
-
-	private ProgressDialog m_ProgressDialog;
 
 	private ListView mMidListView = null;
 	private ImageView mMidUnreadImage = null;
@@ -81,8 +68,6 @@ public class MainActivity extends Activity implements OnTouchListener {
 	private ImageView mSetStarr = null;
 	private ImageView mUpdateRss = null;
 
-	// private EditText etaddfeedname = null;
-	// private AutoCompleteTextView etaddcategoryname = null;
 	DisplayMetrics dm = null;
 	private Cursor _Cursor = null;
 
@@ -90,26 +75,32 @@ public class MainActivity extends Activity implements OnTouchListener {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		setLayoutSize();
-
-		initTools();
 
 		initView();
+
+		initTools();
 
 		setListener();
 
 		bindData();
+		
+		if(mExpandableAdapter.getGroupCount()==0){
+			addNorRss();
+		}
 
 	}
 
-	// new
 	public void initTools() {
 		mBusinessRss = new BusinessRss(this);
 		mAsyncImageGetter = new AsyncImageGetter();
+		dm = getResources().getDisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(dm);
+		gestureDetector = new GestureDetector(this, new GestureListenerImpl(
+				this, layout, dm));
 	}
 
 	public void initView() {
-
+		layout = (LinearLayout) findViewById(R.id.homelayout);
 		mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListleft);
 		mMidListView = (ListView) findViewById(R.id.mid_listview);
 		tvrighttext = (TextView) findViewById(R.id.tvright_text_up);
@@ -123,9 +114,6 @@ public class MainActivity extends Activity implements OnTouchListener {
 		mSetStarr = (ImageView) findViewById(R.id.ivsetstarr);
 		mMid_starr_listview = (ListView) findViewById(R.id.mid_starr_listview);
 		mUpdateRss = (ImageView) findViewById(R.id.ivupdate);
-		// etaddfeedname = (EditText) findViewById(R.id.etaddfeedname);
-		// etaddcategoryname = (AutoCompleteTextView)
-		// findViewById(R.id.etaddcategoryname);
 	}
 
 	public void setListener() {
@@ -142,8 +130,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Toast.makeText(MainActivity.this, "请选中Item", Toast.LENGTH_SHORT)
-						.show();
+				showToast("请选中Item");
 			}
 		});
 
@@ -192,32 +179,26 @@ public class MainActivity extends Activity implements OnTouchListener {
 										if (etaddfeedname.getText().toString()
 												.equals("")) {
 
-											Toast.makeText(MainActivity.this,
-													"请输入地址", Toast.LENGTH_SHORT)
-													.show();
+											showToast("请输入地址");
 											return;
 										}
 										if (etaddcategoryname.getText()
 												.toString().equals("")) {
-											Toast.makeText(MainActivity.this,
-													"请输入类别", Toast.LENGTH_SHORT)
-													.show();
+											showToast("请输入类别");
 											return;
 										}
 										final String category = etaddcategoryname
 												.getText().toString();
 
 										if (mBusinessRss.isRssFeedExist(link)) {
-											Toast.makeText(MainActivity.this,
-													"rss已存在",
-													Toast.LENGTH_SHORT).show();
+											showToast("rss已存在");
 											return;
 										}
 
 										imm.hideSoftInputFromWindow(
 												etaddcategoryname
 														.getWindowToken(), 0);
-										ShowProgressDialog("正在加载rss", "loading");
+										showProgressDialog("正在加载rss", "loading");
 
 										new Thread(new Runnable() {
 
@@ -236,7 +217,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 														public void handleMessage(
 																Message msg) {
 															bindData();
-															DismissProgressDialog();
+															dismissProgressDialog();
 														}
 													};
 													myhandler.removeMessages(0);
@@ -249,12 +230,8 @@ public class MainActivity extends Activity implements OnTouchListener {
 														@Override
 														public void handleMessage(
 																Message msg) {
-															DismissProgressDialog();
-															Toast.makeText(
-																	MainActivity.this,
-																	"网络异常，请检查你的feed地址是否正确",
-																	Toast.LENGTH_SHORT)
-																	.show();
+															dismissProgressDialog();
+															showToast("网络异常，请检查你的feed地址是否正确");
 														}
 													};
 													handler.removeMessages(0);
@@ -285,15 +262,13 @@ public class MainActivity extends Activity implements OnTouchListener {
 					_RssName = null;
 				}
 				if (_RssName != null) {
-					Toast.makeText(MainActivity.this, "改rss所有条目设置为已阅读",
-							Toast.LENGTH_SHORT).show();
+					showToast("将rss所有条目设置为已阅读");
 					mBusinessRss.setRssIsread(_RssName);
 					mExpandableAdapter.notifyDataSetChanged();
 					((MidListViewAdapter) mMidListView.getAdapter())
 							.notifyDataSetChanged();
 				} else {
-					Toast.makeText(MainActivity.this, "请先选中rss",
-							Toast.LENGTH_SHORT).show();
+					showToast("请先选中rss");
 				}
 			}
 		});
@@ -305,8 +280,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 				// TODO Auto-generated method stub
 
 				if (mMidListView.getAdapter() == null) {
-					Toast.makeText(MainActivity.this, "请选择rss",
-							Toast.LENGTH_SHORT).show();
+					showToast("请选择rss");
 					return;
 				}
 				mMid_starr_listview.setVisibility(View.GONE);
@@ -315,12 +289,10 @@ public class MainActivity extends Activity implements OnTouchListener {
 						.getAdapter();
 				if (_Adapter.getOnlyViewUnRead()) {
 					_Adapter.setOnlyViewUnRead(false);
-					Toast.makeText(MainActivity.this, "显示所有条目",
-							Toast.LENGTH_SHORT).show();
+					showToast("显示所有条目");
 				} else {
 					_Adapter.setOnlyViewUnRead(true);
-					Toast.makeText(MainActivity.this, "只显示未读条目",
-							Toast.LENGTH_SHORT).show();
+					showToast("只显示未读条目");
 				}
 				_Adapter.notifyDataSetChanged();
 			}
@@ -331,8 +303,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Toast.makeText(MainActivity.this, "显示所有星标条目",
-						Toast.LENGTH_SHORT).show();
+				showToast("显示所有星标条目");
 				_Cursor = mBusinessRss.getStarredCursor();
 
 				mSimpleCursorAdapter = new SimpleCursorAdapter(
@@ -358,7 +329,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				ShowProgressDialog("正在更新rss", "loading");
+				showProgressDialog("正在更新rss", "loading");
 				svrightscroll.scrollTo(0, 0);
 				new Thread(new Runnable() {
 
@@ -375,8 +346,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 								@Override
 								public void handleMessage(Message msg) {
 									// TODO Auto-generated method stub
-									Toast.makeText(MainActivity.this, "网络异常",
-											Toast.LENGTH_SHORT).show();
+									showToast("网络异常");
 								}
 							};
 							myhandler.removeMessages(0);
@@ -387,7 +357,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 							public void handleMessage(Message msg) {
 								// TODO Auto-generated method stub
 								bindData();
-								DismissProgressDialog();
+								dismissProgressDialog();
 							}
 						};
 						myhandler.removeMessages(0);
@@ -423,7 +393,6 @@ public class MainActivity extends Activity implements OnTouchListener {
 
 			tvrighttext.setText(Html.fromHtml(_Description, new DownFile(
 					tvrighttext), null));
-			// tvrighttext.setText(_Description);
 			mRightUnreadImage.setVisibility(View.GONE);
 			svrightscroll.setVisibility(View.VISIBLE);
 			if (!mBusinessRss.isRead(_RssName, _ItemTitle)) {
@@ -441,29 +410,14 @@ public class MainActivity extends Activity implements OnTouchListener {
 					// TODO Auto-generated method stub
 					if (mBusinessRss.isItemStarred(_ItemTitle)) {
 						mBusinessRss.setItemUnstarr(_ItemTitle);
-						Toast.makeText(MainActivity.this, "set unstarr",
-								Toast.LENGTH_SHORT).show();
+						showToast("set unstarr");
 					} else {
 						mBusinessRss.setItemStarr(_RssName, _ItemTitle,
 								_Pubdate);
-						Toast.makeText(MainActivity.this, "set starr",
-								Toast.LENGTH_SHORT).show();
+						showToast("set starr");
 					}
 				}
 			});
-		}
-	}
-
-	protected void ShowProgressDialog(String p_TitleResID, String p_MessageResID) {
-		m_ProgressDialog = new ProgressDialog(this);
-		m_ProgressDialog.setTitle(p_TitleResID);
-		m_ProgressDialog.setMessage(p_MessageResID);
-		m_ProgressDialog.show();
-	}
-
-	protected void DismissProgressDialog() {
-		if (m_ProgressDialog != null) {
-			m_ProgressDialog.dismiss();
 		}
 	}
 
@@ -472,30 +426,85 @@ public class MainActivity extends Activity implements OnTouchListener {
 				mMidListView, mMidUnreadImage);
 		mExpandableListView.setAdapter(mExpandableAdapter);
 	}
+	
+	public void addNorRss(){
+		new AlertDialog.Builder(MainActivity.this)
+		.setTitle("rss为空,是否自动加入rss测试")
+		.setPositiveButton("确定",
+				new DialogInterface.OnClickListener() {
 
-	public void setLayoutSize() {
-		dm = getResources().getDisplayMetrics();
+					@Override
+					public void onClick(DialogInterface dialog,
+							int which) {
+						
+						showProgressDialog("正在加载rss", "loading");
 
-		getWindowManager().getDefaultDisplay().getMetrics(dm);
+						new Thread(new Runnable() {
 
-		layout = (LinearLayout) findViewById(R.id.homelayout);
-		gestureDetector = new GestureDetector(this, new GestureListenerImpl(
-				this, layout, dm));
+							@Override
+							public void run() {
+								String testlinks[]=getResources().getStringArray(R.array.testlinks);
+								Log.i("test", "count="+testlinks.length);
+								String category="";
+								for (int i = 0; i < testlinks.length; i++) {
+									
+									if(i<3){
+										category="资讯1";
+									}else{
+										category="资讯2";
+									}
+									Log.i("test", testlinks[i]);
+									Log.i("test", category);
+									
+									if (mBusinessRss
+											.downloadRSS(testlinks[i])) {
+										mBusinessRss.addRssFeed(
+												category, testlinks[i]);
+										mBusinessRss.updateRss();
+										
+									} else {
+										Handler handler = new Handler(
+												Looper.getMainLooper()) {
+
+											@Override
+											public void handleMessage(
+													Message msg) {
+												dismissProgressDialog();
+												showToast("网络错误，添加失败，请自输地址");
+											}
+										};
+										handler.removeMessages(0);
+										handler.sendEmptyMessage(0);
+
+									}
+								}
+								
+								Handler myhandler = new Handler(
+										Looper.getMainLooper()) {
+
+									@Override
+									public void handleMessage(
+											Message msg) {
+										bindData();
+										dismissProgressDialog();
+									}
+								};
+								myhandler.removeMessages(0);
+								myhandler
+										.sendEmptyMessage(0);
+
+							}
+						}).start();
+
+					}
+				}).setNegativeButton("取消", null).show();
 	}
+	
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		// TODO Auto-generated method stub
 		return gestureDetector.onTouchEvent(event);
-	}
-
-	public void setAnimation() {
-		open_layout_anim = AnimationUtils.loadAnimation(this,
-				R.anim.open_layout);
-
-		close_layout_anim = AnimationUtils.loadAnimation(this,
-				R.anim.close_layout);
-
 	}
 
 	@Override
@@ -510,6 +519,8 @@ public class MainActivity extends Activity implements OnTouchListener {
 		if (_Cursor != null) {
 			_Cursor.close();
 		}
+		ImageCache.getInstance().clearCache();
+		mBusinessRss.closeDatabase();
 		super.onDestroy();
 	}
 }

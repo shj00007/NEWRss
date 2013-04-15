@@ -15,5 +15,13 @@
         <item>时事</item>
         <item>国际</item>
     </string-array>
+    
+    <string-array name="testlinks">
+        <item>http://www.36kr.com/feed</item>
+        <item>http://cn.engadget.com/rss.xml</item>
+        <item>http://www.guao.hk/feed</item>
+        <item>http://berrytimes.cn/feed/</item>
+        <item>http://feed.iplaysoft.com</item>
+    </string-array>
 
 </resources>

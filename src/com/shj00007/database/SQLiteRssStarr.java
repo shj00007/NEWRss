@@ -2,13 +2,14 @@ package com.shj00007.database;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.shj00007.database.base.SQLiteBase;
 
 public class SQLiteRssStarr extends SQLiteBase {
 
-	public SQLiteRssStarr(Context pContext) {
-		super(pContext);
+	public SQLiteRssStarr(Context pContext,SQLiteDatabase pDatabase) {
+		super(pContext,pDatabase);
 		// TODO Auto-generated constructor stub
 	}
 

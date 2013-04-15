@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.shj00007.bean.ModelRssItem;
 import com.shj00007.bean.ModelRssfeed;
@@ -26,11 +27,20 @@ public class BusinessRss {
 	private SQLiteRssStarr mSQLiteRssStarr = null;
 	private Context mContext = null;
 
+	private DBHelper mDbHelper = null;
+	private SQLiteDatabase mDatabase = null;
+
 	public BusinessRss(Context pContext) {
 		this.mContext = pContext;
-		mSQLiteRssfeed = new SQLiteRssfeed(mContext);
-		mSQLiteRssItem = new SQLiteRssItem(mContext);
-		mSQLiteRssStarr = new SQLiteRssStarr(mContext);
+		this.mDbHelper=new DBHelper(mContext);
+		this.mDatabase = mDbHelper.getWritableDatabase();
+		this.mSQLiteRssfeed = new SQLiteRssfeed(mContext, mDatabase);
+		this.mSQLiteRssItem = new SQLiteRssItem(mContext, mDatabase);
+		this.mSQLiteRssStarr = new SQLiteRssStarr(mContext, mDatabase);
+	}
+	
+	public void closeDatabase(){
+		mDatabase.close();
 	}
 
 	public void updateRss() {

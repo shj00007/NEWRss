@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.shj00007.bean.ModelRssfeed;
@@ -11,8 +12,8 @@ import com.shj00007.database.base.SQLiteBase;
 
 public class SQLiteRssfeed extends SQLiteBase {
 
-	public SQLiteRssfeed(Context pContext) {
-		super(pContext);
+	public SQLiteRssfeed(Context pContext,SQLiteDatabase pDatabase) {
+		super(pContext,pDatabase);
 		// TODO Auto-generated constructor stub
 	}
 
