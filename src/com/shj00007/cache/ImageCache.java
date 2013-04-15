@@ -59,16 +59,19 @@ public class ImageCache {
 		String iamgeMD5 = MD5Change.getMD5(pLink);
 		_ImageFile = new File(DownFile.IMAGE_FLODER_PATH + "/" + iamgeMD5);
 
+		
 		if (_ImageFile.exists()) {
+			Log.i("test", "cacheimagemodel from file");
 			_image = this.loadimageFromDisk(iamgeMD5, _ImageFile);
 		} else {
+			Log.i("test", "cacheimagemodel from net");
 			_image = this.loadImageFromNet(pLink, _ImageFile);
 		}
 
 		_ImageModel = new ImageModel(iamgeMD5, pLink, _image);
 
 		ImageModelRef ref = new ImageModelRef(_ImageModel, q);
-		imageModelRefs.put(_ImageModel.getImageName(), ref);
+		imageModelRefs.put(iamgeMD5, ref);
 
 		return _image;
 
@@ -134,8 +137,13 @@ public class ImageCache {
 	public Bitmap getImage(String pLink) {
 		Bitmap _image = null;
 		String _key = MD5Change.getMD5(pLink);
-		if (imageModelRefs.contains(_key)) {
-			_image = imageModelRefs.get(_key).get().getImageBitmap();
+		if (imageModelRefs.containsKey(_key)) {
+			Log.i("test", "form soferef");
+			try{
+				_image = imageModelRefs.get(_key).get().getImageBitmap();
+			}catch(Exception e){
+				return this.cacheImageModel(pLink);
+			}
 		} else {
 			_image = this.cacheImageModel(pLink);
 		}

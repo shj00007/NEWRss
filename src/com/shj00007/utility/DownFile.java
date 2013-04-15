@@ -33,25 +33,13 @@ public class DownFile implements ImageGetter {
 		// TODO Auto-generated method stub
 		URLDrawable _URLDrawable = new URLDrawable();
 		AsyncImageGetter mAsyncTask = new AsyncImageGetter();
-		Log.i("test", source);
 		mAsyncTask.setOnViewChangeListener(_URLDrawable,
 				new OnViewChangeListener() {
 
 					@Override
 					public void onInvalidateView(Drawable pDrawable) {
-						// TODO Auto-generated method stub
-
-						// mRightText.invalidate();
-						// mRightText.setMinimumHeight((mRightText.getHeight() +
-						// pDrawable
-						// .getIntrinsicHeight()));
-						// mRightText.requestLayout();
-						// mRightText.setHeight((mRightText.getHeight() +
-						// pDrawable
-						// .getIntrinsicHeight()));
+						
 						mRightText.setText(DownFile.this.mRightText.getText());
-						// mRightText.setEllipsize(null);
-						// mRightText.invalidate();
 					}
 				});
 		mAsyncTask.execute(source);
