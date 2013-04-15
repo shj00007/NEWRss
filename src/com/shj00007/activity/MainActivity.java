@@ -470,7 +470,7 @@ public class MainActivity extends BaseActivity implements OnTouchListener {
 											public void handleMessage(
 													Message msg) {
 												dismissProgressDialog();
-												showToast("网络错误，添加失败，请自输地址");
+												showToast("网络错误，添加失败，请链接网络");
 											}
 										};
 										handler.removeMessages(0);
